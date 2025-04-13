@@ -1,0 +1,109 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // ===== C =====
+    {
+      "label": "Run C",
+      "dependsOn": ["compile-c"],
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "Start-Process",
+        "-FilePath",
+        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+      ]
+    },
+    {
+      "label": "compile-c",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-c.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "0"
+        }
+      }
+    },
+    {
+      "label": "compile-debug-c",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-c.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "1"
+        }
+      }
+    },
+
+    // ===== C++ =====
+    {
+      "label": "Run C++",
+      "dependsOn": ["compile-cpp"],
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "Start-Process",
+        "-FilePath",
+        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+      ]
+    },
+    {
+      "label": "compile-cpp",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-cpp.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "0"
+        }
+      }
+    },
+    {
+      "label": "compile-debug-cpp",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-cpp.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "1"
+        }
+      }
+    },
+
+    // ===== C# =====
+    {
+      "label": "Run C#",
+      "dependsOn": ["compile-cs"],
+      "type": "process",
+      "command": "powershell",
+      "args": [
+        "Start-Process",
+        "-FilePath",
+        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+      ]
+    },
+    {
+      "label": "compile-cs",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-cs.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "0"
+        }
+      }
+    },
+    {
+      "label": "compile-debug-cs",
+      "type": "shell",
+      "command": ".vscode\\scripts\\compile-cs.bat",
+      "args": ["${file}", "${workspaceFolder}\\.temp", "${relativeFile}"],
+      "options": {
+        "env": {
+          "DEBUG": "1"
+        }
+      }
+    }
+  ]
+}

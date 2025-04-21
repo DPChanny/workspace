@@ -9,8 +9,9 @@
       "command": "powershell",
       "args": [
         "Start-Process",
-        "-FilePath",
-        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+        "cmd",
+        "-ArgumentList",
+        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
       ]
     },
     {
@@ -44,8 +45,9 @@
       "command": "powershell",
       "args": [
         "Start-Process",
-        "-FilePath",
-        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+        "cmd",
+        "-ArgumentList",
+        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
       ]
     },
     {
@@ -79,8 +81,9 @@
       "command": "powershell",
       "args": [
         "Start-Process",
-        "-FilePath",
-        "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe"
+        "cmd",
+        "-ArgumentList",
+        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
       ]
     },
     {

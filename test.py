@@ -1,6 +1,6 @@
-import openai
+from openai import OpenAI
 
-client = openai.OpenAI(
+client = OpenAI(
     api_key=""
 )
 

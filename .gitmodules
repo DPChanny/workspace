@@ -1,0 +1,6 @@
+[submodule "ML"]
+	path = ML
+	url = https://github.com/DPChanny/ml
+[submodule "PS"]
+	path = PS
+	url = https://github.com/DPChanny/ps

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace UnicoderCMD
+namespace Unicoder
 {
     class Program
     {
@@ -327,7 +327,7 @@ namespace UnicoderCMD
         public static bool EncryptedStrToIntArray(string encryptedStr, out List<int> encrypted)
         {
             List<int> result = new List<int>();
-            foreach (string item in encryptedStr.Split(" "))
+            foreach (string item in encryptedStr.Split(' '))
             {
                 if (int.TryParse(item, out int currentEncrypted))
                 {

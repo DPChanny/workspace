@@ -4,63 +4,53 @@
 #include <Windows.h>
 #include <string.h>
 
-void waitEnter();
+void wait(const char* message, const char trigger);
 
 void main()
 {
-	const char* asdfs = "asdf";
+	const char* asdf = "asdf";
 
 	float time;
-	int inputCount;
-	char i;
+	int count;
+	char i, buffer;
+
+	wait("Press S to start", 's');
+	system("cls");
 
 	while (1)
 	{
-		inputCount = 0;
+		count = 0;
 		i = 0;
-
-		waitEnter();
-		system("cls");
-
-		char input;
 
 		clock_t start = clock();
 		while (1)
 		{
-			input = _getche();
+			buffer = _getche();
 			rewind(stdin);
-			if (input != asdfs[i])
-			{
-				break;
-			}
+			if (buffer != asdf[i]) break;
 			i++;
-			if (i >= strlen(asdfs))
-			{
-				i = 0;
-			}
-			inputCount++;
+			if (i >= strlen(asdf)) i = 0;
+			count++;
 		}
 		clock_t end = clock();
 
 		time = (float)(end - start) / CLOCKS_PER_SEC;
 
-		printf("\n�ɸ� �ð�: %f��, �Է��� asdf��: %d, �ʴ� �Է¼�: %f\n", time, (int)inputCount / 4, 1 / (time / inputCount));
+		printf("\ntime: %fs, count: %d, speed: %f\n", time, (int)count / 4, 1 / (time / count));
 
-		waitEnter();
+		wait("Press R to restart", 'r');
 		system("cls");
 	}
 }
 
-void waitEnter()
+void wait(const char* message, const char trigger)
 {
-	printf("press enter to continue");
+	printf("%s", message);
+	char buffer;
 	while (1)
 	{
-		char input = getchar();
+		buffer = _getch();
 		rewind(stdin);
-		if (input == '\n')
-		{
-			break;
-		}
+		if (tolower(buffer) == tolower(trigger)) break;
 	}
 }

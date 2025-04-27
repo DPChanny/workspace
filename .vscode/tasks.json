@@ -107,6 +107,9 @@
         "cmd",
         "-ArgumentList",
         "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
+      ],
+      "problemMatcher": [
+        "$nvcc"
       ]
     },
     {

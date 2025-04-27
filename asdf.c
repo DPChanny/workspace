@@ -15,7 +15,6 @@ void main()
 	char i, buffer;
 
 	wait("Press S to start", 's');
-	system("cls");
 
 	while (1)
 	{
@@ -39,7 +38,6 @@ void main()
 		printf("\ntime: %fs, count: %d, speed: %f\n", time, (int)count / 4, 1 / (time / count));
 
 		wait("Press R to restart", 'r');
-		system("cls");
 	}
 }
 
@@ -53,4 +51,5 @@ void wait(const char* message, const char trigger)
 		rewind(stdin);
 		if (tolower(buffer) == tolower(trigger)) break;
 	}
+	system("cls");
 }

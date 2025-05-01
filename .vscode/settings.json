@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "string.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "ios": "cpp",
+        "iostream": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp"
     }
 }

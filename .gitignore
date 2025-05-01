@@ -1,5 +1,5 @@
 .temp
-temp.*
+*.tmp.*
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,csharp,c,c++
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,csharp,c,c++

@@ -12,7 +12,7 @@
       "externalConsole": true,
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/P/Programs/mingw64/bin/gdb.exe"
+      "miDebuggerPath": "C:/Devs/Programs/mingw64/bin/gdb.exe"
     },
     {
       "name": "Debug C++",
@@ -25,19 +25,19 @@
       "externalConsole": true,
       "cwd": "${workspaceFolder}",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/P/Programs/mingw64/bin/gdb.exe"
-    },
-    {
-      "name": "Debug C#",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "compile-debug-cs",
-      "program": "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.debug.exe",
-      "args": [],
-      "stopAtEntry": true,
-      "externalConsole": true,
-      "cwd": "${workspaceFolder}",
-      "console": "externalTerminal"
+      "miDebuggerPath": "C:/Devs/Programs/mingw64/bin/gdb.exe"
     }
+    // {
+    //   "name": "Debug C#",
+    //   "type": "coreclr",
+    //   "request": "launch",
+    //   "preLaunchTask": "compile-debug-cs",
+    //   "program": "${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.debug.exe",
+    //   "args": [],
+    //   "stopAtEntry": true,
+    //   "externalConsole": true,
+    //   "cwd": "${workspaceFolder}",
+    //   "console": "externalTerminal"
+    // }
   ]
 }

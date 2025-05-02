@@ -17,12 +17,10 @@
       "label": "Run C",
       "dependsOn": ["compile-c"],
       "type": "process",
-      "command": "powershell",
+      "command": "pwsh",
       "args": [
-        "Start-Process",
-        "cmd",
-        "-ArgumentList",
-        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
+        "-Command",
+        "Start-Process pwsh -ArgumentList '-NoExit','-Command','${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe'"
       ],
       "problemMatcher": ["$gcc"]
     },
@@ -52,12 +50,10 @@
       "label": "Run C++",
       "dependsOn": ["compile-cpp"],
       "type": "process",
-      "command": "powershell",
+      "command": "pwsh",
       "args": [
-        "Start-Process",
-        "cmd",
-        "-ArgumentList",
-        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
+        "-Command",
+        "Start-Process pwsh -ArgumentList '-NoExit','-Command','${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe'"
       ],
       "problemMatcher": ["$gcc"]
     },
@@ -87,12 +83,10 @@
       "label": "Run C#",
       "dependsOn": ["compile-cs"],
       "type": "process",
-      "command": "powershell",
+      "command": "pwsh",
       "args": [
-        "Start-Process",
-        "cmd",
-        "-ArgumentList",
-        "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
+        "-Command",
+        "Start-Process pwsh -ArgumentList '-NoExit','-Command','${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe'"
       ],
       "problemMatcher": ["$msCompile"]
     },

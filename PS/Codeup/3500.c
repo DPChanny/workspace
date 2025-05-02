@@ -2,7 +2,7 @@
 #include<stdlib.h>
 
 int map[9][9];
-int map_checked[9][9] = {0, }; 
+int map_checked[9][9] = {0, };
 char map_print[9][9];
 
 int check_map(int _x, int _y) {

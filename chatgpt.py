@@ -41,19 +41,18 @@ for index, input in enumerate(inputs):
         response = client.chat.completions.create(
             model=prompt[MD],
             messages=messages,
-            temperature=prompt[TP],         # 창의성 수준 
-            top_p=0.5,               # 확률 상위 후보 컷 
-            max_tokens=500,        
+            temperature=prompt[TP],         # 창의성 수준
+            top_p=0.5,                      # 확률 상위 후보 컷
+            max_tokens=500,
 
             # 고급 매개변수 추가 (기본값 기준 설정)
             presence_penalty=prompt[PP],    # 새로운 주제를 유도할지 (기본: 0.0)
             frequency_penalty=prompt[FP],   # 반복 단어 억제 강도 (기본: 0.0)
-            logit_bias={},           # 특정 토큰에 대한 편향 없음 (기본: 빈 딕셔너리)
+            logit_bias={},                  # 특정 토큰에 대한 편향 없음 (기본: 빈 딕셔너리)
         )
 
         gpt_reply = response.choices[0].message.content
         messages.append({"role": "assistant", "content": gpt_reply})
         print("RESPONSE " + str(index + 1) + "\n" + gpt_reply)
-        
+
     print("")
-    

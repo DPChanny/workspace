@@ -21,5 +21,3 @@ int main(void) {
 
 	printf("%d", count);
 }
-
-//일단 10으로 나누고 각 숫자가 되는 최소 개수를 더함

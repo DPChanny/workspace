@@ -34,8 +34,12 @@ void main() {
 
     time = (float)(end - start) / CLOCKS_PER_SEC;
 
-    printf("\ntime: %fs, count: %d, speed: %f\n", time, (int)count / 4,
-           1 / (time / count));
+    // clang-format off
+    printf("\ntime: %fs, count: %d, speed: %f\n",
+      time,
+      (int)(count / 4),
+      1 / (time / count));
+    // clang-format on
 
     wait("Press R to restart", 'r');
   }

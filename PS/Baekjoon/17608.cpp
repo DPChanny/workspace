@@ -1,5 +1,5 @@
-#include<stack>
-#include<iostream>
+#include <iostream>
+#include <stack>
 
 typedef long long int lli;
 
@@ -9,11 +9,12 @@ lli n, b;
 stack<lli> ns;
 
 int main(void) {
-	cin >> n;
-	for (lli _n(0LL); _n < n; _n++) {
-		cin >> b;
-		while (!ns.empty() && ns.top() < b + 1LL) ns.pop();
-		ns.push(b);
-	}
-	cout << ns.size();
+  cin >> n;
+  for (lli _n(0LL); _n < n; _n++) {
+    cin >> b;
+    while (!ns.empty() && ns.top() < b + 1LL)
+      ns.pop();
+    ns.push(b);
+  }
+  cout << ns.size();
 }

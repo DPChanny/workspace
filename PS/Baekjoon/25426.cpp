@@ -1,5 +1,5 @@
-#include<iostream>
-#include<algorithm>
+#include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -12,11 +12,11 @@ lli n, s;
 P fs[100'000];
 
 int main(void) {
-	cin >> n;
-	for (lli _n(0); _n < n; _n++)
-		cin >> fs[_n].pf >> fs[_n].ps;
-	sort(fs, fs + n);
-	for (lli _n(0); _n < n; _n++)
-		s += fs[_n].pf * (_n + 1) + fs[_n].ps;
-	cout << s;
+  cin >> n;
+  for (lli _n(0); _n < n; _n++)
+    cin >> fs[_n].pf >> fs[_n].ps;
+  sort(fs, fs + n);
+  for (lli _n(0); _n < n; _n++)
+    s += fs[_n].pf * (_n + 1) + fs[_n].ps;
+  cout << s;
 }

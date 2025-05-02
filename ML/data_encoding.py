@@ -1,7 +1,7 @@
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 
-label = ['사자', '기린', '기린', '코끼리']
+label = ["사자", "기린", "기린", "코끼리"]
 
 enc = LabelEncoder()
 enc.fit(label)

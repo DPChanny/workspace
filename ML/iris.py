@@ -24,11 +24,13 @@ iris_label = iris.target
 # 붓꼿 데이터 프레임 생성
 iris_df = pd.DataFrame(data=iris_data, columns=iris.feature_names)
 # 붓꼿 열 데이터 종류 추가
-iris_df['label'] = iris_label
+iris_df["label"] = iris_label
 
 # 테스트 데이터 x_test, y_test
 # 학습 데이터 x_train, y_train
-x_train, x_test, y_train, y_test = train_test_split(iris_data, iris_label, test_size=0.2, random_state=RANDOM_STATE)
+x_train, x_test, y_train, y_test = train_test_split(
+    iris_data, iris_label, test_size=0.2, random_state=RANDOM_STATE
+)
 
 # 의사 결정 트리 객체 생성
 dt_clf = DecisionTreeClassifier(random_state=RANDOM_STATE)

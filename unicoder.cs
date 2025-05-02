@@ -6,7 +6,6 @@ namespace Unicoder
 {
     class Program
     {
-
         private const int EXCEPTION = -1;
         private const int SENTENCE = 1;
         private const int FILE = 2;
@@ -82,7 +81,12 @@ namespace Unicoder
                                             Console.Write("Enter Encrypted Sentence: ");
                                             string input = Console.ReadLine();
                                             List<int> decrypted;
-                                            if (Unicoder.EncryptedStrToIntArray(input, out decrypted))
+                                            if (
+                                                Unicoder.EncryptedStrToIntArray(
+                                                    input,
+                                                    out decrypted
+                                                )
+                                            )
                                             {
                                                 string decryptedStr = Unicoder.Decrypt(decrypted);
                                                 Console.WriteLine(decryptedStr);
@@ -119,22 +123,38 @@ namespace Unicoder
                                         try
                                         {
                                             Console.Clear();
-                                            if (GetFile(out FileStream file, FileMode.Open, "Enter File Name To Encrypt"))
+                                            if (
+                                                GetFile(
+                                                    out FileStream file,
+                                                    FileMode.Open,
+                                                    "Enter File Name To Encrypt"
+                                                )
+                                            )
                                             {
                                                 StreamReader fileStream = new StreamReader(file);
                                                 Console.WriteLine("Reading...");
                                                 string fileStr = fileStream.ReadToEnd();
                                                 fileStream.Close();
-                                                List<int> fileStrEncryptedInt = Unicoder.Encrypt(fileStr);
+                                                List<int> fileStrEncryptedInt = Unicoder.Encrypt(
+                                                    fileStr
+                                                );
                                                 Console.WriteLine("Encrypting...");
-                                                string fileStrEncryptedStr = Unicoder.IntArrayToStr(fileStrEncryptedInt);
+                                                string fileStrEncryptedStr = Unicoder.IntArrayToStr(
+                                                    fileStrEncryptedInt
+                                                );
                                                 Console.WriteLine("Converting To String...");
-                                                Console.WriteLine("Saving File As " + file.Name + ".ue ...");
-                                                StreamWriter encryptedStream = new StreamWriter(file.Name + ".ue");
+                                                Console.WriteLine(
+                                                    "Saving File As " + file.Name + ".ue ..."
+                                                );
+                                                StreamWriter encryptedStream = new StreamWriter(
+                                                    file.Name + ".ue"
+                                                );
                                                 file.Close();
                                                 encryptedStream.Write(fileStrEncryptedStr);
                                                 encryptedStream.Close();
-                                                Console.WriteLine("Encrypted: " + fileStrEncryptedStr);
+                                                Console.WriteLine(
+                                                    "Encrypted: " + fileStrEncryptedStr
+                                                );
                                                 wait();
                                             }
                                             else
@@ -155,19 +175,36 @@ namespace Unicoder
                                         try
                                         {
                                             Console.Clear();
-                                            if (GetFile(out FileStream file, FileMode.Open, "Enter File Name To Decrypt"))
+                                            if (
+                                                GetFile(
+                                                    out FileStream file,
+                                                    FileMode.Open,
+                                                    "Enter File Name To Decrypt"
+                                                )
+                                            )
                                             {
                                                 StreamReader fileStream = new StreamReader(file);
                                                 Console.WriteLine("Reading...");
                                                 string fileStr = fileStream.ReadToEnd();
                                                 fileStream.Close();
                                                 Console.WriteLine("Converting To Int Array...");
-                                                if (Unicoder.EncryptedStrToIntArray(fileStr, out List<int> fileStrEncryptedInt))
+                                                if (
+                                                    Unicoder.EncryptedStrToIntArray(
+                                                        fileStr,
+                                                        out List<int> fileStrEncryptedInt
+                                                    )
+                                                )
                                                 {
                                                     Console.WriteLine("Decrypting...");
-                                                    string decrypted = Unicoder.Decrypt(fileStrEncryptedInt);
-                                                    Console.WriteLine("Saving File As " + file.Name + ".ud ...");
-                                                    StreamWriter decryptedStream = new StreamWriter(file.Name + ".ud");
+                                                    string decrypted = Unicoder.Decrypt(
+                                                        fileStrEncryptedInt
+                                                    );
+                                                    Console.WriteLine(
+                                                        "Saving File As " + file.Name + ".ud ..."
+                                                    );
+                                                    StreamWriter decryptedStream = new StreamWriter(
+                                                        file.Name + ".ud"
+                                                    );
                                                     file.Close();
                                                     decryptedStream.Write(decrypted);
                                                     decryptedStream.Close();
@@ -357,5 +394,4 @@ namespace Unicoder
             return result;
         }
     }
-
 }

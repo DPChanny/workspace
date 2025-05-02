@@ -1,6 +1,10 @@
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-client = OpenAI(api_key="")
+load_dotenv()
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 GD = "guide"
 PP = "presense_penalty"
@@ -33,7 +37,6 @@ prompts = [
 ]
 # fmt: on
 
-# 사용자 입력 반복
 for index, input in enumerate(inputs):
     print("INPUT " + str(index + 1) + "\n" + input)
 

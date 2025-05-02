@@ -2,6 +2,18 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "Dry Run Git Clean",
+      "type": "shell",
+      "command": "git clean -ndfx",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Git Clean",
+      "type": "shell",
+      "command": "git clean -xdf",
+      "problemMatcher": []
+    },
+    {
       "label": "Run C",
       "dependsOn": ["compile-c"],
       "type": "process",
@@ -82,7 +94,7 @@
         "-ArgumentList",
         "@('/k', '${workspaceFolder}\\.temp\\${relativeFileDirname}\\${fileBasenameNoExtension}.exe')"
       ],
-      "problemMatcher": ["$nvcc"]
+      "problemMatcher": ["$msCompile"]
     },
     {
       "label": "compile-cs",

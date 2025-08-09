@@ -1,8 +1,7 @@
 .temp
 *.tmp.*
-
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,csharp,c,c++
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,csharp,c,c++
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks,csharp,c,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,jupyternotebooks,csharp,c,c++
 
 ### C ###
 # Prerequisites
@@ -471,6 +470,20 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+### JupyterNotebooks ###
+# gitignore template for Jupyter Notebooks
+# website: http://jupyter.org/
+
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Remove previous ipynb_checkpoints
+#   git rm -r .ipynb_checkpoints/
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 *.py[cod]
@@ -547,11 +560,8 @@ docs/_build/
 target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
 
 # IPython
-profile_default/
-ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
@@ -653,4 +663,4 @@ pyrightconfig.json
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,csharp,c,c++
+# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,jupyternotebooks,csharp,c,c++

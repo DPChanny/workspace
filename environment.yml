@@ -1,0 +1,14 @@
+name: workspace
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - tensorflow
+  - pytorch
+  - matplotlib
+  - pandas
+  - jupyter
+  - notebook
+  - scikit-learn
+  - openai
+  - python-dotenv

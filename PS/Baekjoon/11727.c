@@ -3,14 +3,14 @@
 
 int get_count(int _n);
 
-int *counts;
+int* counts;
 
 int main(void) {
   int n = 0;
 
   scanf("%d", &n);
 
-  counts = (int *)malloc(sizeof(int) * n);
+  counts = (int*)malloc(sizeof(int) * n);
   for (int i = 0; i < n; i++) {
     counts[i] = NULL;
   }
@@ -23,10 +23,10 @@ int get_count(int _n) {
     return 0;
   }
   switch (_n) {
-  case 1:
-    return 1;
-  case 2:
-    return 3;
+    case 1:
+      return 1;
+    case 2:
+      return 3;
   }
 
   if (counts[_n - 1] == NULL) {

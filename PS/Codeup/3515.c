@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 int n;
-int **ns;
-int *visit;
+int** ns;
+int* visit;
 
 int dfs(int _y, int _num) {
   if (_y == n) {
@@ -29,14 +29,14 @@ int dfs(int _y, int _num) {
 
 int main(void) {
   scanf("%d", &n);
-  ns = (int **)malloc(sizeof(int *) * n);
+  ns = (int**)malloc(sizeof(int*) * n);
   for (int _y = 0; _y < n; _y++) {
-    ns[_y] = (int *)malloc(sizeof(int) * n);
+    ns[_y] = (int*)malloc(sizeof(int) * n);
     for (int _x = 0; _x < n; _x++) {
       scanf("%d", &ns[_y][_x]);
     }
   }
-  visit = (int *)calloc(n, sizeof(int));
+  visit = (int*)calloc(n, sizeof(int));
 
   printf("%d", dfs(0, 0));
 

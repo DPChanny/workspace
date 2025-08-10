@@ -4,15 +4,15 @@
 typedef struct Monkey {
   int cage;
   int enemy_monkey_count;
-  struct Monkey *enemy_monkies[3];
+  struct Monkey* enemy_monkies[3];
 } Monkey;
 
 int main(void) {
   int monkey_count;
-  Monkey *monkies;
+  Monkey* monkies;
 
   scanf("%d", &monkey_count);
-  monkies = (Monkey *)malloc(sizeof(Monkey) * (monkey_count + 1));
+  monkies = (Monkey*)malloc(sizeof(Monkey) * (monkey_count + 1));
 
   for (int i = 1; i <= monkey_count; i++) {
     monkies[i].cage = 1;

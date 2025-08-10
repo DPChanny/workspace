@@ -11,7 +11,7 @@ int main(void) {
 
   scanf("%d", &people_count);
 
-  Person *people = (Person *)malloc(sizeof(Person) * people_count);
+  Person* people = (Person*)malloc(sizeof(Person) * people_count);
 
   for (int i = 0; i < people_count; i++) {
     scanf("%d %d", &people[i].weight, &people[i].height);

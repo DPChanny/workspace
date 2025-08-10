@@ -10,18 +10,24 @@ struct N {
   lli n, x, y, z;
 };
 
-bool cx(N &_a, N &_b) { return _a.x > _b.x; }
+bool cx(N& _a, N& _b) {
+  return _a.x > _b.x;
+}
 
-bool cy(N &_a, N &_b) { return _a.y > _b.y; }
+bool cy(N& _a, N& _b) {
+  return _a.y > _b.y;
+}
 
-bool cz(N &_a, N &_b) { return _a.z > _b.z; }
+bool cz(N& _a, N& _b) {
+  return _a.z > _b.z;
+}
 
 struct E {
   lli f, t, w;
 };
 
 struct ce {
-  bool operator()(E &_a, E &_b) { return _a.w > _b.w; }
+  bool operator()(E& _a, E& _b) { return _a.w > _b.w; }
 };
 
 lli n, nus[100'000 + 1], r;

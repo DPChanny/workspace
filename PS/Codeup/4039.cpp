@@ -19,21 +19,21 @@ NM dir_vectors[DIR_VECTORS_COUNT] = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
 int main(void) {
   int n, m;
-  int **map;
-  int **went;
+  int** map;
+  int** went;
 
-  // ÀÔ·Â 1
+  // ï¿½Ô·ï¿½ 1
   scanf("%d %d", &n, &m);
 
-  // µ¿Àû ÇÒ´ç
-  map = (int **)malloc(sizeof(int *) * n);
-  went = (int **)malloc(sizeof(int *) * n);
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½
+  map = (int**)malloc(sizeof(int*) * n);
+  went = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
-    map[_n] = (int *)malloc(sizeof(int) * m);
-    went[_n] = (int *)calloc(m, sizeof(int));
+    map[_n] = (int*)malloc(sizeof(int) * m);
+    went[_n] = (int*)calloc(m, sizeof(int));
   }
 
-  // ÀÔ·Â 2
+  // ï¿½Ô·ï¿½ 2
   for (int _n = 0; _n < n; _n++) {
     for (int _m = 0; _m < m; _m++) {
       scanf("%d", &map[_n][_m]);
@@ -78,7 +78,7 @@ int main(void) {
     printf("0");
   }
 
-  // µ¿Àû ÇÒ´ç ÇØÁ¦
+  // ï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½ï¿½
   for (int _n = 0; _n < n; _n++) {
     free(map[_n]);
     free(went[_n]);

@@ -7,7 +7,7 @@ int k, is[10], maxis[10], minis[10];
 char ks[10];
 bool ius[10];
 
-int *max(int *_a, int *_b, const int &_n) {
+int* max(int* _a, int* _b, const int& _n) {
   for (int __n(0); __n < _n; __n++) {
     if (_a[__n] < _b[__n])
       return _b;
@@ -16,7 +16,8 @@ int *max(int *_a, int *_b, const int &_n) {
   }
   return _a;
 }
-int *min(int *_a, int *_b, const int &_n) {
+
+int* min(int* _a, int* _b, const int& _n) {
   for (int __n(0); __n < _n; __n++) {
     if (_a[__n] < _b[__n])
       return _a;

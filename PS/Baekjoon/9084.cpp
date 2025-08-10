@@ -3,10 +3,10 @@
 using namespace std;
 
 int main(void) {
-  int tc,     // test case count
-      cc,     // coin count
-      cs[20], // coins
-      tp;     // target price
+  int tc,      // test case count
+      cc,      // coin count
+      cs[20],  // coins
+      tp;      // target price
   cin >> tc;
 
   for (int _tc(0); _tc < tc; _tc++) {

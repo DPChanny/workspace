@@ -7,22 +7,22 @@
 
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 
-int R(int _n, int **_rgb, int **_rgb_cal);
-int G(int _n, int **_rgb, int **_rgb_cal);
-int B(int _n, int **_rgb, int **_rgb_cal);
+int R(int _n, int** _rgb, int** _rgb_cal);
+int G(int _n, int** _rgb, int** _rgb_cal);
+int B(int _n, int** _rgb, int** _rgb_cal);
 
 int main(void) {
   int n = 0;
 
   scanf("%d", &n);
 
-  int **rgb = (int **)malloc(sizeof(int *) * n);
-  int **rgb_cal = (int **)malloc(sizeof(int *) * n);
+  int** rgb = (int**)malloc(sizeof(int*) * n);
+  int** rgb_cal = (int**)malloc(sizeof(int*) * n);
   for (int i = 0; i < n; i++) {
-    rgb[i] = (int *)malloc(sizeof(int) * 3);
+    rgb[i] = (int*)malloc(sizeof(int) * 3);
   }
   for (int i = 0; i < n; i++) {
-    rgb_cal[i] = (int *)malloc(sizeof(int) * 3);
+    rgb_cal[i] = (int*)malloc(sizeof(int) * 3);
     for (int j = 0; j < 3; j++) {
       rgb_cal[i][j] = 0;
     }
@@ -45,7 +45,7 @@ int main(void) {
   return 0;
 }
 
-int R(int _n, int **_rgb, int **_rgb_cal) {
+int R(int _n, int** _rgb, int** _rgb_cal) {
   if (!_rgb_cal[_n][RED]) {
     if (_n == 0) {
       _rgb_cal[_n][RED] = _rgb[_n][RED];
@@ -59,7 +59,7 @@ int R(int _n, int **_rgb, int **_rgb_cal) {
   return _rgb_cal[_n][RED];
 }
 
-int G(int _n, int **_rgb, int **_rgb_cal) {
+int G(int _n, int** _rgb, int** _rgb_cal) {
   if (!_rgb_cal[_n][GREEN]) {
     if (_n == 0) {
       _rgb_cal[_n][GREEN] = _rgb[_n][GREEN];
@@ -73,7 +73,7 @@ int G(int _n, int **_rgb, int **_rgb_cal) {
   return _rgb_cal[_n][GREEN];
 }
 
-int B(int _n, int **_rgb, int **_rgb_cal) {
+int B(int _n, int** _rgb, int** _rgb_cal) {
   if (!_rgb_cal[_n][BLUE]) {
     if (_n == 0) {
       _rgb_cal[_n][BLUE] = _rgb[_n][BLUE];

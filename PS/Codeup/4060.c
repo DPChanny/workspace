@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 int h, w;
-int **visited;
-int **map;
+int** visited;
+int** map;
 
 void dfs(int _x, int _y, int _status) {
   if (_x < 0 || _x > w - 1 || _y < 0 || _y > h - 1) {
@@ -24,11 +24,11 @@ void dfs(int _x, int _y, int _status) {
 int main(void) {
   scanf("%d %d", &h, &w);
 
-  map = (int **)malloc(sizeof(int *) * h);
-  visited = (int **)malloc(sizeof(int *) * h);
+  map = (int**)malloc(sizeof(int*) * h);
+  visited = (int**)malloc(sizeof(int*) * h);
   for (int _h = 0; _h < h; _h++) {
-    map[_h] = (int *)malloc(sizeof(int) * w);
-    visited[_h] = (int *)calloc(w, sizeof(int));
+    map[_h] = (int*)malloc(sizeof(int) * w);
+    visited[_h] = (int*)calloc(w, sizeof(int));
     for (int _w = 0; _w < w; _w++) {
       scanf("%d", &map[_h][_w]);
     }

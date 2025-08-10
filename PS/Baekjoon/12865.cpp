@@ -6,7 +6,7 @@ typedef unsigned long long int llu;
 using namespace std;
 
 class K {
-public:
+ public:
   llu price;
   llu weight;
 
@@ -14,20 +14,20 @@ public:
 };
 
 int main(void) {
-  int k, // k count
-      w; // weight
+  int k,  // k count
+      w;  // weight
   cin >> k >> w;
 
-  K *ks = new K[k]; // k array
+  K* ks = new K[k];  // k array
   for (int _k(0); _k < k; _k++)
     cin >> ks[_k].weight >> ks[_k].price;
 
-  llu **dp = new llu *[k + 1];
+  llu** dp = new llu*[k + 1];
   dp[0] = new llu[w + 1]{
       0,
   };
   for (int _k(1); _k < k + 1; _k++) {
-    const K &ck = ks[_k - 1]; // current k
+    const K& ck = ks[_k - 1];  // current k
     dp[_k] = new llu[w + 1]{
         0,
     };

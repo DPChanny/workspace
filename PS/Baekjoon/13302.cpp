@@ -1,7 +1,6 @@
 #include <iostream>
 
-constexpr int INF = 1'000'000'000;
-constexpr int K = 40;
+constexpr int INF = 1 '000' 000'000; constexpr int K = 40;
 
 using namespace std;
 

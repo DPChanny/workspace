@@ -15,7 +15,9 @@ constexpr int B = 1;
 constexpr int C = 2;
 constexpr int D = 3;
 
-bool operator<(const N &_a, const N &_b) { return _a.r < _b.r; }
+bool operator<(const N& _a, const N& _b) {
+  return _a.r < _b.r;
+}
 
 char bt;
 uint32_t n, k, nsc[4], ns[4][200000];

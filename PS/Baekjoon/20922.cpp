@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int n, k, ns[200'000], nus[100'001], l, c;
+int n, k, ns[200 '000], nus[100' 001], l, c;
 
 int main(void) {
   cin >> n >> k;

@@ -1,5 +1,6 @@
-#include <queue>
 #include <stdio.h>
+#include <queue>
+
 // cpp only for queue
 
 int main(void) {

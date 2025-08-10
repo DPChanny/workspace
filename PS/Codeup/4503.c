@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int n, m;
-int **graph;
+int** graph;
 int count;
 
 void bfs(int _target) {
@@ -23,9 +23,9 @@ int main(void) {
   scanf("%d %d", &n, &m);
 
   // graph[from][to]
-  graph = (int **)malloc(sizeof(int *) * n);
+  graph = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
-    graph[_n] = (int *)calloc(n, sizeof(int));
+    graph[_n] = (int*)calloc(n, sizeof(int));
   }
 
   for (int _m = 0; _m < m; _m++) {

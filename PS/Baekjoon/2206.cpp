@@ -12,9 +12,9 @@ struct Point {
 
 bool m[1000][1000];
 
-#define NV 0   // Not Visited
-#define VB 1   // Visited with Broke
-#define VNB -1 // Visited with not Broke
+#define NV 0    // Not Visited
+#define VB 1    // Visited with Broke
+#define VNB -1  // Visited with not Broke
 int mv[1000][1000]{
     0,
 };

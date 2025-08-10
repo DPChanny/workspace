@@ -6,7 +6,7 @@ using namespace std;
 
 #define s(x, f, t) (x[(t)] - x[(f) - 1])
 
-long long int t, n, m, ns[1'000 + 1], ms[1'000 + 1], c;
+long long int t, n, m, ns[1 '000 + 1], ms[1' 000 + 1], c;
 vector<long long int> nss;
 
 int main(void) {

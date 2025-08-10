@@ -2,7 +2,7 @@
 
 using namespace std;
 
-constexpr long long int INF = 1'000'000'000'000;
+constexpr long long int INF = 1 '000' 000 '000' 000;
 
 int n, m, bf, bt;
 long long int ds[100][100], bw;

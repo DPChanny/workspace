@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int *dp;
+int* dp;
 
 int count(int _n) {
   if (!_n || _n == 1) {
@@ -20,7 +20,7 @@ int main(void) {
   int n;
   scanf("%d", &n);
 
-  dp = (int *)calloc(n, sizeof(int));
+  dp = (int*)calloc(n, sizeof(int));
 
   printf("%d", count(n));
 

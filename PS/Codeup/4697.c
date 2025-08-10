@@ -9,8 +9,8 @@
 #define TRUE 1
 #define FALSE 0
 
-int **visited;
-int **heights;
+int** visited;
+int** heights;
 int n;
 
 void dfs(int _y, int _x, int _height) {
@@ -36,11 +36,11 @@ int main(void) {
   scanf("%d", &n);
 
   // 높이 입력
-  heights = (int **)malloc(sizeof(int *) * n);
-  int max_height = MIN_HEIGHT; // 가장 높은 높이
-  int min_height = MAX_HEIGHT; // 가장 낮은 높이
+  heights = (int**)malloc(sizeof(int*) * n);
+  int max_height = MIN_HEIGHT;  // 가장 높은 높이
+  int min_height = MAX_HEIGHT;  // 가장 낮은 높이
   for (int y = 0; y < n; y++) {
-    heights[y] = (int *)malloc(sizeof(int) * n);
+    heights[y] = (int*)malloc(sizeof(int) * n);
     for (int x = 0; x < n; x++) {
       scanf("%d", &heights[y][x]);
       min_height = heights[y][x] < min_height ? heights[y][x] : min_height;
@@ -49,9 +49,9 @@ int main(void) {
   }
 
   // 탐색한 위치 저장
-  visited = (int **)malloc(sizeof(int *) * n);
+  visited = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
-    visited[_n] = (int *)calloc(n, sizeof(int));
+    visited[_n] = (int*)calloc(n, sizeof(int));
   }
 
   // 가장 많은 안전한 지역 개수

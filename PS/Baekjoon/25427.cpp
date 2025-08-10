@@ -9,14 +9,14 @@ char bn;
 
 lli gi(char _n) {
   switch (_n) {
-  case 'D':
-    return 1;
-  case 'K':
-    return 2;
-  case 'S':
-    return 3;
-  case 'H':
-    return 4;
+    case 'D':
+      return 1;
+    case 'K':
+      return 2;
+    case 'S':
+      return 3;
+    case 'H':
+      return 4;
   }
   return 0;
 }

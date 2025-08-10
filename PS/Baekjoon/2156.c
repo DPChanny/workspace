@@ -7,8 +7,8 @@ int main(void) {
   int count = 0;
   scanf("%d", &count);
 
-  int *amounts = (int *)malloc(sizeof(int) * count);
-  int *amounts_cal = (int *)calloc(count, sizeof(int));
+  int* amounts = (int*)malloc(sizeof(int) * count);
+  int* amounts_cal = (int*)calloc(count, sizeof(int));
 
   for (int i = 0; i < count; i++) {
     scanf(" %d", &amounts[i]);

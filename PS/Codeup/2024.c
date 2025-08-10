@@ -15,7 +15,9 @@ const char unit[][4] = {"만", "억", "조", "경"};
 //(인덱스 + 1)에 대응하는 한글
 const char strNum[][4] = {"일", "이", "삼", "사", "오", "육", "칠", "팔", "구"};
 
-char *getStrNum(char num) { return strNum[num - '0' - 1]; }
+char* getStrNum(char num) {
+  return strNum[num - '0' - 1];
+}
 
 void main() {
   // 입력 받은 숫자

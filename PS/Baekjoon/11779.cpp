@@ -11,7 +11,7 @@ typedef pair<lli, lli> P;
 
 lli n, m, bf, bt, bw;
 P cn;
-vector<lli> nws(1'000, INT64_MAX), nhs(1'000, -1);
+vector<lli> nws(1 '000, INT64_MAX), nhs(1' 000, -1);
 vector<P> bs[1'000];
 priority_queue<P> ns;
 

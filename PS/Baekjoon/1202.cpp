@@ -5,11 +5,11 @@
 using namespace std;
 
 class N {
-public:
+ public:
   int m;
   int v;
 
-  bool operator<(const N &_n) { return this->m < _n.m; }
+  bool operator<(const N& _n) { return this->m < _n.m; }
 };
 
 N ns[300000];

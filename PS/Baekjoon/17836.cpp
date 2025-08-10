@@ -9,7 +9,9 @@ typedef pair<lli, lli> P;
 #define pf first
 #define ps second
 
-P operator+(P _a, P _b) { return {_a.pf + _b.pf, _a.ps + _b.ps}; }
+P operator+(P _a, P _b) {
+  return {_a.pf + _b.pf, _a.ps + _b.ps};
+}
 
 constexpr lli E = 0;
 constexpr lli W = 1;

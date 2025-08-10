@@ -6,7 +6,7 @@
 #define MINUS '-'
 
 int n;
-char *symbols;
+char* symbols;
 
 void dfs(int _n, int _symbol) {
 
@@ -48,7 +48,7 @@ void dfs(int _n, int _symbol) {
 int main(void) {
   scanf("%d", &n);
 
-  symbols = (char *)calloc(n, sizeof(char));
+  symbols = (char*)calloc(n, sizeof(char));
   dfs(0, PLUS);
 
   free(symbols);

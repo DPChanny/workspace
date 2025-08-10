@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int n, ns[1'000'001], l, bn, i;
+int n, ns[1 '000' 001], l, bn, i;
 
 int main(void) {
   cin >> n;

@@ -4,7 +4,7 @@
 #include <vector>
 // C++ only for vector
 
-int **map;
+int** map;
 int n;
 std::vector<int> member_count;
 int group_count;
@@ -29,9 +29,9 @@ void dfs(int _x, int _y) {
 int main(void) {
   scanf("%d", &n);
 
-  map = (int **)malloc(sizeof(int *) * n);
+  map = (int**)malloc(sizeof(int*) * n);
   for (int h = 0; h < n; h++) {
-    map[h] = (int *)malloc(sizeof(int) * n);
+    map[h] = (int*)malloc(sizeof(int) * n);
   }
 
   for (int h = 0; h < n; h++) {

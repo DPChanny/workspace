@@ -3,16 +3,16 @@
 using namespace std;
 
 struct Q {
-  Q *pq;
+  Q* pq;
   char q;
   int k;
 };
 
 int n;
-Q **qs;
+Q** qs;
 
 int glk(int _n) {
-  Q *q = qs[_n];
+  Q* q = qs[_n];
   int s(0);
   while (true) {
     if (q->q == 'a') {
@@ -31,7 +31,9 @@ int main(void) {
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> n;
-  qs = new Q *[n + 1] { new Q{nullptr, 'a', -1}, };
+  qs = new Q* [n + 1] {
+    new Q{nullptr, 'a', -1},
+  };
   for (int _n(1); _n < n + 1; _n++) {
     qs[_n] = new Q;
     cin >> qs[_n]->q;

@@ -2,9 +2,9 @@
 
 using namespace std;
 
-int n, ns[1'000'000];
+int n, ns[1 '000' 000];
 
-void m(int *_l, int *_m, int *_r) {
+void m(int* _l, int* _m, int* _r) {
   int *il(_l), *ir(_m), *t(new int[_r - _l]), *it(t);
   while (il != _m && ir != _r)
     *it++ = *il < *ir ? *il++ : *ir++;
@@ -19,7 +19,7 @@ void m(int *_l, int *_m, int *_r) {
   delete[] t;
 }
 
-void ms(int *_l, int *_r) {
+void ms(int* _l, int* _r) {
   if (!(_r - _l - 1))
     return;
   ms(_l, _l + (_r - _l) / 2);

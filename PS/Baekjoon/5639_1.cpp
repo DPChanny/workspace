@@ -7,7 +7,7 @@ int n, po[10'000];
 void mt(int *_po, const long long int &_s) {
   if (!_s)
     return;
-  int *m(_po + 1);
+  int* m(_po + 1);
   while (m - _po < _s && *m < *_po)
     m++;
   mt(_po + 1, m - _po - 1);

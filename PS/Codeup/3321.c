@@ -10,13 +10,13 @@ int main(void) {
 
   int topping_count;
   int topping_price;
-  int *topping_calories;
+  int* topping_calories;
 
   scanf("%d", &topping_count);
   scanf(" %d %d", &dough_price, &topping_price);
   scanf(" %d", &dough_calorie);
 
-  topping_calories = (int *)malloc(sizeof(int) * topping_count);
+  topping_calories = (int*)malloc(sizeof(int) * topping_count);
   for (int i = 0; i < topping_count; i++) {
     scanf(" %d", &topping_calories[i]);
   }

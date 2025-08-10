@@ -4,11 +4,11 @@
 
 using namespace std;
 
-bool **graph; // 관계표
-bool *visit;  // visit[i] i번째 인원 탐색 여부
-int n;        // 인원수
+bool** graph;  // 관계표
+bool* visit;   // visit[i] i번째 인원 탐색 여부
+int n;         // 인원수
 
-void searchGroup(int _from, vector<int> *_group) {
+void searchGroup(int _from, vector<int>* _group) {
   if (visit[_from]) {
     return;
   }
@@ -47,7 +47,7 @@ int searchTime(int _from, int _main) {
   }
 }
 
-int searchMaxTime(vector<int> *_group, int _main) {
+int searchMaxTime(vector<int>* _group, int _main) {
   int max = 0;
   for (int i = 0; i < _group->size(); i++) {
     int time = searchTime(_group->at(i), _main);
@@ -59,11 +59,11 @@ int searchMaxTime(vector<int> *_group, int _main) {
 }
 
 int main(void) {
-  int m; // 관계수
+  int m;  // 관계수
   cin >> n >> m;
 
   // graph[from][to]
-  graph = new bool *[n];
+  graph = new bool*[n];
   for (int _n = 0; _n < n; _n++) {
     graph[_n] = new bool[n]{
         false,
@@ -83,7 +83,7 @@ int main(void) {
       false,
   };
 
-  vector<vector<int> *> groups; // 위원회 인원
+  vector<vector<int>*> groups;  // 위원회 인원
   vector<int> mains;            // 위원회 대표
 
   for (int _n = 0; _n < n; _n++) {

@@ -3,7 +3,7 @@
 
 int count = 0;
 // queen[i]: i¿­ ÄýÀÇ Çà ÀÎµ¦½º
-int *queen;
+int* queen;
 int n;
 
 int dfs(int _n) {
@@ -41,7 +41,7 @@ int dfs(int _n) {
 int main(void) {
   scanf("%d", &n);
 
-  queen = (int *)calloc(n, sizeof(int));
+  queen = (int*)calloc(n, sizeof(int));
 
   dfs(0);
 

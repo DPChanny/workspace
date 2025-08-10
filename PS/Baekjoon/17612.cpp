@@ -14,7 +14,7 @@ struct N {
 };
 
 struct ck {
-  bool operator()(IT &_a, IT &_b) {
+  bool operator()(IT& _a, IT& _b) {
     if (_a.pt == _b.pt)
       return _a.pk > _b.pk;
     return _a.pt > _b.pt;
@@ -22,7 +22,7 @@ struct ck {
 };
 
 struct cn {
-  bool operator()(N &_a, N &_b) {
+  bool operator()(N& _a, N& _b) {
     if (_a.t == _b.t)
       return _a.k < _b.k;
     return _a.t > _b.t;

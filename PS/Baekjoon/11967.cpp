@@ -7,7 +7,8 @@ using namespace std;
 #define y first
 #define x second
 typedef pair<int, int> point;
-point operator+(const point &_a, const point &_b) {
+
+point operator+(const point& _a, const point& _b) {
   return {_a.y + _b.y, _a.x + _b.x};
 }
 
@@ -23,7 +24,7 @@ bool ns[100][100]{
         true,
     };
 
-bool rc(const point &_p) {
+bool rc(const point& _p) {
   return _p.y + 1 > 0 && _p.y < n && _p.x + 1 > 0 && _p.x < n;
 }
 
@@ -49,7 +50,7 @@ int main(void) {
       cp = ps.front();
       ps.pop();
 
-      vector<point> &cms = ms[cp.y][cp.x];
+      vector<point>& cms = ms[cp.y][cp.x];
       for (int _m(0); _m < cms.size(); _m++)
         ns[cms[_m].y][cms[_m].x] = true;
       cms.clear();

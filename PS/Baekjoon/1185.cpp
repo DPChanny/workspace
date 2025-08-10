@@ -3,18 +3,18 @@
 
 using namespace std;
 
-int n, p, ns[10'000], us[10'000 + 1], s;
+int n, p, ns[10 '000], us[10' 000 + 1], s;
 
 class E {
-public:
+ public:
   int na, nb, w;
 
   int gv() const { return w * 2 + ns[na - 1] + ns[nb - 1]; }
 
-  bool operator<(const E &_a) { return gv() < _a.gv(); }
+  bool operator<(const E& _a) { return gv() < _a.gv(); }
 };
 
-E *es;
+E* es;
 
 int gu(int _n) {
   if (!us[_n])

@@ -11,7 +11,7 @@ typedef long long int lli;
 #define ps first
 #define pe second
 
-bool operator<(P &_a, P &_b) {
+bool operator<(P& _a, P& _b) {
   if (_a.ps == _b.ps)
     return _a.pe < _b.pe;
   return _a.ps > _b.ps;
@@ -20,7 +20,7 @@ bool operator<(P &_a, P &_b) {
 vector<P> xs, ys;
 lli n, xb, yb, xa, ya, xo, yo;
 
-lli goc(vector<P> &_ns) {
+lli goc(vector<P>& _ns) {
   priority_queue<lli, vector<lli>, greater<lli>> es;
   sort(_ns.begin(), _ns.end());
   lli s(_ns[0].ps), m(0);

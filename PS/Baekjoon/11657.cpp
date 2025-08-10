@@ -5,11 +5,12 @@
 
 using namespace std;
 
-constexpr int INF = 2'000'000'000;
+constexpr int INF = 2 '000' 000'000;
 #define ev first
 #define ew second
 
-long long int v, e, bu, bv, bw, ds[500], cv, vcs[500];
+    long long int v,
+              e, bu, bv, bw, ds[500], cv, vcs[500];
 vector<pair<int, int>> es[500];
 bool vus[500];
 

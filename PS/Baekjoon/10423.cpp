@@ -11,7 +11,8 @@ int n, m, k, bk, us[1'000 + 1], s;
 E *es;
 bool ks[1'000 + 1];
 
-bool operator<(const E &_a, const E &_b) { return _a.w < _b.w; }
+bool operator<(const E &_a, const E &_b) {
+  return _a.w < _b.w; }
 
 int gu(int _n) {
   if (!us[_n])

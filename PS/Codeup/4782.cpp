@@ -10,7 +10,7 @@ struct N {
 
 int n, k, kss[41];
 N ns[1000];
-vector<N *> nkrs[41], nkcs[41];
+vector<N*> nkrs[41], nkcs[41];
 bool ks[41];
 
 void dfs(int _k, bool _f) {

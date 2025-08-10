@@ -5,7 +5,7 @@ using namespace std;
 int n, c;
 bool qxs[15], qs[15][15], f;
 
-bool cp(const int &_y, const int &_x) {
+bool cp(const int& _y, const int& _x) {
   return _y + 1 > 0 && _y < n && _x + 1 > 0 && _x < n;
 }
 

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int n;
-char *chars;
+char* chars;
 
 void dfs(int _n, char _c) {
   chars[_n] = _c;
@@ -18,7 +18,7 @@ void dfs(int _n, char _c) {
 
 int main(void) {
   scanf("%d", &n);
-  chars = (char *)calloc(n + 1, sizeof(char));
+  chars = (char*)calloc(n + 1, sizeof(char));
 
   dfs(0, 'O');
   dfs(0, 'X');

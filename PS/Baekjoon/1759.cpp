@@ -7,7 +7,7 @@ int l, c, ls[16];
 char cs[15];
 bool vs[15];
 
-bool cv(const char &_a) {
+bool cv(const char& _a) {
   return _a == 'a' || _a == 'e' || _a == 'i' || _a == 'o' || _a == 'u';
 }
 

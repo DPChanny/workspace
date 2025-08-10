@@ -6,6 +6,7 @@ int dp[4001][4001] = {
         0,
     },
 };
+
 int main(void) {
   string a, b;
   cin >> a >> b;

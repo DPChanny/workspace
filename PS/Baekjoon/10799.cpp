@@ -7,8 +7,8 @@ int main(void) {
   string str;
   cin >> str;
 
-  int layer(0), // stick layer count
-      count(0); // stick count
+  int layer(0),  // stick layer count
+      count(0);  // stick count
 
   // true when before char was '('
   bool flag(false);
@@ -17,13 +17,13 @@ int main(void) {
     if (str[_i] == '(') {
       layer++;
       flag = true;
-    } else // (str[_i] == ')')
+    } else  // (str[_i] == ')')
     {
-      if (flag) // laser
+      if (flag)  // laser
       {
         layer--;
         count += layer;
-      } else // end of stick
+      } else  // end of stick
       {
         layer--;
         count++;

@@ -8,9 +8,11 @@ struct E {
 };
 
 int n, m, us[1000 + 1], s;
-E *es;
+E* es;
 
-bool operator<(const E &_a, const E &_b) { return _a.w < _b.w; }
+bool operator<(const E& _a, const E& _b) {
+  return _a.w < _b.w;
+}
 
 int gu(int _n) {
   if (!us[_n])

@@ -6,7 +6,7 @@ using namespace std;
 typedef long long int lli;
 
 lli n, ns[13], r;
-bool rs[26'000'000 + 1];
+bool rs[26 '000' 000 + 1];
 
 void grs(lli _n, lli _m, lli _s) {
   if (_n == n) {

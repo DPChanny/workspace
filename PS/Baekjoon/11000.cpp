@@ -7,7 +7,7 @@ using namespace std;
 struct L {
   uint32_t s, e;
 
-  bool operator<(const L &_l) const { return s > _l.s; }
+  bool operator<(const L& _l) const { return s > _l.s; }
 };
 
 uint32_t n, bs, be;

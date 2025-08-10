@@ -11,14 +11,14 @@ int main(void) {
   int n;
   scanf("%d", &n);
 
-  int **ns = (int **)malloc(sizeof(int *) * n);
+  int** ns = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
-    ns[_n] = (int *)malloc(sizeof(int) * 3);
+    ns[_n] = (int*)malloc(sizeof(int) * 3);
     scanf("%d%d%d", &ns[_n][0], &ns[_n][1], &ns[_n][2]);
   }
 
-  int *cns = (int *)malloc(sizeof(int) * 6);
-  int *bcns = (int *)malloc(sizeof(int) * 3);
+  int* cns = (int*)malloc(sizeof(int) * 6);
+  int* bcns = (int*)malloc(sizeof(int) * 3);
   bcns[RED] = ns[0][RED];
   bcns[GREEN] = ns[0][GREEN];
   bcns[BLUE] = ns[0][BLUE];

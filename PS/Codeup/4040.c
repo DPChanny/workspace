@@ -4,15 +4,15 @@
 int main(void) {
   int day_count;
   int room_count;
-  char **room_status;
+  char** room_status;
   int arrival_day;
   int departure_day;
 
   // ют╥б
   scanf("%d %d", &day_count, &room_count);
-  room_status = (char **)malloc(sizeof(char *) * day_count);
+  room_status = (char**)malloc(sizeof(char*) * day_count);
   for (int i = 0; i < day_count; i++) {
-    room_status[i] = (char *)malloc(sizeof(char) * room_count);
+    room_status[i] = (char*)malloc(sizeof(char) * room_count);
     for (int j = 0; j < room_count; j++) {
       scanf(" %c", &room_status[i][j]);
     }

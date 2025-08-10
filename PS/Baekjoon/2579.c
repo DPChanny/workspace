@@ -3,21 +3,21 @@
 
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 
-int get_max(int *_stairs, int **_stairs_cal, int _n, int _count);
+int get_max(int* _stairs, int** _stairs_cal, int _n, int _count);
 
 int main(void) {
   int n = 0;
 
   scanf("%d", &n);
 
-  int *stairs = (int *)malloc(sizeof(int) * n);
+  int* stairs = (int*)malloc(sizeof(int) * n);
   for (int i = 0; i < n; i++) {
     scanf(" %d", &stairs[i]);
   }
 
-  int **stairs_cal = (int **)malloc(sizeof(int *) * n);
+  int** stairs_cal = (int**)malloc(sizeof(int*) * n);
   for (int i = 0; i < n; i++) {
-    stairs_cal[i] = (int *)malloc(sizeof(int) * 2);
+    stairs_cal[i] = (int*)malloc(sizeof(int) * 2);
     for (int j = 0; j < 2; j++) {
       stairs_cal[i][j] = NULL;
     }
@@ -32,7 +32,7 @@ int main(void) {
   free(stairs_cal);
 }
 
-int get_max(int *_stairs, int **_stairs_cal, int _n, int _count) {
+int get_max(int* _stairs, int** _stairs_cal, int _n, int _count) {
   if (_count < 2) {
     if (_stairs_cal[_n][_count] == NULL) {
 

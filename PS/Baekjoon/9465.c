@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define R 2 // row size
+#define R 2  // row size
 
-#define max(a, b) (((a) > (b)) ? (a) : (b)) // max macro
+#define max(a, b) (((a) > (b)) ? (a) : (b))  // max macro
 
 int main(void) {
-  int t; // test case size
+  int t;  // test case size
   scanf("%d", &t);
 
   for (int _t = 0; _t < t; _t++) {
-    int c; // column size
+    int c;  // column size
     scanf("%d", &c);
 
-    int *stickers[R], // sticker array
-        *dp[R];       // memoization array, dp[_r][0] : dummy
+    int *stickers[R],  // sticker array
+        *dp[R];        // memoization array, dp[_r][0] : dummy
 
     for (int _r = 0; _r < R; _r++) {
-      stickers[_r] = (int *)malloc(sizeof(int) * c);
-      dp[_r] = (int *)calloc(c + 1, sizeof(int));
+      stickers[_r] = (int*)malloc(sizeof(int) * c);
+      dp[_r] = (int*)calloc(c + 1, sizeof(int));
 
       for (int _c = 0; _c < c; _c++)
         scanf("%d", &stickers[_r][_c]);

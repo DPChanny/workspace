@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int n, ns[1'000'000];
+int n, ns[1 '000' 000];
 stack<int> s, ps;
 
 int main(void) {

@@ -5,7 +5,7 @@ using namespace std;
 
 typedef long long int lli;
 
-lli n, m, ns[500'000], ms[500'000];
+lli n, m, ns[500 '000], ms[500' 000];
 
 int main(void) {
   cin >> n >> m;

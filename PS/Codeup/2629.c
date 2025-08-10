@@ -7,12 +7,14 @@ typedef struct City {
   double radius;
 } City;
 
-int compare(const City *a, const City *b) { return a->radius > b->radius; }
+int compare(const City* a, const City* b) {
+  return a->radius > b->radius;
+}
 
 int main(void) {
   int n, p;
   scanf("%d%d", &n, &p);
-  City *cities = (City *)malloc(sizeof(City) * n);
+  City* cities = (City*)malloc(sizeof(City) * n);
   for (int _n = 0; _n < n; _n++) {
     City city;
     scanf("%d%d%d", &city.x, &city.y, &city.p);

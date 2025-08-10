@@ -4,10 +4,10 @@
 #include <string.h>
 #include <time.h>
 
-void wait(const char *message, const char trigger);
+void wait(const char* message, const char trigger);
 
 void main() {
-  const char *asdf = "asdf";
+  const char* asdf = "asdf";
 
   float time;
   int count;
@@ -45,7 +45,7 @@ void main() {
   }
 }
 
-void wait(const char *message, const char trigger) {
+void wait(const char* message, const char trigger) {
   printf("%s", message);
   char buffer;
   while (1) {

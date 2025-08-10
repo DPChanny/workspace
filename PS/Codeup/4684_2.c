@@ -4,7 +4,7 @@
 int main() {
   int n;
   scanf("%d", &n);
-  int *arr = (int *)malloc(sizeof(int) * (n + 2));
+  int* arr = (int*)malloc(sizeof(int) * (n + 2));
   for (int i = 1; i <= n; i++)
     scanf("%d", arr + i);
   arr[0] = arr[n];
@@ -20,9 +20,9 @@ int main() {
       continue;
 
     if ((n + arr[i] - arr[i + 1]) % n == 1)
-      p = i; // 1~n
+      p = i;  // 1~n
     if ((n + arr[i + 1] - arr[i]) % n == 1)
-      q = i - 1; // 0~n-1
+      q = i - 1;  // 0~n-1
   }
 
   // printf("p:%d q:%d\n",p,q);

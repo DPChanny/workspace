@@ -8,10 +8,12 @@ struct E {
   int na, nb, w;
 };
 
-int n, m, us[1'000'000 + 1], s, mw;
-E *es;
+int n, m, us[1 '000' 000 + 1], s, mw;
+E* es;
 
-bool operator<(const E &_a, const E &_b) { return _a.w < _b.w; }
+bool operator<(const E& _a, const E& _b) {
+  return _a.w < _b.w;
+}
 
 int gu(int _n) {
   if (!us[_n])

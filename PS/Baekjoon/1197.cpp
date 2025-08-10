@@ -6,12 +6,16 @@ using namespace std;
 struct line {
   int f, t, w;
 };
-bool operator<(const line &_a, const line &_b) { return _a.w < _b.w; }
+
+bool operator<(const line& _a, const line& _b) {
+  return _a.w < _b.w;
+}
 
 int n, fs[10'001], e, r;
 line ls[1'00'000];
 
-int f(int _n) { return fs[_n] == _n ? _n : fs[_n] = f(fs[_n]); }
+int f(int _n) {
+  return fs[_n] == _n ? _n : fs[_n] = f(fs[_n]); }
 
 int main(void) {
   for (int _f(0); _f < 10'001; _f++)

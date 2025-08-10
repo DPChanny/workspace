@@ -14,7 +14,7 @@ struct b {
 int ns[N][N];
 vector<b> bs;
 
-vector<int> gps(const int &_y, const int &_x) {
+vector<int> gps(const int& _y, const int& _x) {
   bool ps[N + 1]{
       false,
   };
@@ -32,7 +32,7 @@ vector<int> gps(const int &_y, const int &_x) {
   return r;
 }
 
-bool cp(const int &_y, const int &_x, const int &_n) {
+bool cp(const int& _y, const int& _x, const int& _n) {
   for (int __x(0); __x < N; __x++)
     if (ns[_y][__x] == _n)
       return false;

@@ -3,7 +3,7 @@
 
 int dp[20][20][20] = {
     0,
-}; // dp[a][b][c]
+};  // dp[a][b][c]
 
 int w(int _a, int _b, int _c) {
   if (_a <= 0 || _b <= 0 || _c <= 0)

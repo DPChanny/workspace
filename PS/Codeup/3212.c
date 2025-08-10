@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int **graph;
-int *visit;
+int** graph;
+int* visit;
 int v, start;
 
 void find_cycle(int node) {
@@ -22,11 +22,11 @@ void find_cycle(int node) {
 int main() {
   int n, from, to;
   scanf("%d %d", &v, &n);
-  graph = (int **)malloc(sizeof(int *) * (v + 1));
-  visit = (int *)malloc(sizeof(int) * (v + 1));
-  int *count = (int *)malloc(sizeof(int) * (v + 1));
+  graph = (int**)malloc(sizeof(int*) * (v + 1));
+  visit = (int*)malloc(sizeof(int) * (v + 1));
+  int* count = (int*)malloc(sizeof(int) * (v + 1));
   for (int i = 1; i <= v; i++) {
-    graph[i] = (int *)malloc(sizeof(int) * (v + 1));
+    graph[i] = (int*)malloc(sizeof(int) * (v + 1));
     visit[i] = 0;
     count[i] = 0;
     for (int j = 1; j <= v; j++)

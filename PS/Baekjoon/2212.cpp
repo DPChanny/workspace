@@ -9,9 +9,13 @@ struct N {
   bool k;
 };
 
-bool cv(const N &_a, const N &_b) { return _a.v < _b.v; }
+bool cv(const N& _a, const N& _b) {
+  return _a.v < _b.v;
+}
 
-bool cg(const N &_a, const N &_b) { return _a.g > _b.g; }
+bool cg(const N& _a, const N& _b) {
+  return _a.g > _b.g;
+}
 
 N ns[10000];
 

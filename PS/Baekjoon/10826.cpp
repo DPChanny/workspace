@@ -3,7 +3,7 @@
 
 using namespace std;
 
-string Add(string &_a, string &_b);
+string Add(string& _a, string& _b);
 
 int main(void) {
   string f1 = "0";
@@ -25,7 +25,8 @@ int main(void) {
     cout << f2 << endl;
   }
 }
-string Add(string &s1, string &s2) {
+
+string Add(string& s1, string& s2) {
   string result(max(s1.size(), s2.size()), '0');
   bool carry = false;
   for (int i = 0; i < result.size(); i++) {

@@ -5,7 +5,7 @@
 using namespace std;
 
 class BOX {
-public:
+ public:
   int start;
   int end;
   int amount;
@@ -38,7 +38,7 @@ int main(void) {
     sort(boxes[_n].begin(), boxes[_n].end());
   }
 
-  int *amounts = new int[n]{
+  int* amounts = new int[n]{
       0,
   };
   int count = 0;

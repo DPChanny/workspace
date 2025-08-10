@@ -44,12 +44,12 @@ int make_1(int n) {
   }
 
   switch (n) {
-  case 1:
-    return 0;
-  case 2:
-    return 1;
-  case 3:
-    return 1;
+    case 1:
+      return 0;
+    case 2:
+      return 1;
+    case 3:
+      return 1;
   }
 }
 

@@ -12,10 +12,10 @@ int main(void) {
 
   scanf("%d", &n);
 
-  int **rgb = (int **)malloc(sizeof(int *) * n);
-  int **rgb_cal = (int **)malloc(sizeof(int *) * n);
+  int** rgb = (int**)malloc(sizeof(int*) * n);
+  int** rgb_cal = (int**)malloc(sizeof(int*) * n);
   for (int i = 0; i < n; i++) {
-    rgb[i] = (int *)malloc(sizeof(int) * 3);
+    rgb[i] = (int*)malloc(sizeof(int) * 3);
   }
 
   for (int i = 0; i < n; i++) {
@@ -23,7 +23,7 @@ int main(void) {
   }
 
   for (int i = 0; i < n; i++) {
-    rgb_cal[i] = (int *)malloc(sizeof(int) * 3);
+    rgb_cal[i] = (int*)malloc(sizeof(int) * 3);
   }
   for (int j = 0; j < 3; j++) {
     rgb_cal[0][j] = rgb[0][j];

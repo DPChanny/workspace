@@ -7,11 +7,13 @@ using namespace std;
 struct line {
   int n, s, e;
 };
-bool operator<(const line &_a, const line &_b) {
+
+bool operator<(const line& _a, const line& _b) {
   if (_a.s == _b.s)
     return _a.e > _b.e;
   return _a.s < _b.s;
 }
+
 vector<line> ls;
 
 int n, m, bs, be;

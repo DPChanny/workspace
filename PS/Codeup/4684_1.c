@@ -3,11 +3,11 @@
 
 int main(void) {
   int n;
-  int *ns;
+  int* ns;
 
   scanf("%d", &n);
 
-  ns = (int *)malloc(sizeof(int) * (n + 2));
+  ns = (int*)malloc(sizeof(int) * (n + 2));
   for (int i = 1; i < n + 1; i++)
     scanf(" %d", &ns[i]);
   ns[0] = ns[n];

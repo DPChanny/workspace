@@ -7,10 +7,13 @@ typedef long long int lli;
 typedef pair<lli, lli> P;
 #define pf first
 #define ps second
-P operator+(P _a, P _b) { return {_a.pf + _b.pf, _a.ps + _b.ps}; }
+
+P operator+(P _a, P _b) {
+  return {_a.pf + _b.pf, _a.ps + _b.ps};
+}
 
 class N {
-public:
+ public:
   P p;
   lli k;
 
@@ -20,7 +23,7 @@ public:
 };
 
 lli y, x, k, nss, r;
-bool yxs[1'000][1'000], yxvs[11][1'000][1'000], f;
+bool yxs[1 '000][1' 000], yxvs[11][1 '000][1' 000], f;
 queue<N> ns;
 N cn, nn;
 vector<P> vs({{1, 0}, {0, 1}, {-1, 0}, {0, -1}});

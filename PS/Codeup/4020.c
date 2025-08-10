@@ -9,40 +9,40 @@ typedef struct HeliportInfo {
 const HeliportInfo NULL_INFO = {NULL, NULL};
 const HeliportInfo MAX_INFO = {2147483647, 2147483647};
 
-HeliportInfo *infos;
+HeliportInfo* infos;
 
-// Çï±â°¡ ÃÖ´ë·Î °¥¼öÀÖ´Â °Å¸®
+// ï¿½ï¿½â°¡ ï¿½Ö´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Å¸ï¿½
 int max_distance;
-// Á¤·ùÀåÀÇ °³¼ö
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 int heliport_count;
-// Á¤·ùÀå »çÀÌÀÇ °Å¸®
-int *distances;
-// Á¤·ùÀåÀ» °æÀ¯ÇÏ´Âµ¥ °É¸®´Â ½Ã°£
-int *times;
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½
+int* distances;
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Âµï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½
+int* times;
 
 HeliportInfo get_min_time(int _n);
 
 int main(void) {
-  // ÀÔ·Â
+  // ï¿½Ô·ï¿½
   scanf("%d", &max_distance);
   scanf(" %d", &heliport_count);
 
-  infos = (HeliportInfo *)malloc(sizeof(HeliportInfo) * heliport_count);
+  infos = (HeliportInfo*)malloc(sizeof(HeliportInfo) * heliport_count);
   for (int i = 0; i < heliport_count; i++) {
     infos[i] = NULL_INFO;
   }
 
-  distances = (int *)malloc(sizeof(int) * (heliport_count + 1));
+  distances = (int*)malloc(sizeof(int) * (heliport_count + 1));
   for (int i = 0; i < (heliport_count + 1); i++) {
     scanf(" %d", &distances[i]);
   }
 
-  times = (int *)malloc(sizeof(int) * (heliport_count));
+  times = (int*)malloc(sizeof(int) * (heliport_count));
   for (int i = 0; i < heliport_count; i++) {
     scanf(" %d", &times[i]);
   }
 
-  // Ã³¸®
+  // Ã³ï¿½ï¿½
   int cur_distance = 0;
   HeliportInfo min_info = MAX_INFO;
   for (int i = heliport_count; i >= 0; i--) {

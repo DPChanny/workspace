@@ -3,11 +3,11 @@
 
 int main(void) {
   int count;
-  int *locked;
+  int* locked;
 
   scanf("%d", &count);
 
-  locked = (int *)malloc(sizeof(int) * count);
+  locked = (int*)malloc(sizeof(int) * count);
   for (int i = 0; i < count; i++) {
     scanf(" %d", &locked[i]);
   }

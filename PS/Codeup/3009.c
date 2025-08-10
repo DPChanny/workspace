@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int n, s;
-int *ns;
+int* ns;
 
 int dfs(int _n, int _s, int _c) {
   if (_n == n) {
@@ -20,7 +20,7 @@ int dfs(int _n, int _s, int _c) {
 int main(void) {
   scanf("%d%d", &n, &s);
 
-  ns = (int *)malloc(sizeof(int) * n);
+  ns = (int*)malloc(sizeof(int) * n);
   for (int _n = 0; _n < n; _n++) {
     scanf("%d", &ns[_n]);
   }

@@ -8,7 +8,8 @@ uint32_t n, bf, bt;
 uint64_t c;
 bool vs[500'000]{
     true,
-};
+}
+;
 
 void gc(uint32_t _f, uint64_t _c) {
   bool f(false);

@@ -5,13 +5,13 @@
 using namespace std;
 
 class S {
-public:
+ public:
   unsigned int s;
   unsigned int e;
 
   S(unsigned int _s, unsigned int _e) : s(_s), e(_e) {}
 
-  bool operator<(const S &_session) {
+  bool operator<(const S& _session) {
     if (this->e == _session.e) {
       return this->s < _session.s;
     }

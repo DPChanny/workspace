@@ -12,10 +12,10 @@ int main(void) {
   int n;
   cin >> n;
 
-  N *ns = new N[n];
+  N* ns = new N[n];
   for (int _n(0); _n < n; _n++)
     cin >> ns[_n].v;
-  int *dp = new int[n];
+  int* dp = new int[n];
   for (int _n(0); _n < n; _n++) {
     int max(-1);
     for (int i(0); i < _n; i++)

@@ -7,9 +7,9 @@ int main(void) {
 
   scanf("%d %d", &height, &width);
 
-  int **board = (int **)malloc(sizeof(int *) * height);
+  int** board = (int**)malloc(sizeof(int*) * height);
   for (int i = 0; i < height; i++) {
-    board[i] = (int *)malloc(sizeof(int) * width);
+    board[i] = (int*)malloc(sizeof(int) * width);
   }
 
   for (int i = 0; i < height; i++) {

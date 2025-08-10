@@ -8,16 +8,16 @@ int get_i_m(int _i, int _count);
 
 int main(void) {
   int count;
-  int *locked;
+  int* locked;
 
   scanf("%d", &count);
 
-  locked = (int *)malloc(sizeof(int) * count);
+  locked = (int*)malloc(sizeof(int) * count);
   for (int i = 0; i < count; i++) {
     scanf(" %d", &locked[i]);
   }
 
-  int *locked_stat = (int *)malloc(sizeof(int) * count);
+  int* locked_stat = (int*)malloc(sizeof(int) * count);
 
   int i_p;
   int i_m;

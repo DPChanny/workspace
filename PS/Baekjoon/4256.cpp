@@ -5,7 +5,7 @@ using namespace std;
 
 typedef long long int lli;
 
-lli t, n, nps[1'000], nis[1'000];
+lli t, n, nps[1 '000], nis[1' 000];
 
 void pr(lli _npl, lli _npr, lli _nil, lli _nir) {
   if (_npr == _npl)

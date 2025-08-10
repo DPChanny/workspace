@@ -1,5 +1,5 @@
-#include <iostream>
 #include <math.h>
+#include <iostream>
 using namespace std;
 double xys[10000][2];
 

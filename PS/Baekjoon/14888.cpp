@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int n, ns[11], a, b, c, d, h(-1'000'000'000), l(1'000'000'000);
+int n, ns[11], a, b, c, d, h(-1 '000' 000 '000), l(1' 000 '000' 000);
 
 void ghl(int _a, int _b, int _c, int _d, int _n, int _t) {
   if (_n == n) {

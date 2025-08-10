@@ -10,7 +10,9 @@ uint64_t gilc() {
   return (m + (m * (m - 3) / 2)) * n;
 }
 
-uint64_t golc() { return (n * m * m * (n - 1)) / 2; }
+uint64_t golc() {
+  return (n * m * m * (n - 1)) / 2;
+}
 
 int32_t main(void) {
   ios::sync_with_stdio(false);

@@ -6,7 +6,7 @@
 using namespace std;
 
 int t, s, a, b, cq, nq, h, l;
-bool pns[10'000], pnvs[10'000];
+bool pns[10 '000], pnvs[10' 000];
 
 int main(void) {
   for (int _pn(2); _pn * _pn < 10'000; _pn++)

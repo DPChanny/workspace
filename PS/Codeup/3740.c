@@ -11,12 +11,12 @@ int main(void) {
   int n, w;
   scanf("%d%d", &n, &w);
 
-  Item *items = (Item *)malloc(sizeof(Item) * n);
+  Item* items = (Item*)malloc(sizeof(Item) * n);
   for (int _n = 0; _n < n; _n++) {
     scanf("%d%d", &items[_n].w, &items[_n].v);
   }
 
-  int *prices = (int *)calloc(w + 1, sizeof(int));
+  int* prices = (int*)calloc(w + 1, sizeof(int));
   for (int _w = 1; _w < w + 1; _w++) {
     prices[_w] = NC;
   }

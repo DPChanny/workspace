@@ -3,7 +3,7 @@
 
 #define max(a, b) (((a) > (b)) ? (a) : (b))
 
-int *ns;
+int* ns;
 int b, n;
 
 int dfs(int _n, int _price, int _price_before) {
@@ -19,7 +19,7 @@ int dfs(int _n, int _price, int _price_before) {
 
 int main(void) {
   scanf("%d%d", &b, &n);
-  ns = (int *)malloc(sizeof(int) * n);
+  ns = (int*)malloc(sizeof(int) * n);
   for (int _n = 0; _n < n; _n++) {
     scanf("%d", &ns[_n]);
   }

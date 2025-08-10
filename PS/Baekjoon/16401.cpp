@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int m, n, ns[1'000'000];
+int m, n, ns[1 '000' 000];
 
 int gc(int _l) {
   int c(0);

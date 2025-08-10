@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int upper_bound(const int *_ns, const int _n, const int _t) {
+int upper_bound(const int* _ns, const int _n, const int _t) {
   int s(0), e(_n), m;
   while (s != e) {
     m = (s + e) / 2;
@@ -15,7 +15,7 @@ int upper_bound(const int *_ns, const int _n, const int _t) {
   return e;
 }
 
-int lower_bound(const int *_ns, const int _n, const int _t) {
+int lower_bound(const int* _ns, const int _n, const int _t) {
   int s(0), e(_n), m;
   while (s != e) {
     m = (s + e) / 2;

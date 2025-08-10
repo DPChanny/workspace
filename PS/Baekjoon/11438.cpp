@@ -5,7 +5,7 @@ constexpr int MAX_ST(20);
 
 using namespace std;
 
-int n, m, ba, bb, st[MAX_ST][100'000], ds[100'000];
+int n, m, ba, bb, st[MAX_ST][100 '000], ds[100' 000];
 vector<int> es[100'000];
 
 void gst(const int &_n, const int &_p, const int &_d) {

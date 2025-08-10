@@ -4,9 +4,9 @@
 
 using namespace std;
 
-vector<int> ns[1'000'000];
-bool nvs[1'000'000];
-int ngs[1'000'000], n, m, bf, bt, g, t, k;
+vector<int> ns[1 '000' 000];
+bool nvs[1 '000' 000];
+int ngs[1 '000' 000], n, m, bf, bt, g, t, k;
 
 void dfs(int _f, int _g) {
   nvs[_f] = true;

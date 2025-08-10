@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int get_length(int *_nums, int *_nums_cal, int _n);
+int get_length(int* _nums, int* _nums_cal, int _n);
 
 int main(void) {
   int count = 0;
   scanf("%d", &count);
 
-  int *nums = (int *)malloc(sizeof(int) * count);
-  int *nums_cal = (int *)calloc(count, sizeof(int));
+  int* nums = (int*)malloc(sizeof(int) * count);
+  int* nums_cal = (int*)calloc(count, sizeof(int));
 
   for (int i = 0; i < count; i++) {
     scanf(" %d", &nums[i]);
@@ -25,7 +25,7 @@ int main(void) {
   printf("%d", max);
 }
 
-int get_length(int *_nums, int *_nums_cal, int _n) {
+int get_length(int* _nums, int* _nums_cal, int _n) {
   if (_nums_cal[_n] == 0) {
     int max = 0;
     for (int i = 0; i < _n; i++) {

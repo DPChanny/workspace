@@ -21,7 +21,7 @@ int main(void) {
   queue<Point2> queue;
 
   // tomatoes[y][x];
-  int **tomatoes = new int *[y_size];
+  int** tomatoes = new int*[y_size];
   for (int _y = 0; _y < y_size; _y++) {
     tomatoes[_y] = new int[x_size];
     for (int _x = 0; _x < x_size; _x++) {

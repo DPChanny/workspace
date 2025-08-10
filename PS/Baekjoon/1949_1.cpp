@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int n, bf, bt, ns[10'000], dps[10'000][2];
+int n, bf, bt, ns[10 '000], dps[10' 000][2];
 vector<int> es[10'000];
 
 int dp(int _p, int _n, bool _g) {

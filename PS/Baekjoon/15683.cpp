@@ -17,10 +17,11 @@ constexpr pair<int, int> u = {1, 0};
 constexpr pair<int, int> d = {-1, 0};
 constexpr int w = 6;
 
-pair<int, int> operator+(const pair<int, int> &_a, const pair<int, int> &_b) {
+pair<int, int> operator+(const pair<int, int>& _a, const pair<int, int>& _b) {
   return {_a.py + _b.py, _a.px + _b.px};
 }
-pair<int, int> operator*(const int &_a, const pair<int, int> &_b) {
+
+pair<int, int> operator*(const int& _a, const pair<int, int>& _b) {
   return {_a * _b.py, _a * _b.px};
 }
 
@@ -34,7 +35,7 @@ vector<c> cs;
 
 int y, x, yxs[8][8], yxvs[8][8], mr(64);
 
-bool cp(const pair<int, int> &_a) {
+bool cp(const pair<int, int>& _a) {
   return _a.px + 1 > 0 && _a.px < x && _a.py + 1 > 0 && _a.py < y &&
          yxs[_a.py][_a.px] != w;
 }
@@ -49,7 +50,7 @@ void grm(int _c) {
     mr = min(mr, r);
     return;
   }
-  c &c = cs[_c];
+  c& c = cs[_c];
   pair<int, int> p;
   for (int _i(0); _i < dcs[c.t].first; _i++) {
     for (int _j(0); _j < dcs[c.t].second; _j++)

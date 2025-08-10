@@ -5,7 +5,9 @@ using namespace std;
 int n, b;
 string a;
 
-bool gc(int _n) { return (((_n / 8) + (_n % 8 ? 1 : 0)) % 2 == _n % 2); }
+bool gc(int _n) {
+  return (((_n / 8) + (_n % 8 ? 1 : 0)) % 2 == _n % 2);
+}
 
 int main(void) {
   cin >> n;

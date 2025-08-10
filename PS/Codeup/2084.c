@@ -3,12 +3,12 @@
 
 int main(void) {
   int n_count;
-  int *nums;
+  int* nums;
   int a_count;
 
   scanf("%d", &n_count);
 
-  nums = (int *)malloc(sizeof(int) * n_count);
+  nums = (int*)malloc(sizeof(int) * n_count);
 
   for (int i = 0; i < n_count; i++) {
     scanf(" %d", &nums[i]);

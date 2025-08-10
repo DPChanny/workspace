@@ -5,9 +5,9 @@
 #define TRUE 1
 #define FALSE 0
 
-int n;       // 학생수
-int **graph; // 키 관계도
-int *visited;
+int n;        // 학생수
+int** graph;  // 키 관계도
+int* visited;
 
 int dfs(int _from) {
   if (visited[_from] == 1) {
@@ -43,9 +43,9 @@ int main(void) {
   scanf("%d %d", &n, &m);
 
   // graph[from][to]
-  graph = (int **)malloc(sizeof(int *) * n);
+  graph = (int**)malloc(sizeof(int*) * n);
   for (int from = 0; from < n; from++) {
-    graph[from] = (int *)calloc(n, sizeof(int));
+    graph[from] = (int*)calloc(n, sizeof(int));
   }
 
   // 그래프 입력
@@ -58,7 +58,7 @@ int main(void) {
   // 키 순서 판별 가능 학생수
   int count = 0;
 
-  visited = (int *)calloc(n, sizeof(int));
+  visited = (int*)calloc(n, sizeof(int));
   for (int _n = 0; _n < n; _n++) {
     //_n번째 학생 보다 키가 작은 학생수
     int shorter = dfs_reverse(_n) - 1;

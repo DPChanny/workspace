@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int n, bf, bt, ns[10'000], dps[10'000];
+int n, bf, bt, ns[10 '000], dps[10' 000];
 vector<int> es[10'000];
 
 int gdp(int _p, int _f, int _n);

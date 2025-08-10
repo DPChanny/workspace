@@ -9,14 +9,15 @@ bool ns[200][200];
 
 struct N {
   int y, x, k;
-  N operator+(const N &_n) { return {y + _n.y, x + _n.x, k + _n.k}; }
+
+  N operator+(const N& _n) { return {y + _n.y, x + _n.x, k + _n.k}; }
 };
 
 const N ds[12] = {{1, 2, -1}, {-1, 2, -1}, {1, -2, -1}, {-1, -2, -1},
                   {2, 1, -1}, {2, -1, -1}, {-2, 1, -1}, {-2, -1, -1},
                   {1, 0, 0},  {-1, 0, 0},  {0, 1, 0},   {0, -1, 0}};
 
-bool check(const N &_n) {
+bool check(const N& _n) {
   return _n.y + 1 > 0 && _n.y < y && _n.x + 1 > 0 && _n.x < x &&
          !ns[_n.y][_n.x] && !vs[_n.y][_n.x][_n.k];
 }

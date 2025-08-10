@@ -6,14 +6,14 @@
 using namespace std;
 
 class D {
-public:
+ public:
   int n;
   int x;
   bool f;
 
   D(int _n, int _x, bool _f) : n(_n), x(_x), f(_f) {}
 
-  bool operator<(const D &_d) { return this->x < _d.x; }
+  bool operator<(const D& _d) { return this->x < _d.x; }
 };
 
 int main(void) {

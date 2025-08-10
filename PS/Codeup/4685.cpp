@@ -9,24 +9,26 @@
 using namespace std;
 
 typedef struct Code {
-  int value;            // ÄÚµå °ª
-  int order;            // ÀÔ·Â ¼ø¼­
-  vector<Code *> codes; // ÀÌµ¿ °¡´É ÄÚµå
+  int value;            // ï¿½Úµï¿½ ï¿½ï¿½
+  int order;            // ï¿½Ô·ï¿½ ï¿½ï¿½ï¿½ï¿½
+  vector<Code*> codes;  // ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½
   bool visit;
-  Code *before;
+  Code* before;
 } Code;
 
-bool compare(Code *a, Code *b) { return a->value < b->value; }
+bool compare(Code* a, Code* b) {
+  return a->value < b->value;
+}
 
 int main(void) {
-  // ÄÚµå °³¼ö, ÄÚµå ±æÀÌ
+  // ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
   int n, k;
   cin >> n >> k;
 
-  // ÄÚµå ½ÊÁø¼ö º¯È¯ ÀÔ·Â
-  Code **codes = new Code *[n];
+  // ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½Ô·ï¿½
+  Code** codes = new Code*[n];
   for (int _n = 0; _n < n; _n++) {
-    Code *code = new Code;
+    Code* code = new Code;
 
     getchar();
     int value = 0;
@@ -45,14 +47,14 @@ int main(void) {
   cin >> buf1 >> buf2;
   buf1--;
   buf2--;
-  Code *start_code = codes[buf1];
-  Code *end_code = codes[buf2];
+  Code* start_code = codes[buf1];
+  Code* end_code = codes[buf2];
 
-  queue<Code *> queue;
+  queue<Code*> queue;
   start_code->visit = true;
   queue.push(start_code);
 
-  // ÄÚµå ¿À¸§Â÷¼ø Á¤·Ä
+  // ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
   sort(codes, codes + n, compare);
 
 #ifdef DEBUG
@@ -63,14 +65,14 @@ int main(void) {
 #endif
 
   for (int _n = 0; _n < n; _n++) {
-    // Áßº¹ ÀÌµ¿ °¡´É ÄÚµå Á¦°Å¸¦ À§ÇÑ temp
+    // ï¿½ßºï¿½ ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½ï¿½ temp
     int temp = codes[_n]->value;
     for (int _k = 0; _k < k; _k++) {
-      //_k¹øÂ° ºñÆ®°¡ 1 ÀÌ¸é ¿¬»ê
+      //_kï¿½ï¿½Â° ï¿½ï¿½Æ®ï¿½ï¿½ 1 ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½
       if (temp & 1) {
-        // ÇöÀç ÄÚµå¿¡¼­ _k ¹øÂ° ºñÆ®¸¦ 0À¸·Î ¹Ù²Þ
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¿¡ï¿½ï¿½ _k ï¿½ï¿½Â° ï¿½ï¿½Æ®ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
         int target = codes[_n]->value - (1 << _k);
-        // ÀÌºÐÅ½»öÀ¸·Î target ÄÚµå Å½»ö
+        // ï¿½Ìºï¿½Å½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ target ï¿½Úµï¿½ Å½ï¿½ï¿½
         int _start = 0;
         int _end = _n - 1;
         while (_start != _end) {
@@ -101,9 +103,9 @@ int main(void) {
   }
 #endif
 
-  // BFS·Î before Æ÷ÀÎÅÍ ¿¬°á ¹× visit ¾÷µ¥ÀÌÆ®
+  // BFSï¿½ï¿½ before ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ visit ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
   while (queue.size()) {
-    Code *code = queue.front();
+    Code* code = queue.front();
     queue.pop();
 
 #ifdef DEBUG
@@ -126,7 +128,7 @@ int main(void) {
 
   if (end_code->visit) {
     string out = "";
-    Code *code = end_code;
+    Code* code = end_code;
 #ifdef DEBUG
     cout << endl;
     cout << "order: " << code->order << endl;

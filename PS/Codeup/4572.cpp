@@ -5,7 +5,7 @@
 #include <vector>
 
 int h, w;
-int **map;
+int** map;
 std::vector<int> area;
 int count;
 
@@ -30,9 +30,9 @@ int main(void) {
   int k;
   scanf("%d %d %d", &h, &w, &k);
 
-  map = (int **)malloc(sizeof(int *) * h);
+  map = (int**)malloc(sizeof(int*) * h);
   for (int _h = 0; _h < h; _h++) {
-    map[_h] = (int *)calloc(w, sizeof(int));
+    map[_h] = (int*)calloc(w, sizeof(int));
   }
 
   for (int _k = 0; _k < k; _k++) {

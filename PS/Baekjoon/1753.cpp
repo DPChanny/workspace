@@ -4,7 +4,7 @@
 
 using namespace std;
 
-constexpr int INF = 1'000'000;
+constexpr int INF = 1 '000' 000;
 #define ev first
 #define ew second
 
@@ -13,8 +13,10 @@ vector<pair<int, int>> es[20'000 + 1];
 bool vus[20'000 + 1];
 
 struct compare {
-  bool operator()(const int &_a, const int &_b) { return ds[_a] > ds[_b]; }
-};
+  bool operator()(const int &_a, const int &_b) { return ds[_a] > ds[_b];
+}
+}
+;
 
 int main(void) {
   ios::sync_with_stdio(false);

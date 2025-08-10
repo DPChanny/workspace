@@ -7,7 +7,7 @@ int main(void) {
 
   // 입력
   scanf("%d %d", &card_count, &black_jack_num);
-  int *cards = (int *)malloc(sizeof(int) * card_count);
+  int* cards = (int*)malloc(sizeof(int) * card_count);
 
   for (int i = 0; i < card_count; i++) {
     scanf("%d", &cards[i]);

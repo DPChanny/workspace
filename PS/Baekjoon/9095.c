@@ -9,7 +9,7 @@ int sum(int arr[]);
 int main(void) {
   int t = 0;
   scanf("%d", &t);
-  int *inputs = (int *)malloc(sizeof(int) * t);
+  int* inputs = (int*)malloc(sizeof(int) * t);
   for (int i = 0; i < t; i++) {
     scanf("%d", &inputs[i]);
   }

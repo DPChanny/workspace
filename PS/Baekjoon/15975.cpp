@@ -15,7 +15,7 @@ int32_t main(void) {
     ns[bc - 1].push_back(bx);
   }
   for (uint32_t _n(0u); _n < n; _n++) {
-    vector<uint32_t> &xs = ns[_n];
+    vector<uint32_t>& xs = ns[_n];
     if (xs.size() > 1) {
       sort(xs.begin(), xs.end());
       l += xs[1u] - xs[0u];

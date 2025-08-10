@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int count = 0;
-// queen[i]: i¿­ ÄıÀÇ Çà ÀÎµ¦½º
+// queen[i]: iì—´ í€¸ì˜ í–‰ ì¸ë±ìŠ¤
 int* queen;
 int n;
 
@@ -19,9 +19,9 @@ int dfs(int _n) {
   }
 
   for (int i = 0; i < n; i++) {
-    // iÇà Äı ¹èÄ¡ °¡´É ¿©ºÎ
+    // ií–‰ í€¸ ë°°ì¹˜ ê°€ëŠ¥ ì—¬ë¶€
     int flag = 0;
-    // j¿­
+    // jì—´
     for (int j = 0; j < _n; j++) {
       int distance = _n - j;
       if (queen[j] == i || queen[j] == i - distance ||

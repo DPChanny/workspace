@@ -32,13 +32,13 @@ void dfs(int _y, int _x, int _height) {
 }
 
 int main(void) {
-  // Å©±â ÀÔ·Â
+  // í¬ê¸° ì…ë ¥
   scanf("%d", &n);
 
-  // ³ôÀÌ ÀÔ·Â
+  // ë†’ì´ ì…ë ¥
   heights = (int**)malloc(sizeof(int*) * n);
-  int max_height = MIN_HEIGHT;  // °¡Àå ³ôÀº ³ôÀÌ
-  int min_height = MAX_HEIGHT;  // °¡Àå ³·Àº ³ôÀÌ
+  int max_height = MIN_HEIGHT;  // ê°€ì¥ ë†’ì€ ë†’ì´
+  int min_height = MAX_HEIGHT;  // ê°€ì¥ ë‚®ì€ ë†’ì´
   for (int y = 0; y < n; y++) {
     heights[y] = (int*)malloc(sizeof(int) * n);
     for (int x = 0; x < n; x++) {
@@ -48,19 +48,19 @@ int main(void) {
     }
   }
 
-  // Å½»öÇÑ À§Ä¡ ÀúÀå
+  // íƒìƒ‰í•œ ìœ„ì¹˜ ì €ì¥
   visited = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
     visited[_n] = (int*)calloc(n, sizeof(int));
   }
 
-  // °¡Àå ¸¹Àº ¾ÈÀüÇÑ Áö¿ª °³¼ö
+  // ê°€ì¥ ë§ì€ ì•ˆì „í•œ ì§€ì—­ ê°œìˆ˜
   int max_count = MIN_COUNT;
   for (int _height = min_height; _height < max_height + 1; _height++) {
-    // ¾ÈÀüÇÑ Áö¿ª °³¼ö
+    // ì•ˆì „í•œ ì§€ì—­ ê°œìˆ˜
     int count = 0;
 
-    // ¾ÈÀüÇÑ Áö¿ª °³¼ö Å½»ö
+    // ì•ˆì „í•œ ì§€ì—­ ê°œìˆ˜ íƒìƒ‰
     for (int y = 0; y < n; y++) {
       for (int x = 0; x < n; x++) {
         if (visited[y][x])
@@ -72,19 +72,19 @@ int main(void) {
       }
     }
 
-    // °¡Àå ¸¹Àº ¾ÈÀüÇÑ Áö¿ª °³¼ö ¾÷µ¥ÀÌÆ®
+    // ê°€ì¥ ë§ì€ ì•ˆì „í•œ ì§€ì—­ ê°œìˆ˜ ì—…ë°ì´íŠ¸
     max_count = max_count < count ? count : max_count;
 
-    // Å½»öÇÑ À§Ä¡ ÃÊ±âÈ­
+    // íƒìƒ‰í•œ ìœ„ì¹˜ ì´ˆê¸°í™”
     for (int _n = 0; _n < n; _n++) {
       memset(visited[_n], FALSE, sizeof(int) * n);
     }
   }
 
-  // °¡Àå ¸¹Àº ¾ÈÀüÇÑ Áö¿ª °³¼ö Ãâ·Â
+  // ê°€ì¥ ë§ì€ ì•ˆì „í•œ ì§€ì—­ ê°œìˆ˜ ì¶œë ¥
   printf("%d", max_count);
 
-  // µ¿Àû ÇÒ´ç ÇØÁ¦
+  // ë™ì  í• ë‹¹ í•´ì œ
   for (int _n = 0; _n < n; _n++) {
     free(heights[_n]);
     free(visited[_n]);

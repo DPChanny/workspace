@@ -22,10 +22,10 @@ int main(void) {
   int** map;
   int** went;
 
-  // �Է� 1
+  // 占쌉뤄옙 1
   scanf("%d %d", &n, &m);
 
-  // ���� �Ҵ�
+  // 占쏙옙占쏙옙 占쌀댐옙
   map = (int**)malloc(sizeof(int*) * n);
   went = (int**)malloc(sizeof(int*) * n);
   for (int _n = 0; _n < n; _n++) {
@@ -33,7 +33,7 @@ int main(void) {
     went[_n] = (int*)calloc(m, sizeof(int));
   }
 
-  // �Է� 2
+  // 占쌉뤄옙 2
   for (int _n = 0; _n < n; _n++) {
     for (int _m = 0; _m < m; _m++) {
       scanf("%d", &map[_n][_m]);
@@ -78,7 +78,7 @@ int main(void) {
     printf("0");
   }
 
-  // ���� �Ҵ� ����
+  // 占쏙옙占쏙옙 占쌀댐옙 占쏙옙占쏙옙
   for (int _n = 0; _n < n; _n++) {
     free(map[_n]);
     free(went[_n]);

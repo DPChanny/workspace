@@ -4,9 +4,9 @@
 
 using namespace std;
 
-bool** graph;  // °ü°èÇ¥
-bool* visit;   // visit[i] i¹øÂ° ÀÎ¿ø Å½»ö ¿©ºÎ
-int n;         // ÀÎ¿ø¼ö
+bool** graph;  // ê´€ê³„í‘œ
+bool* visit;   // visit[i] ië²ˆì§¸ ì¸ì› íƒìƒ‰ ì—¬ë¶€
+int n;         // ì¸ì›ìˆ˜
 
 void searchGroup(int _from, vector<int>* _group) {
   if (visit[_from]) {
@@ -59,7 +59,7 @@ int searchMaxTime(vector<int>* _group, int _main) {
 }
 
 int main(void) {
-  int m;  // °ü°è¼ö
+  int m;  // ê´€ê³„ìˆ˜
   cin >> n >> m;
 
   // graph[from][to]
@@ -83,8 +83,8 @@ int main(void) {
       false,
   };
 
-  vector<vector<int>*> groups;  // À§¿øÈ¸ ÀÎ¿ø
-  vector<int> mains;            // À§¿øÈ¸ ´ëÇ¥
+  vector<vector<int>*> groups;  // ìœ„ì›íšŒ ì¸ì›
+  vector<int> mains;            // ìœ„ì›íšŒ ëŒ€í‘œ
 
   for (int _n = 0; _n < n; _n++) {
     if (!visit[_n]) {

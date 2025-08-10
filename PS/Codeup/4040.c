@@ -8,7 +8,7 @@ int main(void) {
   int arrival_day;
   int departure_day;
 
-  // ÀÔ·Â
+  // ìž…ë ¥
   scanf("%d %d", &day_count, &room_count);
   room_status = (char**)malloc(sizeof(char*) * day_count);
   for (int i = 0; i < day_count; i++) {
@@ -23,7 +23,7 @@ int main(void) {
   arrival_day--;
   departure_day--;
 
-  // Ã³¸®
+  // ì²˜ë¦¬
   int count = 0;
   int cur_day = arrival_day;
 
@@ -52,6 +52,6 @@ int main(void) {
     count++;
   }
 
-  // Ãâ·Â
+  // ì¶œë ¥
   printf("%d", count - 1);
 }

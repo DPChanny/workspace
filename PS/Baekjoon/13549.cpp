@@ -20,25 +20,25 @@ int main(void) {
                  greater<pair<int, int>>>
       q;
   cin >> n >> k;
-  q.emplace(0, n);  // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
+  q.emplace(0, n);  // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
   while (true) {
-    cp = q.top().second;  // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
-    ct = q.top().first;   // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
+    cp = q.top().second;  // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
+    ct = q.top().first;   // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
     q.pop();
     if (cp == k) {
       cout << ct;
       break;
     }
     if (cp * 2 < MAX && ct < vs[cp * 2]) {
-      q.emplace(ct, cp * 2);  // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
+      q.emplace(ct, cp * 2);  // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
       vs[cp * 2] = ct;
     }
     if (cp + 1 < MAX && ct < vs[cp + 1]) {
-      q.emplace(ct + 1, cp + 1);  // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
+      q.emplace(ct + 1, cp + 1);  // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
       vs[cp + 1] = ct;
     }
     if (cp - 1 >= 0 && ct < vs[cp - 1]) {
-      q.emplace(ct + 1, cp - 1);  // ¸Å°³º¯¼ö ¼ø¼­ º¯°æ
+      q.emplace(ct + 1, cp - 1);  // ë§¤ê°œë³€ìˆ˜ ìˆœì„œ ë³€ê²½
       vs[cp - 1] = ct;
     }
   }

@@ -5,8 +5,8 @@
 #define TRUE 1
 #define FALSE 0
 
-int n;        // ÇĞ»ı¼ö
-int** graph;  // Å° °ü°èµµ
+int n;        // í•™ìƒìˆ˜
+int** graph;  // í‚¤ ê´€ê³„ë„
 int* visited;
 
 int dfs(int _from) {
@@ -38,7 +38,7 @@ int dfs_reverse(int _to) {
 }
 
 int main(void) {
-  // ºñ±³È½¼ö
+  // ë¹„êµíšŸìˆ˜
   int m;
   scanf("%d %d", &n, &m);
 
@@ -48,21 +48,21 @@ int main(void) {
     graph[from] = (int*)calloc(n, sizeof(int));
   }
 
-  // ±×·¡ÇÁ ÀÔ·Â
+  // ê·¸ë˜í”„ ì…ë ¥
   for (int _m = 0; _m < m; _m++) {
     int from, to;
     scanf("%d %d", &from, &to);
     graph[--from][--to] = TRUE;
   }
 
-  // Å° ¼ø¼­ ÆÇº° °¡´É ÇĞ»ı¼ö
+  // í‚¤ ìˆœì„œ íŒë³„ ê°€ëŠ¥ í•™ìƒìˆ˜
   int count = 0;
 
   visited = (int*)calloc(n, sizeof(int));
   for (int _n = 0; _n < n; _n++) {
-    //_n¹øÂ° ÇĞ»ı º¸´Ù Å°°¡ ÀÛÀº ÇĞ»ı¼ö
+    //_në²ˆì§¸ í•™ìƒ ë³´ë‹¤ í‚¤ê°€ ì‘ì€ í•™ìƒìˆ˜
     int shorter = dfs_reverse(_n) - 1;
-    //_n¹øÂ° ÇĞ»ı º¸´Ù Å°°¡ Å« ÇĞ»ı¼ö
+    //_në²ˆì§¸ í•™ìƒ ë³´ë‹¤ í‚¤ê°€ í° í•™ìƒìˆ˜
     int taller = dfs(_n) - 1;
     if (shorter + taller == n - 1) {
       count++;

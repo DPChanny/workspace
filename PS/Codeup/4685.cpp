@@ -9,9 +9,9 @@
 using namespace std;
 
 typedef struct Code {
-  int value;            // �ڵ� ��
-  int order;            // �Է� ����
-  vector<Code*> codes;  // �̵� ���� �ڵ�
+  int value;            // 占쌘듸옙 占쏙옙
+  int order;            // 占쌉뤄옙 占쏙옙占쏙옙
+  vector<Code*> codes;  // 占싱듸옙 占쏙옙占쏙옙 占쌘듸옙
   bool visit;
   Code* before;
 } Code;
@@ -21,11 +21,11 @@ bool compare(Code* a, Code* b) {
 }
 
 int main(void) {
-  // �ڵ� ����, �ڵ� ����
+  // 占쌘듸옙 占쏙옙占쏙옙, 占쌘듸옙 占쏙옙占쏙옙
   int n, k;
   cin >> n >> k;
 
-  // �ڵ� ������ ��ȯ �Է�
+  // 占쌘듸옙 占쏙옙占쏙옙占쏙옙 占쏙옙환 占쌉뤄옙
   Code** codes = new Code*[n];
   for (int _n = 0; _n < n; _n++) {
     Code* code = new Code;
@@ -54,7 +54,7 @@ int main(void) {
   start_code->visit = true;
   queue.push(start_code);
 
-  // �ڵ� �������� ����
+  // 占쌘듸옙 占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙
   sort(codes, codes + n, compare);
 
 #ifdef DEBUG
@@ -65,14 +65,14 @@ int main(void) {
 #endif
 
   for (int _n = 0; _n < n; _n++) {
-    // �ߺ� �̵� ���� �ڵ� ���Ÿ� ���� temp
+    // 占쌩븝옙 占싱듸옙 占쏙옙占쏙옙 占쌘듸옙 占쏙옙占신몌옙 占쏙옙占쏙옙 temp
     int temp = codes[_n]->value;
     for (int _k = 0; _k < k; _k++) {
-      //_k��° ��Ʈ�� 1 �̸� ����
+      //_k占쏙옙째 占쏙옙트占쏙옙 1 占싱몌옙 占쏙옙占쏙옙
       if (temp & 1) {
-        // ���� �ڵ忡�� _k ��° ��Ʈ�� 0���� �ٲ�
+        // 占쏙옙占쏙옙 占쌘드에占쏙옙 _k 占쏙옙째 占쏙옙트占쏙옙 0占쏙옙占쏙옙 占쌕뀐옙
         int target = codes[_n]->value - (1 << _k);
-        // �̺�Ž������ target �ڵ� Ž��
+        // 占싱븝옙탐占쏙옙占쏙옙占쏙옙 target 占쌘듸옙 탐占쏙옙
         int _start = 0;
         int _end = _n - 1;
         while (_start != _end) {
@@ -103,7 +103,7 @@ int main(void) {
   }
 #endif
 
-  // BFS�� before ������ ���� �� visit ������Ʈ
+  // BFS占쏙옙 before 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙 visit 占쏙옙占쏙옙占쏙옙트
   while (queue.size()) {
     Code* code = queue.front();
     queue.pop();

@@ -2,7 +2,7 @@
 
 constexpr int INF = 1 '000' 000'000; constexpr int K = 40;
 
-using namespace std;
+    using namespace std;
 
 int n, m, bm, ns[101][41];
 bool ms[101];

@@ -7,7 +7,9 @@ from sklearn.metrics import accuracy_score
 
 titanic_df = pd.read_csv("train.csv")
 y_titanic_df = titanic_df["Survived"]
-x_titanic_df = titanic_df.drop(["PassengerId", "Name", "Ticket", "Survived"], axis=1)
+x_titanic_df = titanic_df.drop(
+    ["PassengerId", "Name", "Ticket", "Survived"], axis=1
+)
 
 x_titanic_df["Age"].fillna(x_titanic_df["Age"].mean(), inplace=True)
 x_titanic_df["Cabin"].fillna("N", inplace=True)
@@ -15,8 +17,12 @@ x_titanic_df["Embarked"].fillna("N", inplace=True)
 x_titanic_df["Fare"].fillna(0, inplace=True)
 
 x_titanic_df["Sex"] = LabelEncoder().fit_transform(x_titanic_df["Sex"])
-x_titanic_df["Cabin"] = LabelEncoder().fit_transform(x_titanic_df["Cabin"].str[:1])
-x_titanic_df["Embarked"] = LabelEncoder().fit_transform(x_titanic_df["Embarked"])
+x_titanic_df["Cabin"] = LabelEncoder().fit_transform(
+    x_titanic_df["Cabin"].str[:1]
+)
+x_titanic_df["Embarked"] = LabelEncoder().fit_transform(
+    x_titanic_df["Embarked"]
+)
 
 print(x_titanic_df.head())
 

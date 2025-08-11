@@ -14,7 +14,10 @@ train_x, test_x, train_y, test_y = train_test_split(
 )
 
 grid = GridSearchCV(
-    DecisionTreeClassifier(random_state=11), param_grid=grid_params, cv=3, refit=True
+    DecisionTreeClassifier(random_state=11),
+    param_grid=grid_params,
+    cv=3,
+    refit=True,
 )
 
 grid.fit(train_x, train_y)

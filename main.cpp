@@ -118,14 +118,37 @@ int main() {
               {"Cache Update", 3, 1, 18, 768},
               {"Log Writer", 10, 4, 22, 512}};
 
-  for (const auto& j : js) {
-    scheduler.push(j);
+  int totalJobs = sizeof(js) / sizeof(js[0]);
+  int jobIndex = 0;
+  int processedCount = 0;
+
+  // 초기에 3개 작업 추가
+  for (int i = 0; i < 3 && i < totalJobs; i++) {
+    cout << "[PUSH]" << endl;
+    js[jobIndex].print();
+    cout << endl;
+
+    scheduler.push(js[jobIndex++]);
   }
 
-  int count = 1;
-  while (!scheduler.empty()) {
-    job current = scheduler.pop();
-    current.print();
-    cout << endl;
+  // pop과 push를 반복
+  while (processedCount < totalJobs) {
+    // 1개씩 pop
+    if (!scheduler.empty()) {
+      job current = scheduler.pop();
+
+      cout << "[POP] Processing job #" << (processedCount++ + 1) << endl;
+      current.print();
+      cout << endl;
+    }
+
+    // 2개씩 push
+    for (int i = 0; i < 2 && jobIndex < totalJobs; i++) {
+      cout << "[PUSH]" << endl;
+      js[jobIndex].print();
+      cout << endl;
+
+      scheduler.push(js[jobIndex++]);
+    }
   }
 }

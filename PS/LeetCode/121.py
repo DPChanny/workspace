@@ -1,0 +1,18 @@
+class Solution:
+    def maxProfit(self, prices):
+        max_profit = 0
+        a = 0
+        b = 0
+        for i in range(0, len(prices)):
+            if prices[i] < prices[a]:
+                profit = prices[b] - prices[a]
+                if profit > max_profit:
+                    max_profit = profit
+                a = i
+                b = i
+            if prices[i] > prices[b]:
+                b = i
+        profit = prices[b] - prices[a]
+        if profit > max_profit:
+            max_profit = profit
+        return max_profit

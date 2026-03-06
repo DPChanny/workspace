@@ -6,7 +6,7 @@
 
 void wait(const char* message, const char trigger);
 
-void main() {
+int main() {
   const char* asdf = "asdf";
 
   float time;

@@ -6,7 +6,6 @@
       "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "args": [],
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C++"
     },
@@ -15,7 +14,6 @@
       "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "args": [],
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C"
     },

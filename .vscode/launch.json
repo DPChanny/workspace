@@ -5,26 +5,26 @@
       "name": "Debug C++",
       "type": "lldb-dap",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C++",
       "stdio": [
-        "${fileDirname}\\stdin",
-        "${fileDirname}\\stdout",
-        "${fileDirname}\\stderr"
+        "${fileDirname}/stdin",
+        "${fileDirname}/stdout",
+        "${fileDirname}/stderr"
       ]
     },
     {
       "name": "Debug C",
       "type": "lldb-dap",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C",
       "stdio": [
-        "${fileDirname}\\stdin",
-        "${fileDirname}\\stdout",
-        "${fileDirname}\\stderr"
+        "${fileDirname}/stdin",
+        "${fileDirname}/stdout",
+        "${fileDirname}/stderr"
       ]
     },
     {

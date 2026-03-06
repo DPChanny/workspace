@@ -9,7 +9,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
         "-std=c++23",
         "-fexec-charset=utf-8"
       ],
@@ -24,7 +24,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
         "-fexec-charset=utf-8"
       ],
       "group": "build",
@@ -34,10 +34,7 @@
       "type": "shell",
       "label": "Run C++",
       "command": "Start-Process",
-      "args": [
-        "-NoNewWindow",
-        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
-      ],
+      "args": ["-NoNewWindow", "${fileDirname}/${fileBasenameNoExtension}.exe"],
       "dependsOn": ["Build C++"],
       "dependsOrder": "sequence",
       "problemMatcher": []
@@ -46,10 +43,7 @@
       "type": "shell",
       "label": "Run C",
       "command": "Start-Process",
-      "args": [
-        "-NoNewWindow",
-        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
-      ],
+      "args": ["-NoNewWindow", "${fileDirname}/${fileBasenameNoExtension}.exe"],
       "dependsOn": ["Build C"],
       "dependsOrder": "sequence",
       "problemMatcher": []
@@ -58,7 +52,7 @@
       "type": "shell",
       "label": "Run Python",
       "command": "python",
-      "args": ["\"${file}\""],
+      "args": ["${file}"],
       "options": {
         "cwd": "${fileDirname}"
       },

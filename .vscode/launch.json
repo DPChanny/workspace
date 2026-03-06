@@ -2,28 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "OMEN (GDB Debug)",
+      "name": "CppDebugGdb",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${fileDirname}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb.exe",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
-          "description": "Enable pretty-printing for gdb",
+          "description": "Enable pretty-printing",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "cppbuild"
+      "preLaunchTask": "CppDebugBuild",
+      "windows": {
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "miDebuggerPath": "gdb.exe"
+      }
     },
     {
-      "name": "SURFACE (LLDB Debug)",
+      "name": "CppDebugLldb",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
@@ -33,15 +37,153 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "lldb",
-      "miDebuggerPath": "lldb.exe",
+      "miDebuggerPath": "lldb",
       "setupCommands": [
         {
-          "description": "Enable pretty-printing for lldb",
+          "description": "Enable pretty-printing",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
       ],
-      "preLaunchTask": "cppbuild"
+      "preLaunchTask": "CppDebugBuild"
+    },
+    {
+      "name": "CppRunGdb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CppRunBuild",
+      "windows": {
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "miDebuggerPath": "gdb.exe"
+      }
+    },
+    {
+      "name": "CppRunLldb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "miDebuggerPath": "lldb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CppRunBuild"
+    },
+    {
+      "name": "CDebugGdb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CDebugBuild",
+      "windows": {
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "miDebuggerPath": "gdb.exe"
+      }
+    },
+    {
+      "name": "CDebugLldb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "miDebuggerPath": "lldb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CDebugBuild"
+    },
+    {
+      "name": "CRunGdb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CRunBuild",
+      "windows": {
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "miDebuggerPath": "gdb.exe"
+      }
+    },
+    {
+      "name": "CRunLldb",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "miDebuggerPath": "lldb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "CRunBuild"
     }
   ]
 }

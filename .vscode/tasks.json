@@ -2,21 +2,95 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "cppbuild",
-      "label": "cppbuild",
+      "type": "shell",
+      "label": "CppDebugBuild",
       "command": "g++",
       "args": [
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe",
-        "-std=c++23",
-        "-fexec-charset=utf-8"
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "-std=c++23"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
+      "windows": {
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-std=c++23",
+          "-fexec-charset=utf-8"
+        ]
       },
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "CppRunBuild",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "-std=c++23",
+        "-O2"
+      ],
+      "windows": {
+        "args": [
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-std=c++23",
+          "-O2",
+          "-fexec-charset=utf-8"
+        ]
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "CDebugBuild",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "windows": {
+        "args": [
+          "-g",
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-fexec-charset=utf-8"
+        ]
+      },
+      "group": "build",
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "type": "shell",
+      "label": "CRunBuild",
+      "command": "gcc",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}",
+        "-O2"
+      ],
+      "windows": {
+        "args": [
+          "${file}",
+          "-o",
+          "${fileDirname}\\${fileBasenameNoExtension}.exe",
+          "-O2",
+          "-fexec-charset=utf-8"
+        ]
+      },
+      "group": "build",
       "problemMatcher": ["$gcc"]
     }
   ]

@@ -3,8 +3,8 @@
   "tasks": [
     {
       "type": "cppbuild",
-      "label": "Build CPP",
-      "command": "g++",
+      "label": "Build C++",
+      "command": "clang++",
       "args": [
         "-g",
         "${file}",
@@ -19,7 +19,7 @@
     {
       "type": "cppbuild",
       "label": "Build C",
-      "command": "gcc",
+      "command": "clang",
       "args": [
         "-g",
         "${file}",
@@ -32,13 +32,13 @@
     },
     {
       "type": "shell",
-      "label": "Run CPP",
+      "label": "Run C++",
       "command": "Start-Process",
       "args": [
         "-NoNewWindow",
         "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
       ],
-      "dependsOn": ["Build CPP"],
+      "dependsOn": ["Build C++"],
       "dependsOrder": "sequence",
       "problemMatcher": []
     },

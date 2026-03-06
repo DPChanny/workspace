@@ -1,13 +1,22 @@
 {
   "configurations": [
     {
-      "name": "Default",
+      "name": "X64",
       "includePath": ["${workspaceFolder}/**"],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
-      "compilerPath": "g++",
+      "compilerPath": "clang++",
       "cStandard": "c23",
       "cppStandard": "c++23",
-      "intelliSenseMode": "windows-gcc-x64"
+      "intelliSenseMode": "windows-clang-x64"
+    },
+    {
+      "name": "ARM64",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "compilerPath": "clang++",
+      "cStandard": "c23",
+      "cppStandard": "c++23",
+      "intelliSenseMode": "windows-clang-arm64"
     }
   ],
   "version": 4

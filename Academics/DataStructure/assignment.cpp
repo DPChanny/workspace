@@ -16,30 +16,28 @@ class max_heap {
 
   int right(int i) { return 2 * i + 2; }
 
-  // 삽입 후 힙 속성 유지
   void heapify_up(int i) {
-    while (i > 0 && heap[parent(i)] < heap[i]) {  // 부모보다 크면
-      swap(heap[i], heap[parent(i)]);             // 교환
-      i = parent(i);                              // 부모 위치로 이동
+    while (i > 0 && heap[parent(i)] < heap[i]) {
+      swap(heap[i], heap[parent(i)]);
+      i = parent(i);
     }
   }
 
-  // 삭제 후 힙 속성 유지
   void heapify_down(int i) {
     int maxIdx = i;
     int l = left(i);
     int r = right(i);
 
-    if (l < heap.size() && heap[maxIdx] < heap[l]) {  // 왼쪽 자식이 더 크면
+    if (l < heap.size() && heap[maxIdx] < heap[l]) {
       maxIdx = l;
     }
-    if (r < heap.size() && heap[maxIdx] < heap[r]) {  // 오른쪽 자식이 더 크면
+    if (r < heap.size() && heap[maxIdx] < heap[r]) {
       maxIdx = r;
     }
 
-    if (i != maxIdx) {              // 최대값이 자식이면
-      swap(heap[i], heap[maxIdx]);  // 교환
-      heapify_down(maxIdx);         // 재귀적으로 힙 속성 유지
+    if (i != maxIdx) {
+      swap(heap[i], heap[maxIdx]);
+      heapify_down(maxIdx);
     }
   }
 
@@ -54,12 +52,12 @@ class max_heap {
       throw runtime_error("Heap is empty");
     }
 
-    T maxValue = heap[0];   // 최대값 저장
-    heap[0] = heap.back();  // 마지막 요소를 루트로 이동
-    heap.pop_back();        // 마지막 요소 제거
+    T maxValue = heap[0];
+    heap[0] = heap.back();
+    heap.pop_back();
 
-    if (!heap.empty()) {  // 힙이 비어있지 않으면
-      heapify_down(0);    // 힙 속성 복구
+    if (!heap.empty()) {
+      heapify_down(0);
     }
 
     return maxValue;
@@ -69,20 +67,20 @@ class max_heap {
 };
 
 struct job {
-  string name;        // 작업 이름
-  int burst_time;     // 실행 시간
-  int arrival_time;   // 도착 시간
-  int io_amount;      // I/O 양
-  int memory_amount;  // 메모리 사용량
+  string name;
+  int burst_time;
+  int arrival_time;
+  int io_amount;
+  int memory_amount;
 
   float get_priority() const {
     float priority = 0.0f;
     priority +=
-        (100.f / (burst_time + 1)) * 2.f;  // 실행 시간 짧을수록 높은 점수
+        (100.f / (burst_time + 1)) * 2.f;
     priority +=
-        (100.f / (arrival_time + 1)) * 1.5f;     // 도착 시간 빠를수록 높은 점수
-    priority += (io_amount * .5f);               // I/O 양이 많을수록 높은 점수
-    priority += (memory_amount / 1024.f) * .3f;  // 메모리 사용량에 비례
+        (100.f / (arrival_time + 1)) * 1.5f;
+    priority += (io_amount * .5f);
+    priority += (memory_amount / 1024.f) * .3f;
     return priority;
   }
 
@@ -95,7 +93,7 @@ struct job {
   }
 
   void print() const {
-    cout << fixed << setprecision(2);  // 소수점 둘째 자리까지 출력
+    cout << fixed << setprecision(2);
     cout << name << endl;
     cout << "Burst Time: " << burst_time << "ms" << endl;
     cout << "Arrival Time: " << arrival_time << "ms" << endl;
@@ -122,7 +120,6 @@ int main() {
   int jobIndex = 0;
   int processedCount = 0;
 
-  // 초기에 3개 작업 추가
   for (int i = 0; i < 3 && i < totalJobs; i++) {
     cout << "[PUSH]" << endl;
     js[jobIndex].print();
@@ -131,9 +128,7 @@ int main() {
     scheduler.push(js[jobIndex++]);
   }
 
-  // pop과 push를 반복
   while (processedCount < totalJobs) {
-    // 1개씩 pop
     if (!scheduler.empty()) {
       job current = scheduler.pop();
 
@@ -142,7 +137,6 @@ int main() {
       cout << endl;
     }
 
-    // 2개씩 push
     for (int i = 0; i < 2 && jobIndex < totalJobs; i++) {
       cout << "[PUSH]" << endl;
       js[jobIndex].print();

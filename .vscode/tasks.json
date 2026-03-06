@@ -2,48 +2,31 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "type": "shell",
+      "type": "cppbuild",
       "label": "Build CPP",
       "command": "g++",
       "args": [
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}",
-        "-std=c++23"
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-std=c++23",
+        "-fexec-charset=utf-8"
       ],
-      "windows": {
-        "args": [
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "-std=c++23",
-          "-fexec-charset=utf-8"
-        ]
-      },
       "group": { "kind": "build", "isDefault": true },
       "problemMatcher": ["$gcc"]
     },
     {
-      "type": "shell",
+      "type": "cppbuild",
       "label": "Build C",
       "command": "gcc",
       "args": [
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "-fexec-charset=utf-8"
       ],
-      "windows": {
-        "args": [
-          "-g",
-          "${file}",
-          "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "-fexec-charset=utf-8"
-        ]
-      },
       "group": "build",
       "problemMatcher": ["$gcc"]
     },

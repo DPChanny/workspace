@@ -84,6 +84,14 @@
         }
       ],
       "preLaunchTask": "Build C"
+    },
+    {
+      "name": "Debug Python",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal"
     }
   ]
 }

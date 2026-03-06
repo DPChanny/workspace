@@ -53,6 +53,16 @@
       "dependsOn": ["Build C"],
       "dependsOrder": "sequence",
       "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Run Python",
+      "command": "python",
+      "args": ["\"${file}\""],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": []
     }
   ]
 }

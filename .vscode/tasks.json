@@ -3,7 +3,7 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "CppDebugBuild",
+      "label": "Build CPP",
       "command": "g++",
       "args": [
         "-g",
@@ -27,31 +27,7 @@
     },
     {
       "type": "shell",
-      "label": "CppRunBuild",
-      "command": "g++",
-      "args": [
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}",
-        "-std=c++23",
-        "-O2"
-      ],
-      "windows": {
-        "args": [
-          "${file}",
-          "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "-std=c++23",
-          "-O2",
-          "-fexec-charset=utf-8"
-        ]
-      },
-      "group": "build",
-      "problemMatcher": ["$gcc"]
-    },
-    {
-      "type": "shell",
-      "label": "CDebugBuild",
+      "label": "Build C",
       "command": "gcc",
       "args": [
         "-g",
@@ -73,25 +49,19 @@
     },
     {
       "type": "shell",
-      "label": "CRunBuild",
-      "command": "gcc",
-      "args": [
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}",
-        "-O2"
-      ],
-      "windows": {
-        "args": [
-          "${file}",
-          "-o",
-          "${fileDirname}\\${fileBasenameNoExtension}.exe",
-          "-O2",
-          "-fexec-charset=utf-8"
-        ]
-      },
-      "group": "build",
-      "problemMatcher": ["$gcc"]
+      "label": "Run CPP",
+      "command": "Start-Process powershell -ArgumentList '-NoExit', '-Command', \"cd '${fileDirname}'; .\\${fileBasenameNoExtension}.exe\"",
+      "dependsOn": ["Build CPP"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Run C",
+      "command": "Start-Process powershell -ArgumentList '-NoExit', '-Command', \"cd '${fileDirname}'; .\\${fileBasenameNoExtension}.exe\"",
+      "dependsOn": ["Build C"],
+      "dependsOrder": "sequence",
+      "problemMatcher": []
     }
   ]
 }

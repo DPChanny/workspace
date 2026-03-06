@@ -3,29 +3,28 @@
   "configurations": [
     {
       "name": "Debug C++",
-      "type": "lldb",
+      "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C++",
-      "console": "integratedTerminal"
+      "stdio": ["stdin", null, null]
     },
     {
       "name": "Debug C",
-      "type": "lldb",
+      "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C",
-      "console": "integratedTerminal"
+      "stdio": ["stdin", null, null]
     },
     {
       "name": "Debug Python",
       "type": "debugpy",
       "request": "launch",
       "program": "${file}",
-      "cwd": "${fileDirname}",
-      "console": "integratedTerminal"
+      "cwd": "${fileDirname}"
     }
   ]
 }

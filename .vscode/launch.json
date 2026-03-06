@@ -24,23 +24,11 @@
     },
     {
       "name": "Debug CPP LLDB",
-      "type": "cppdbg",
+      "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
-      "stopAtEntry": false,
       "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "miDebuggerPath": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
       "preLaunchTask": "Build CPP"
     },
     {
@@ -66,23 +54,11 @@
     },
     {
       "name": "Debug C LLDB",
-      "type": "cppdbg",
+      "type": "lldb-dap",
       "request": "launch",
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "args": [],
-      "stopAtEntry": false,
       "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "miDebuggerPath": "lldb",
-      "setupCommands": [
-        {
-          "description": "Enable pretty-printing",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        }
-      ],
       "preLaunchTask": "Build C"
     },
     {

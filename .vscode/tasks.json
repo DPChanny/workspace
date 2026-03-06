@@ -33,7 +33,11 @@
     {
       "type": "shell",
       "label": "Run CPP",
-      "command": "Start-Process powershell -ArgumentList '-NoExit', '-Command', \"cd '${fileDirname}'; .\\${fileBasenameNoExtension}.exe\"",
+      "command": "Start-Process",
+      "args": [
+        "-NoNewWindow",
+        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+      ],
       "dependsOn": ["Build CPP"],
       "dependsOrder": "sequence",
       "problemMatcher": []
@@ -41,7 +45,11 @@
     {
       "type": "shell",
       "label": "Run C",
-      "command": "Start-Process powershell -ArgumentList '-NoExit', '-Command', \"cd '${fileDirname}'; .\\${fileBasenameNoExtension}.exe\"",
+      "command": "Start-Process",
+      "args": [
+        "-NoNewWindow",
+        "\"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+      ],
       "dependsOn": ["Build C"],
       "dependsOrder": "sequence",
       "problemMatcher": []

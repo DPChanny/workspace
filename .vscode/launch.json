@@ -8,7 +8,7 @@
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C++",
-      "stdio": ["stdin", null, null]
+      "stdio": ["stdin.txt", "stdout.txt", "stderr.txt"]
     },
     {
       "name": "Debug C",
@@ -17,7 +17,7 @@
       "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "cwd": "${fileDirname}",
       "preLaunchTask": "Build C",
-      "stdio": ["stdin", null, null]
+      "stdio": ["stdin.txt", "stdout.txt", "stderr.txt"]
     },
     {
       "name": "Debug Python",

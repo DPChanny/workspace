@@ -38,8 +38,10 @@ int main(void) {
         min(rgb_cal[i - 1][RED], rgb_cal[i - 1][GREEN]) + rgb[i][BLUE];
   }
 
-  printf("%d", min(min(rgb_cal[n - 1][RED], rgb_cal[n - 1][GREEN]),
-                   rgb_cal[n - 1][BLUE]));
+  printf(
+      "%d",
+      min(min(rgb_cal[n - 1][RED], rgb_cal[n - 1][GREEN]),
+          rgb_cal[n - 1][BLUE]));
 
   for (int i = 0; i < n; i++) {
     free(rgb[i]);

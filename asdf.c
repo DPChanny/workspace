@@ -23,23 +23,20 @@ void main() {
     while (1) {
       buffer = _getche();
       rewind(stdin);
-      if (buffer != asdf[i])
-        break;
+      if (buffer != asdf[i]) break;
       i++;
-      if (i >= strlen(asdf))
-        i = 0;
+      if (i >= strlen(asdf)) i = 0;
       count++;
     }
     clock_t end = clock();
 
     time = (float)(end - start) / CLOCKS_PER_SEC;
 
-    // clang-format off
-    printf("\ntime: %fs, count: %d, speed: %f\n",
-      time,
-      (int)(count / 4),
-      1 / (time / count));
-    // clang-format on
+    printf(
+        "\ntime: %fs, count: %d, speed: %f\n",
+        time,
+        (int)(count / 4),
+        1 / (time / count));
 
     wait("Press R to restart", 'r');
   }
@@ -51,8 +48,7 @@ void wait(const char* message, const char trigger) {
   while (1) {
     buffer = _getch();
     rewind(stdin);
-    if (tolower(buffer) == tolower(trigger))
-      break;
+    if (tolower(buffer) == tolower(trigger)) break;
   }
   system("cls");
 }

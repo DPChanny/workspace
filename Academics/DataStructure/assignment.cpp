@@ -75,10 +75,8 @@ struct job {
 
   float get_priority() const {
     float priority = 0.0f;
-    priority +=
-        (100.f / (burst_time + 1)) * 2.f;
-    priority +=
-        (100.f / (arrival_time + 1)) * 1.5f;
+    priority += (100.f / (burst_time + 1)) * 2.f;
+    priority += (100.f / (arrival_time + 1)) * 1.5f;
     priority += (io_amount * .5f);
     priority += (memory_amount / 1024.f) * .3f;
     return priority;
@@ -105,16 +103,17 @@ struct job {
 
 int main() {
   max_heap<job> scheduler;
-  job js[] = {{"Database Query Process", 5, 0, 15, 2048},
-              {"Video Encoding Task", 50, 2, 3, 8192},
-              {"Web Server Request", 2, 1, 25, 512},
-              {"File Compression", 20, 5, 8, 4096},
-              {"System Backup", 100, 10, 5, 16384},
-              {"User Input Handler", 1, 0, 30, 256},
-              {"Network Sync", 8, 3, 20, 1024},
-              {"Audio Processing", 15, 7, 12, 3072},
-              {"Cache Update", 3, 1, 18, 768},
-              {"Log Writer", 10, 4, 22, 512}};
+  job js[] = {
+      {"Database Query Process", 5, 0, 15, 2048},
+      {"Video Encoding Task", 50, 2, 3, 8192},
+      {"Web Server Request", 2, 1, 25, 512},
+      {"File Compression", 20, 5, 8, 4096},
+      {"System Backup", 100, 10, 5, 16384},
+      {"User Input Handler", 1, 0, 30, 256},
+      {"Network Sync", 8, 3, 20, 1024},
+      {"Audio Processing", 15, 7, 12, 3072},
+      {"Cache Update", 3, 1, 18, 768},
+      {"Log Writer", 10, 4, 22, 512}};
 
   int totalJobs = sizeof(js) / sizeof(js[0]);
   int jobIndex = 0;

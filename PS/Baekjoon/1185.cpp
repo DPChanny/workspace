@@ -17,8 +17,7 @@ class E {
 E* es;
 
 int gu(int _n) {
-  if (!us[_n])
-    return _n;
+  if (!us[_n]) return _n;
   return us[_n] = gu(us[_n]);
 }
 
@@ -28,10 +27,8 @@ int main(void) {
   cout.tie(nullptr);
   cin >> n >> p;
   es = new E[p];
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
-  for (int _p(0); _p < p; _p++)
-    cin >> es[_p].na >> es[_p].nb >> es[_p].w;
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
+  for (int _p(0); _p < p; _p++) cin >> es[_p].na >> es[_p].nb >> es[_p].w;
   sort(es, es + p);
   for (int _p(0); _p < p; _p++)
     if (gu(es[_p].na) != gu(es[_p].nb)) {

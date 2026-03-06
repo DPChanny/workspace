@@ -12,8 +12,7 @@ int main(void) {
     for (int _n(0); _n < n; _n++) {
       cin >> cx >> cy >> cr;
       if ((cx - xa) * (cx - xa) + (cy - ya) * (cy - ya) < cr * cr) {
-        if ((cx - xb) * (cx - xb) + (cy - yb) * (cy - yb) > cr * cr)
-          ac++;
+        if ((cx - xb) * (cx - xb) + (cy - yb) * (cy - yb) > cr * cr) ac++;
       } else if ((cx - xb) * (cx - xb) + (cy - yb) * (cy - yb) < cr * cr)
         bc++;
     }

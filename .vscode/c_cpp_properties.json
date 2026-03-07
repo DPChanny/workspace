@@ -1,7 +1,7 @@
 {
   "configurations": [
     {
-      "name": "X64",
+      "name": "x64",
       "includePath": ["${workspaceFolder}/**"],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
       "compilerPath": "clang++",
@@ -10,7 +10,7 @@
       "intelliSenseMode": "windows-clang-x64"
     },
     {
-      "name": "ARM64",
+      "name": "arm64",
       "includePath": ["${workspaceFolder}/**"],
       "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
       "compilerPath": "clang++",

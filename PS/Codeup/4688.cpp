@@ -16,9 +16,7 @@ typedef struct Code {
   Code* before;
 } Code;
 
-bool compare(Code* a, Code* b) {
-  return a->value < b->value;
-}
+bool compare(Code* a, Code* b) { return a->value < b->value; }
 
 int main(void) {
   // �ڵ� ����, �ڵ� ����

@@ -2,13 +2,9 @@
 
 #define min(a, b) (((a) < (b)) ? (a) : (b))
 
-void E(int* _bottle) {
-  *_bottle = 0;
-}
+void E(int* _bottle) { *_bottle = 0; }
 
-void F(int* _bottle, int _amount_bottle) {
-  *_bottle = _amount_bottle;
-}
+void F(int* _bottle, int _amount_bottle) { *_bottle = _amount_bottle; }
 
 void M(int* _from, int* _to, int _amount_from, int _amount_to) {
   int left_to = _amount_to - *_to;

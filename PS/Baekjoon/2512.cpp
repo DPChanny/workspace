@@ -11,8 +11,7 @@ int32_t main(void) {
   ios::sync_with_stdio(false);
   cin.tie(NULL);
   cin >> n;
-  for (uint16_t _n(0u); _n < n; _n++)
-    cin >> ns[_n];
+  for (uint16_t _n(0u); _n < n; _n++) cin >> ns[_n];
   sort(ns, ns + n);
   cin >> m;
   r = ns[n - 1u] + 1u;

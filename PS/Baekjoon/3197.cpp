@@ -8,9 +8,7 @@ typedef pair<lli, lli> P;
 #define pf first
 #define ps second
 
-P operator+(P _a, P _b) {
-  return {_a.pf + _b.pf, _a.ps + _b.ps};
-}
+P operator+(P _a, P _b) { return {_a.pf + _b.pf, _a.ps + _b.ps}; }
 
 constexpr lli YXM = 1500;
 
@@ -31,8 +29,7 @@ void gews() {
   while (!tews.empty()) {
     cew = tews.front();
     tews.pop();
-    if (yxs[cew.pf][cew.ps] != 'L')
-      yxs[cew.pf][cew.ps] = '.';
+    if (yxs[cew.pf][cew.ps] != 'L') yxs[cew.pf][cew.ps] = '.';
     for (lli _v(0); _v < vs.size(); _v++) {
       np = cew + vs[_v];
       if (cp(np) && !wvs[np.pf][np.ps]) {
@@ -54,14 +51,12 @@ bool gels() {
   while (!tels.empty()) {
     cel = tels.front();
     tels.pop();
-    if (yxs[cel.pf][cel.ps] != 'L')
-      yxs[cel.pf][cel.ps] = '.';
+    if (yxs[cel.pf][cel.ps] != 'L') yxs[cel.pf][cel.ps] = '.';
     for (lli _v(0); _v < vs.size(); _v++) {
       np = cel + vs[_v];
       if (cp(np) && !lvs[np.pf][np.ps]) {
         lvs[np.pf][np.ps] = true;
-        if (yxs[np.pf][np.ps] == 'L')
-          f = true;
+        if (yxs[np.pf][np.ps] == 'L') f = true;
         if (yxs[np.pf][np.ps] != 'X')
           tels.push(np);
         else
@@ -75,8 +70,7 @@ bool gels() {
 int main(void) {
   cin >> y >> x;
   for (lli _y(0); _y < y; _y++)
-    for (lli _x(0); _x < x; _x++)
-      cin >> yxs[_y][_x];
+    for (lli _x(0); _x < x; _x++) cin >> yxs[_y][_x];
   for (lli _y(0); _y < y; _y++)
     for (lli _x(0); _x < x; _x++) {
       if (els.empty() && yxs[_y][_x] == 'L' && !lvs[_y][_x]) {

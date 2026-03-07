@@ -7,8 +7,7 @@ const int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 int n, nt, ns[1000][1000], ntx, nty;
 
 void place_n(int _y, int _x, int _n) {
-  if (_n < 0)
-    return;
+  if (_n < 0) return;
   ns[_y][_x] = _n * _n;
   if (ns[_y][_x] == nt) {
     ntx = _x;
@@ -32,8 +31,7 @@ int main(void) {
   cin >> n >> nt;
   place_n(0, 0, n);
   for (int _y(0); _y < n; _y++) {
-    for (int _x(0); _x < n; _x++)
-      cout << ns[_y][_x] << ' ';
+    for (int _x(0); _x < n; _x++) cout << ns[_y][_x] << ' ';
     cout << '\n';
   }
   cout << nty + 1 << ' ' << ntx + 1;

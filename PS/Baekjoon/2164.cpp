@@ -8,8 +8,7 @@ int main(void) {
 
   int n;
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    q.push(_n + 1);
+  for (int _n(0); _n < n; _n++) q.push(_n + 1);
 
   while (q.size() != 1) {
     q.pop();

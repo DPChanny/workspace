@@ -10,10 +10,8 @@ stack<int> p;
 bool gs(int _n) {
   if (_n == ns.size()) {
     int _nu(1);
-    while (_nu != 100 && nus[_nu++])
-      ;
-    while (_nu != 100 && !nus[_nu++])
-      ;
+    while (_nu != 100 && nus[_nu++]);
+    while (_nu != 100 && !nus[_nu++]);
     return _nu == 100;
   }
   if (!nus[ns[_n] - '0']) {

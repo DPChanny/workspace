@@ -17,8 +17,7 @@ int main(void) {
   }
   for (int _k(0); _k < k; _k++) {
     kso[ks[_k]].pop();
-    if (ksu[ks[_k]])
-      continue;
+    if (ksu[ks[_k]]) continue;
     ksu[ks[_k]] = true;
     if (ns.size() < n)
       ns.push_back(ks[_k]);

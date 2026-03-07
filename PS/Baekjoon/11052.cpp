@@ -12,8 +12,7 @@ int main(void) {
   int n;
   cin >> n;
   int ns[1000];
-  for (int _n = 0; _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n = 0; _n < n; _n++) cin >> ns[_n];
 
   for (int _n(1); _n < n + 1; _n++) {
     for (int _c(1); _c < n + 1; _c++) {

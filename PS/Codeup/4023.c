@@ -43,18 +43,24 @@ int main(void) {
       for (int i = 0; i < 4; i++) {
         int sum = 0;
         for (int j = 0; j < 4; j++) {
-          sum += get_board_value(x + dir_vectors[i][j][X],
-                                 y + dir_vectors[i][j][Y], board[y][x]);
+          sum += get_board_value(
+              x + dir_vectors[i][j][X], y + dir_vectors[i][j][Y], board[y][x]);
         }
         // printf("sum: %d\n", sum);
         if (sum == 4 &&
-            !get_board_value(x + dir_vectors[i][4][X], y + dir_vectors[i][4][Y],
-                             board[y][x]) &&
-            !get_board_value(x + dir_vectors[i][5][X], y + dir_vectors[i][5][Y],
-                             board[y][x])) {
+            !get_board_value(
+                x + dir_vectors[i][4][X],
+                y + dir_vectors[i][4][Y],
+                board[y][x]) &&
+            !get_board_value(
+                x + dir_vectors[i][5][X],
+                y + dir_vectors[i][5][Y],
+                board[y][x])) {
           printf("%d\n", board[y][x]);
-          printf("%d %d", y + dir_vectors[i][0][Y] + 1,
-                 x + dir_vectors[i][0][X] + 1);
+          printf(
+              "%d %d",
+              y + dir_vectors[i][0][Y] + 1,
+              x + dir_vectors[i][0][X] + 1);
           return;
         }
       }

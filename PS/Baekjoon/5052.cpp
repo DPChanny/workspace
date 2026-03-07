@@ -19,8 +19,7 @@ int main(void) {
   cin >> t;
   for (int _t(0); _t < t; _t++) {
     cin >> n;
-    for (int _n(0); _n < n; _n++)
-      cin >> ns[_n];
+    for (int _n(0); _n < n; _n++) cin >> ns[_n];
     sort(ns, ns + n);
     cout << (c() ? "YES\n" : "NO\n");
   }

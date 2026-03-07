@@ -6,8 +6,7 @@ int ra, rb, c, gcd;
 bool a[2001][2001];
 
 int ggcd(int _a, int _b) {
-  if (!_b)
-    return _a;
+  if (!_b) return _a;
   return ggcd(_b, _a % _b);
 }
 

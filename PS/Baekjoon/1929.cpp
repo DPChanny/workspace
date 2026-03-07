@@ -17,8 +17,7 @@ int main(void) {
       }
     if (!f) {
       pns[pnc++] = _n;
-      if (_n + 1 > m)
-        cout << _n << '\n';
+      if (_n + 1 > m) cout << _n << '\n';
     }
   }
 }

@@ -15,16 +15,14 @@ struct N {
 
 struct ck {
   bool operator()(IT& _a, IT& _b) {
-    if (_a.pt == _b.pt)
-      return _a.pk > _b.pk;
+    if (_a.pt == _b.pt) return _a.pk > _b.pk;
     return _a.pt > _b.pt;
   }
 };
 
 struct cn {
   bool operator()(N& _a, N& _b) {
-    if (_a.t == _b.t)
-      return _a.k < _b.k;
+    if (_a.t == _b.t) return _a.k < _b.k;
     return _a.t > _b.t;
   }
 };
@@ -39,8 +37,7 @@ int main(void) {
   cin.tie(nullptr);
   cout.tie(nullptr);
   cin >> n >> k;
-  for (lli _k(0); _k < k; _k++)
-    ks.push({_k, 0});
+  for (lli _k(0); _k < k; _k++) ks.push({_k, 0});
   for (lli _n(0); _n < n; _n++) {
     cin >> bi >> bt;
     kb = ks.top();

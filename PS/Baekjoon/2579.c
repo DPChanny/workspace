@@ -35,7 +35,6 @@ int main(void) {
 int get_max(int* _stairs, int** _stairs_cal, int _n, int _count) {
   if (_count < 2) {
     if (_stairs_cal[_n][_count] == NULL) {
-
       if (_n == 0) {
         _stairs_cal[_n][_count] = _stairs[_n];
       } else if (_n == 1) {

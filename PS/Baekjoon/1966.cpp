@@ -6,7 +6,6 @@
 using namespace std;
 
 int main(void) {
-
   int tc, nc,
       ns[100]{
           0,

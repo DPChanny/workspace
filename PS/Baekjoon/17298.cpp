@@ -8,11 +8,9 @@ stack<int> s, ps;
 
 int main(void) {
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   for (int _n(n - 1); _n + 1 > 0; _n--) {
-    while (!s.empty() && s.top() < ns[_n] + 1)
-      s.pop();
+    while (!s.empty() && s.top() < ns[_n] + 1) s.pop();
     if (s.empty())
       ps.push(-1);
     else

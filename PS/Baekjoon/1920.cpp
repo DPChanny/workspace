@@ -11,8 +11,7 @@ int main(void) {
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   sort(ns, ns + n);
   cin >> m;
   for (int _m(0); _m < m; _m++) {

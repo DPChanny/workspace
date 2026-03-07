@@ -9,8 +9,7 @@ long long int ns[100000], dp[2][100001]{};
 int main(void) {
   int n;
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
 
   long long int m(INT_MIN);
   dp[0][0] = INT_MIN;

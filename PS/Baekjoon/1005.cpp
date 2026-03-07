@@ -32,8 +32,7 @@ int32_t main(void) {
   cin >> t;
   for (uint32_t _t(0); _t < t; _t++) {
     cin >> n >> k;
-    for (uint16_t _n(0); _n < n; _n++)
-      cin >> ns[_n];
+    for (uint16_t _n(0); _n < n; _n++) cin >> ns[_n];
     for (uint32_t _k(0); _k < k; _k++) {
       cin >> bf >> bt;
       ks[bt - 1].push_back(bf - 1);
@@ -41,7 +40,6 @@ int32_t main(void) {
     cin >> w;
     cout << dfs(w - 1) << '\n';
     memset(vs, false, sizeof(bool) * n);
-    for (uint16_t _n(0); _n < n; _n++)
-      ks[_n].clear();
+    for (uint16_t _n(0); _n < n; _n++) ks[_n].clear();
   }
 }

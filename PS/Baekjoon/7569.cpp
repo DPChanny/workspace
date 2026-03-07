@@ -17,8 +17,7 @@ int main(void) {
     for (int _y(0); _y < y; _y++)
       for (int _x(0); _x < x; _x++) {
         cin >> ts[_h][_y][_x];
-        if (ts[_h][_y][_x] == 1)
-          q.push({_y, _x, _h});
+        if (ts[_h][_y][_x] == 1) q.push({_y, _x, _h});
       }
   T c;
   while (!q.empty()) {

@@ -9,8 +9,7 @@ int main(void) {
   for (int _n(0); _n < n; _n++) {
     cin >> ns[_n];
     nus[ns[_n]]++;
-    while (nus[ns[_n]] > k && l < n)
-      nus[ns[l++]]--;
+    while (nus[ns[_n]] > k && l < n) nus[ns[l++]]--;
     c = max(c, _n - l + 1);
   }
   cout << c;

@@ -27,14 +27,12 @@ int main(void) {
   while (!ns.empty()) {
     cn = ns.front();
     ns.pop();
-    if (fs[cn])
-      continue;
+    if (fs[cn]) continue;
     if (es[cn].empty()) {
       cout << "yes";
       exit(EXIT_SUCCESS);
     }
-    for (lli _t(0); _t < es[cn].size(); _t++)
-      ns.push(es[cn][_t]);
+    for (lli _t(0); _t < es[cn].size(); _t++) ns.push(es[cn][_t]);
   }
   cout << "Yes";
 }

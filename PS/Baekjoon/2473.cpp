@@ -7,8 +7,7 @@ long long int n, ns[5000], m(1e10), s, e, a, b, c;
 
 int main(void) {
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   sort(ns, ns + n);
   for (long long int _n(0); _n < n - 2; _n++) {
     s = _n + 1;

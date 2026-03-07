@@ -28,8 +28,7 @@ int main(void) {
   cin >> y >> x;
   for (int _y = 0; _y < y; _y++) {
     getchar();
-    for (int _x = 0; _x < x; _x++)
-      m[_y][_x] = getchar() - '0';
+    for (int _x = 0; _x < x; _x++) m[_y][_x] = getchar() - '0';
   }
   queue<Point> ps;
   Point cp;

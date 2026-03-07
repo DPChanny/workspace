@@ -13,8 +13,7 @@ N npds[10'000 + 1];
 
 void gnds(int _n) {
   npds[_n].d = npds[npds[_n].p].d + 1;
-  for (int _c(0); _c < npds[_n].cs.size(); _c++)
-    gnds(npds[_n].cs[_c]);
+  for (int _c(0); _c < npds[_n].cs.size(); _c++) gnds(npds[_n].cs[_c]);
 }
 
 int gcp(int _a, int _b) {
@@ -40,8 +39,7 @@ int main(void) {
       npds[b2].p = b1;
       npds[b1].cs.push_back(b2);
     }
-    while (npds[b1].p)
-      b1 = npds[b1].p;
+    while (npds[b1].p) b1 = npds[b1].p;
     gnds(b1);
     cin >> b1 >> b2;
     cout << gcp(b1, b2) << '\n';

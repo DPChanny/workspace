@@ -12,8 +12,7 @@ typedef long long int lli;
 #define pe second
 
 bool operator<(P& _a, P& _b) {
-  if (_a.ps == _b.ps)
-    return _a.pe < _b.pe;
+  if (_a.ps == _b.ps) return _a.pe < _b.pe;
   return _a.ps > _b.ps;
 }
 
@@ -28,8 +27,7 @@ lli goc(vector<P>& _ns) {
   for (lli _n(1); _n < _ns.size(); _n++) {
     s = _ns[_n].ps;
     es.push(_ns[_n].pe);
-    while (es.top() < s + 1)
-      es.pop();
+    while (es.top() < s + 1) es.pop();
     m = max(m, (lli)es.size());
   }
   return m;
@@ -46,14 +44,10 @@ int main(void) {
     xb = xa;
     yb = ya;
     cin >> xa >> ya;
-    if (!(xa - xb))
-      ys.emplace_back(min(ya, yb), max(ya, yb));
-    if (!(ya - yb))
-      xs.emplace_back(min(xa, xb), max(xa, xb));
+    if (!(xa - xb)) ys.emplace_back(min(ya, yb), max(ya, yb));
+    if (!(ya - yb)) xs.emplace_back(min(xa, xb), max(xa, xb));
   }
-  if (!(xa - xo))
-    ys.emplace_back(min(ya, yo), max(ya, yo));
-  if (!(ya - yo))
-    xs.emplace_back(min(xa, xo), max(xa, xo));
+  if (!(xa - xo)) ys.emplace_back(min(ya, yo), max(ya, yo));
+  if (!(ya - yo)) xs.emplace_back(min(xa, xo), max(xa, xo));
   cout << max(goc(xs), goc(ys));
 }

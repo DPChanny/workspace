@@ -31,8 +31,8 @@ int main(void) {
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> n;
-  qs = new Q* [n + 1] {
-    new Q{nullptr, 'a', -1},
+  qs = new Q*[n + 1]{
+      new Q{nullptr, 'a', -1},
   };
   for (int _n(1); _n < n + 1; _n++) {
     qs[_n] = new Q;
@@ -48,7 +48,6 @@ int main(void) {
     }
     cout << glk(_n) << '\n';
   }
-  for (int _n(0); _n < n; _n++)
-    delete qs[_n];
+  for (int _n(0); _n < n; _n++) delete qs[_n];
   delete[] qs;
 }

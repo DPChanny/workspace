@@ -7,8 +7,7 @@ bool s(true);
 
 int main(void) {
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   while (s) {
     s = false;
     for (int _n(0); _n < n - 1; _n++)
@@ -17,6 +16,5 @@ int main(void) {
         s = true;
       }
   }
-  for (int _n(0); _n < n; _n++)
-    cout << ns[_n] << '\n';
+  for (int _n(0); _n < n; _n++) cout << ns[_n] << '\n';
 }

@@ -4,13 +4,12 @@
 using namespace std;
 
 int n, c, ns[200'000], l, m, r;
-int *lub;
+int* lub;
 bool f;
 
 int main(void) {
   cin >> n >> c;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   sort(ns, ns + n);
   r = 1e9 + 1;
   while (l != r) {

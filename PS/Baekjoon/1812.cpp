@@ -12,8 +12,7 @@ int main(void) {
   s /= 2;
   for (int _n(0); _n < n; _n++) {
     int _s(s);
-    for (int i(_n + 1); i % n != _n; i += 2)
-      _s -= ns[i % n];
+    for (int i(_n + 1); i % n != _n; i += 2) _s -= ns[i % n];
     cout << _s << '\n';
   }
 }

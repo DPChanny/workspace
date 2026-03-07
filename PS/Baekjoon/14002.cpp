@@ -13,8 +13,7 @@ int main(void) {
   cin >> n;
 
   N* ns = new N[n];
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n].v;
+  for (int _n(0); _n < n; _n++) cin >> ns[_n].v;
   int* dp = new int[n];
   for (int _n(0); _n < n; _n++) {
     int max(-1);
@@ -34,8 +33,7 @@ int main(void) {
   }
 
   int max(0);
-  for (int i(0); i < n; i++)
-    max = (dp[i] > dp[max] ? i : max);
+  for (int i(0); i < n; i++) max = (dp[i] > dp[max] ? i : max);
   N c(ns[max]);
   stack<int> s;
   while (c.i != -1) {

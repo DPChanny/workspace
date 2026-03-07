@@ -12,8 +12,7 @@ void dfs(int _f, int _g) {
   nvs[_f] = true;
   ngs[_f] = _g;
   for (int _t(0); _t < ns[_f].size(); _t++)
-    if (!nvs[ns[_f][_t]])
-      dfs(ns[_f][_t], _g);
+    if (!nvs[ns[_f][_t]]) dfs(ns[_f][_t], _g);
 }
 
 int main(void) {
@@ -25,8 +24,7 @@ int main(void) {
     cout << "Scenario " << _t + 1 << ":\n";
     cin >> n >> k;
     memset(nvs, false, sizeof(bool) * n);
-    for (int _n(0); _n < n; _n++)
-      ns[_n].clear();
+    for (int _n(0); _n < n; _n++) ns[_n].clear();
     g = 0;
     for (int _k(0); _k < k; _k++) {
       cin >> bf >> bt;
@@ -34,8 +32,7 @@ int main(void) {
       ns[bt].push_back(bf);
     }
     for (int _n(0); _n < n; _n++)
-      if (!nvs[_n])
-        dfs(_n, g++);
+      if (!nvs[_n]) dfs(_n, g++);
     cin >> m;
     for (int _m(0); _m < m; _m++) {
       cin >> bf >> bt;

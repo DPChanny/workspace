@@ -9,8 +9,7 @@ constexpr int INF = 2 '000' 000'000;
 #define ev first
 #define ew second
 
-    long long int v,
-              e, bu, bv, bw, ds[500], cv, vcs[500];
+long long int v, e, bu, bv, bw, ds[500], cv, vcs[500];
 vector<pair<int, int>> es[500];
 bool vus[500];
 
@@ -19,8 +18,7 @@ int main(void) {
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> v >> e;
-  for (int _v(0); _v < v; _v++)
-    ds[_v] = INF;
+  for (int _v(0); _v < v; _v++) ds[_v] = INF;
   for (int _e(0); _e < e; _e++) {
     cin >> bu >> bv >> bw;
     es[bu - 1].push_back({bv - 1, bw});
@@ -48,6 +46,5 @@ int main(void) {
       }
     }
   }
-  for (int _v(1); _v < v; _v++)
-    cout << (ds[_v] == INF ? -1 : ds[_v]) << '\n';
+  for (int _v(1); _v < v; _v++) cout << (ds[_v] == INF ? -1 : ds[_v]) << '\n';
 }

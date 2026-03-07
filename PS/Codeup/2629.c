@@ -7,9 +7,7 @@ typedef struct City {
   double radius;
 } City;
 
-int compare(const City* a, const City* b) {
-  return a->radius > b->radius;
-}
+int compare(const City* a, const City* b) { return a->radius > b->radius; }
 
 int main(void) {
   int n, p;

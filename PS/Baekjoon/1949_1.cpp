@@ -24,8 +24,7 @@ int main(void) {
   cin.tie(nullptr);
   cout.tie(nullptr);
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   for (int _n(0); _n < n - 1; _n++) {
     cin >> bf >> bt;
     es[bf - 1].push_back(bt - 1);

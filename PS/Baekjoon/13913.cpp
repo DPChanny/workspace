@@ -8,8 +8,7 @@ using namespace std;
 int visit[100001];
 
 int main(void) {
-  for (int _n(0); _n < 100001; _n++)
-    visit[_n] = -1;
+  for (int _n(0); _n < 100001; _n++) visit[_n] = -1;
   int n, k, t(0), s, c;
   cin >> n >> k;
   queue<int> q;
@@ -23,8 +22,7 @@ int main(void) {
         stack<int> rs;
         cout << t << '\n';
         rs.push(c);
-        while (visit[rs.top()] != -2)
-          rs.push(visit[rs.top()]);
+        while (visit[rs.top()] != -2) rs.push(visit[rs.top()]);
         while (!rs.empty()) {
           cout << rs.top() << ' ';
           rs.pop();

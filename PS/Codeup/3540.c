@@ -9,7 +9,6 @@ int n;
 char* symbols;
 
 void dfs(int _n, int _symbol) {
-
   symbols[_n] = _symbol;
 
   if (_n + 1 == n) {
@@ -30,7 +29,6 @@ void dfs(int _n, int _symbol) {
       i = j - 1;
     }
     if (!sum) {
-
       printf("1");
       for (int i = 1; i < n; i++) {
         printf("%c%d", symbols[i], i + 1);

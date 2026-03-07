@@ -5,8 +5,7 @@ using namespace std;
 int n, m, us[200 + 1], a, b;
 
 int gu(int _n) {
-  if (!us[_n])
-    return _n;
+  if (!us[_n]) return _n;
   return us[_n] = gu(us[_n]);
 }
 
@@ -19,8 +18,7 @@ int main(void) {
     for (int _x(0); _x < n; _x++) {
       cin >> b;
       if (gu(_y + 1) != gu(_x + 1))
-        if (b)
-          us[gu(_y + 1)] = gu(_x + 1);
+        if (b) us[gu(_y + 1)] = gu(_x + 1);
     }
   cin >> b;
   int _m(0);

@@ -8,9 +8,7 @@ typedef pair<lli, lli> P;
 #define pf first
 #define ps second
 
-P operator+(P _a, P _b) {
-  return {_a.pf + _b.pf, _a.ps + _b.ps};
-}
+P operator+(P _a, P _b) { return {_a.pf + _b.pf, _a.ps + _b.ps}; }
 
 class N {
  public:
@@ -36,8 +34,7 @@ int main(void) {
   cin >> y >> x >> k;
   for (lli _y(0); _y < y; _y++) {
     getchar();
-    for (lli _x(0); _x < x; _x++)
-      yxs[_y][_x] = getchar() - '0';
+    for (lli _x(0); _x < x; _x++) yxs[_y][_x] = getchar() - '0';
   }
   ns.push(N());
   while (!ns.empty()) {
@@ -64,8 +61,7 @@ int main(void) {
           }
         }
       }
-      if (f)
-        ns.push(cn);
+      if (f) ns.push(cn);
     }
     r++;
   }

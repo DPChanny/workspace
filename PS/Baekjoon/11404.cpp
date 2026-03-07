@@ -13,8 +13,7 @@ int main(void) {
   cout.tie(nullptr);
   cin >> n >> m;
   for (int _f(0); _f < n; _f++)
-    for (int _t(0); _t < n; _t++)
-      ds[_f][_t] = INF * (_f != _t);
+    for (int _t(0); _t < n; _t++) ds[_f][_t] = INF * (_f != _t);
   for (int _m(0); _m < m; _m++) {
     cin >> bf >> bt >> bw;
     ds[bf - 1][bt - 1] = min(ds[bf - 1][bt - 1], bw);

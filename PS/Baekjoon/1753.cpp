@@ -13,18 +13,15 @@ vector<pair<int, int>> es[20'000 + 1];
 bool vus[20'000 + 1];
 
 struct compare {
-  bool operator()(const int &_a, const int &_b) { return ds[_a] > ds[_b];
-}
-}
-;
+  bool operator()(const int& _a, const int& _b) { return ds[_a] > ds[_b]; }
+};
 
 int main(void) {
   ios::sync_with_stdio(false);
   cin.tie(NULL);
   cout.tie(NULL);
   cin >> v >> e >> s;
-  for (int _v(1); _v < v + 1; _v++)
-    ds[_v] = INF;
+  for (int _v(1); _v < v + 1; _v++) ds[_v] = INF;
   for (int _e(0); _e < e; _e++) {
     cin >> bu >> bv >> bw;
     es[bu].push_back({bv, bw});

@@ -16,8 +16,7 @@ int main(void) {
   cin >> n;
 
   Line* ns = new Line[n];
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n].start >> ns[_n].end;
+  for (int _n(0); _n < n; _n++) cin >> ns[_n].start >> ns[_n].end;
 
   sort(ns, ns + n);
 
@@ -26,15 +25,13 @@ int main(void) {
     int max(0);
     for (int i(0); i < _n; i++)
       if (ns[i].end < ns[_n].end)
-        if (dp[i] > max)
-          max = dp[i];
+        if (dp[i] > max) max = dp[i];
     dp[_n] = max + 1;
   }
 
   int max(0);
   for (int i(0); i < n; i++)
-    if (dp[i] > max)
-      max = dp[i];
+    if (dp[i] > max) max = dp[i];
 
   cout << n - max;
 

@@ -17,8 +17,7 @@ int main(void) {
     for (int _a = 0; _a < a.length(); _a++) {
       if (a[_a] == b[_b]) {
         dp[_b + 1][_a + 1] = dp[_b][_a] + 1;
-        if (dp[_b + 1][_a + 1] > max)
-          max = dp[_b + 1][_a + 1];
+        if (dp[_b + 1][_a + 1] > max) max = dp[_b + 1][_a + 1];
       }
     }
   }

@@ -12,8 +12,7 @@ class S {
   S(int _s1, int _s2) : s1(_s1), s2(_s2) {}
 
   bool operator<(const S& _s) {
-    if (this->s1 == _s.s1)
-      return this->s2 > _s.s2;
+    if (this->s1 == _s.s1) return this->s2 > _s.s2;
     return this->s1 < _s.s1;
   }
 };

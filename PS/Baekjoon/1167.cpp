@@ -17,11 +17,9 @@ point mlp;
 
 void gmlp(int _f, int _l) {
   vs[_f] = true;
-  if (mlp.l < _l)
-    mlp = make_pair(_f, _l);
+  if (mlp.l < _l) mlp = make_pair(_f, _l);
   for (int _t(0); _t < ns[_f].size(); _t++)
-    if (!vs[ns[_f][_t].t])
-      gmlp(ns[_f][_t].t, _l + ns[_f][_t].l);
+    if (!vs[ns[_f][_t].t]) gmlp(ns[_f][_t].t, _l + ns[_f][_t].l);
 }
 
 int main(void) {

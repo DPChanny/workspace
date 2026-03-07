@@ -12,8 +12,7 @@ int main(void) {
   string c;
   cin >> c;
 
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
 
   for (int _i(0); _i < c.size(); _i++) {
     if (c[_i] == '*') {

@@ -2,6 +2,4 @@
 
 using namespace std;
 
-int main(void) {
-  cout << "Hello World!";
-}
+int main(void) { cout << "Hello World!"; }

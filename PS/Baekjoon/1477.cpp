@@ -8,12 +8,10 @@ bool f;
 
 int main(void) {
   cin >> n >> m >> l;
-  for (int _n(1); _n < n + 1; _n++)
-    cin >> ns[_n];
+  for (int _n(1); _n < n + 1; _n++) cin >> ns[_n];
   ns[n + 1] = l;
   sort(ns, ns + n + 2);
-  for (int _n(0); _n < n + 2; _n++)
-    md = max(md, ns[_n + 1] - ns[_n]);
+  for (int _n(0); _n < n + 2; _n++) md = max(md, ns[_n + 1] - ns[_n]);
   ed = md + 1;
   while (sd != ed) {
     f = false;

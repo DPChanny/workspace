@@ -11,8 +11,7 @@ bool pns[10 '000], pnvs[10' 000];
 int main(void) {
   for (int _pn(2); _pn * _pn < 10'000; _pn++)
     if (!pns[_pn])
-      for (int _pnm(_pn); _pnm * _pn < 10'000; _pnm++)
-        pns[_pnm * _pn] = true;
+      for (int _pnm(_pn); _pnm * _pn < 10'000; _pnm++) pns[_pnm * _pn] = true;
   cin >> t;
   for (int _t(0); _t < t; _t++) {
     bool f(false);
@@ -42,8 +41,7 @@ int main(void) {
           }
         }
       }
-      if (f)
-        break;
+      if (f) break;
       r++;
     }
     if (f)

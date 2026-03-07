@@ -14,13 +14,13 @@ vector<E> es[500];
 vector<vector<lli>> dp(1'000 + 1, vector<lli>(500, -1));
 
 lli gdp(lli _n, lli _m) {
-  if (!_n)
-    return 0;
+  if (!_n) return 0;
   if (dp[_n][_m] == -1) {
     dp[_n][_m] = 0;
     for (lli _e(0); _e < es[_m].size(); _e++) {
-      dp[_n][_m] = max(dp[_n][_m], gdp(_n - 1, es[_m][_e].pf) +
-                                       (es[_m][_e].ps == ns[n - _n]) * 10);
+      dp[_n][_m] =
+          max(dp[_n][_m],
+              gdp(_n - 1, es[_m][_e].pf) + (es[_m][_e].ps == ns[n - _n]) * 10);
     }
   }
   return dp[_n][_m];
@@ -31,8 +31,7 @@ int main(void) {
   cin.tie(nullptr);
   cout.tie(nullptr);
   cin >> n;
-  for (lli _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (lli _n(0); _n < n; _n++) cin >> ns[_n];
   cin >> m >> k;
   for (lli _k(0); _k < k; _k++) {
     cin >> bea >> beb >> bec;

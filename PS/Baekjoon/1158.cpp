@@ -8,8 +8,7 @@ int main(void) {
   cin >> n >> k;
 
   vector<int> ns(n);
-  for (int _n(0); _n < n; _n++)
-    ns[_n] = _n + 1;
+  for (int _n(0); _n < n; _n++) ns[_n] = _n + 1;
 
   cout << '<';
   int ci(k - 1);
@@ -18,8 +17,7 @@ int main(void) {
     ns.erase(ns.begin() + ci);
 
     ci += k - 1;
-    if (ci > ns.size() - 1)
-      ci = ci % ns.size();
+    if (ci > ns.size() - 1) ci = ci % ns.size();
   }
   cout << ns[ci] << '>';
 }

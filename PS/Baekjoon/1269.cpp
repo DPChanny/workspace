@@ -7,10 +7,8 @@ int a, b, as[200'000], bs[200'000], ap, bp, us[400'000], up;
 
 int main(void) {
   cin >> a >> b;
-  for (int _a(0); _a < a; _a++)
-    cin >> as[_a];
-  for (int _b(0); _b < b; _b++)
-    cin >> bs[_b];
+  for (int _a(0); _a < a; _a++) cin >> as[_a];
+  for (int _b(0); _b < b; _b++) cin >> bs[_b];
   sort(as, as + a);
   sort(bs, bs + b);
   if (bs[bp] > as[ap])

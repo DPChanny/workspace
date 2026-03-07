@@ -26,7 +26,6 @@ int main(void) {
       if (prices[_w] != NC) {
         if (_w + items[_n].w < w + 1) {
           if (prices[_w + items[_n].w] < prices[_w] + items[_n].v) {
-
             prices[_w + items[_n].w] = prices[_w] + items[_n].v;
           }
         }

@@ -12,8 +12,7 @@ int main(void) {
   cin >> n;
   for (lli _n(0LL); _n < n; _n++) {
     cin >> b;
-    while (!ns.empty() && ns.top() < b + 1LL)
-      ns.pop();
+    while (!ns.empty() && ns.top() < b + 1LL) ns.pop();
     ns.push(b);
   }
   cout << ns.size();

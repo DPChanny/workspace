@@ -11,8 +11,7 @@ void dfs(int _f) {
   c++;
   vs[_f] = true;
   for (int _t(0); _t < cs[_f].size(); _t++)
-    if (!vs[cs[_f][_t]])
-      dfs(cs[_f][_t]);
+    if (!vs[cs[_f][_t]]) dfs(cs[_f][_t]);
 }
 
 int main(void) {

@@ -14,8 +14,7 @@ int n, io[100 '000], po[100' 000];
 N* rn;
 
 void mt(N* _pn, int* _io, int* _po, const long long int& _s) {
-  if (!_s)
-    return;
+  if (!_s) return;
   N* _n = (_pn->lcn == nullptr ? _pn->lcn : _pn->rcn) = new N(_po[_s - 1], _pn);
   int* m = find(_io, _io + _s, _po[_s - 1]);
   mt(_n, _io, _po, m - _io);
@@ -23,8 +22,7 @@ void mt(N* _pn, int* _io, int* _po, const long long int& _s) {
 }
 
 void pp(const N* _n) {
-  if (_n == nullptr)
-    return;
+  if (_n == nullptr) return;
   cout << _n->n << ' ';
   pp(_n->lcn);
   pp(_n->rcn);
@@ -35,10 +33,8 @@ int main(void) {
   cin.tie(nullptr);
   cout.tie(nullptr);
   cin >> n;
-  for (int _n(0); _n < n; _n++)
-    cin >> io[_n];
-  for (int _n(0); _n < n; _n++)
-    cin >> po[_n];
+  for (int _n(0); _n < n; _n++) cin >> io[_n];
+  for (int _n(0); _n < n; _n++) cin >> po[_n];
   rn = new N(po[n - 1], nullptr);
   int* m = find(io, io + n, po[n - 1]);
   mt(rn, io, po, m - io);

@@ -13,8 +13,7 @@ int main(void) {
       for (int _pnm(_pn); _pnm * _pn < 4 '000' 000 + 1; _pnm++)
         ipns[_pnm * _pn] = true;
   for (int _pn(2); _pn < 4 '000' 000 + 1; _pn++)
-    if (!ipns[_pn])
-      pns.push_back(_pn);
+    if (!ipns[_pn]) pns.push_back(_pn);
   cin >> n;
   s = pns[0];
   while (true) {

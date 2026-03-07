@@ -18,8 +18,7 @@ typedef struct state {
 bool check_finished(const bool const (*map)[5]) {
   bool copy[5][5];
   for (uint8_t _y = 0; _y < 5; _y++)
-    for (uint8_t _x = 0; _x < 5; _x++)
-      copy[_y][_x] = map[_y][_x];
+    for (uint8_t _x = 0; _x < 5; _x++) copy[_y][_x] = map[_y][_x];
 
   uint8_t count = 0;
 
@@ -35,8 +34,7 @@ bool check_finished(const bool const (*map)[5]) {
         flag = true;
         break;
       }
-    if (flag)
-      break;
+    if (flag) break;
   }
 
   while (!q.empty()) {
@@ -72,8 +70,7 @@ int main(void) {
 
   for (uint8_t _y = 0; _y < 5; _y++) {
     for (uint8_t _x = 0; _x < 5; _x++)
-      if (getchar() == PIECE)
-        initial_state.pieces[pieces++] = _y * 5 + _x;
+      if (getchar() == PIECE) initial_state.pieces[pieces++] = _y * 5 + _x;
     getchar();
   }
 

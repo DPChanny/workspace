@@ -63,8 +63,7 @@ int main(void) {
     // 안전한 지역 개수 탐색
     for (int y = 0; y < n; y++) {
       for (int x = 0; x < n; x++) {
-        if (visited[y][x])
-          continue;
+        if (visited[y][x]) continue;
         if (heights[y][x] > _height) {
           dfs(y, x, _height);
           count++;

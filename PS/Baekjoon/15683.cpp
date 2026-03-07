@@ -25,11 +25,12 @@ pair<int, int> operator*(const int& _a, const pair<int, int>& _b) {
   return {_a * _b.py, _a * _b.px};
 }
 
-pair<int, int> ds[5][4][4]{{{r}, {l}, {u}, {d}},
-                           {{r, l}, {u, d}},
-                           {{r, u}, {l, u}, {r, d}, {l, d}},
-                           {{r, l, u}, {r, u, d}, {r, l, d}, {l, u, d}},
-                           {{r, l, u, d}}};
+pair<int, int> ds[5][4][4]{
+    {{r}, {l}, {u}, {d}},
+    {{r, l}, {u, d}},
+    {{r, u}, {l, u}, {r, d}, {l, d}},
+    {{r, l, u}, {r, u, d}, {r, l, d}, {l, u, d}},
+    {{r, l, u, d}}};
 pair<int, int> dcs[5]{{4, 1}, {2, 2}, {4, 2}, {4, 3}, {1, 4}};
 vector<c> cs;
 
@@ -45,8 +46,7 @@ void grm(int _c) {
     int r(0);
     for (int _y(0); _y < y; _y++)
       for (int _x(0); _x < x; _x++)
-        if (!yxvs[_y][_x] && yxs[_y][_x] != 6)
-          r++;
+        if (!yxvs[_y][_x] && yxs[_y][_x] != 6) r++;
     mr = min(mr, r);
     return;
   }

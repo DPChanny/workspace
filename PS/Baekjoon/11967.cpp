@@ -51,8 +51,7 @@ int main(void) {
       ps.pop();
 
       vector<point>& cms = ms[cp.y][cp.x];
-      for (int _m(0); _m < cms.size(); _m++)
-        ns[cms[_m].y][cms[_m].x] = true;
+      for (int _m(0); _m < cms.size(); _m++) ns[cms[_m].y][cms[_m].x] = true;
       cms.clear();
 
       for (int _d(0); _d < DC; _d++) {
@@ -68,8 +67,7 @@ int main(void) {
             ef = true;
         }
       }
-      if (ef)
-        eps.push(cp);
+      if (ef) eps.push(cp);
       ef = false;
     }
   }
@@ -77,7 +75,6 @@ int main(void) {
   int c(0);
   for (int _y(0); _y < n; _y++)
     for (int _x(0); _x < n; _x++)
-      if (ns[_y][_x])
-        c++;
+      if (ns[_y][_x]) c++;
   cout << c;
 }

@@ -22,19 +22,16 @@ int main(void) {
     }
   }
   for (lli _n(0); _n < n; _n++)
-    if (!tcs[_n])
-      ns.push(_n);
+    if (!tcs[_n]) ns.push(_n);
   while (!ns.empty()) {
     cn = ns.front();
     ns.pop();
     rs.push_back(cn);
     for (lli _t(0); _t < fts[cn].size(); _t++)
-      if (!(--tcs[fts[cn][_t]]))
-        ns.push(fts[cn][_t]);
+      if (!(--tcs[fts[cn][_t]])) ns.push(fts[cn][_t]);
   }
   if (rs.size() == n)
-    for (lli _n(0); _n < n; _n++)
-      cout << rs[_n] + 1 << '\n';
+    for (lli _n(0); _n < n; _n++) cout << rs[_n] + 1 << '\n';
   else
     cout << 0;
 }

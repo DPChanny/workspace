@@ -9,8 +9,7 @@ int main(void) {
   cin >> n;
   int ns[1000];
 
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
 
   for (int _n(1); _n < n + 1; _n++) {
     for (int _c(1); _c < n + 1; _c++) {
@@ -20,8 +19,7 @@ int main(void) {
         dp[_n][_c] = dp[_n][_c - _n] + ns[_n - 1];
         if (dp[_n - 1][_c - _n])
           dp[_n][_c] = min(dp[_n][_c], dp[_n - 1][_c - _n] + ns[_n - 1]);
-        if (dp[_n - 1][_c])
-          dp[_n][_c] = min(dp[_n][_c], dp[_n - 1][_c]);
+        if (dp[_n - 1][_c]) dp[_n][_c] = min(dp[_n][_c], dp[_n - 1][_c]);
       }
     }
   }

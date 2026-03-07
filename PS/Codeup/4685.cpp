@@ -16,9 +16,7 @@ typedef struct Code {
   Code* before;
 } Code;
 
-bool compare(Code* a, Code* b) {
-  return a->value < b->value;
-}
+bool compare(Code* a, Code* b) { return a->value < b->value; }
 
 int main(void) {
   // 占쌘듸옙 占쏙옙占쏙옙, 占쌘듸옙 占쏙옙占쏙옙
@@ -70,7 +68,8 @@ int main(void) {
     for (int _k = 0; _k < k; _k++) {
       //_k占쏙옙째 占쏙옙트占쏙옙 1 占싱몌옙 占쏙옙占쏙옙
       if (temp & 1) {
-        // 占쏙옙占쏙옙 占쌘드에占쏙옙 _k 占쏙옙째 占쏙옙트占쏙옙 0占쏙옙占쏙옙 占쌕뀐옙
+        // 占쏙옙占쏙옙 占쌘드에占쏙옙 _k 占쏙옙째 占쏙옙트占쏙옙 0占쏙옙占쏙옙
+        // 占쌕뀐옙
         int target = codes[_n]->value - (1 << _k);
         // 占싱븝옙탐占쏙옙占쏙옙占쏙옙 target 占쌘듸옙 탐占쏙옙
         int _start = 0;
@@ -103,7 +102,8 @@ int main(void) {
   }
 #endif
 
-  // BFS占쏙옙 before 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙 visit 占쏙옙占쏙옙占쏙옙트
+  // BFS占쏙옙 before 占쏙옙占쏙옙占쏙옙 占쏙옙占쏙옙 占쏙옙 visit
+  // 占쏙옙占쏙옙占쏙옙트
   while (queue.size()) {
     Code* code = queue.front();
     queue.pop();

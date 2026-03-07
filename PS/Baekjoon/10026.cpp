@@ -53,8 +53,7 @@ int main(void) {
   cin >> n;
   for (int _y(0); _y < n; _y++) {
     getchar();
-    for (int _x(0); _x < n; _x++)
-      ns[_y][_x] = getchar();
+    for (int _x(0); _x < n; _x++) ns[_y][_x] = getchar();
   }
   for (int _y(0); _y < n; _y++)
     for (int _x(0); _x < n; _x++)

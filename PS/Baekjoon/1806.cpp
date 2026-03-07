@@ -13,8 +13,7 @@ int main(void) {
   }
   for (int _n(1); _n < n + 1; _n++) {
     lbp = lower_bound(ns + _n, ns + n + 1, ns[_n - 1] + s);
-    if (lbp != ns + n + 1)
-      c = min(c, (int)(lbp - ns) - _n + 1);
+    if (lbp != ns + n + 1) c = min(c, (int)(lbp - ns) - _n + 1);
   }
   if (c != 100'001)
     cout << c;

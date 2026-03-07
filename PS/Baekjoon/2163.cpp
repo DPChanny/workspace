@@ -6,7 +6,6 @@ uint16_t by, bx;
 
 int main(void) {
   cin >> by >> bx;
-  if (bx < by)
-    swap(bx, by);
+  if (bx < by) swap(bx, by);
   cout << (by - 1) + ((by) * (bx - 1));
 }

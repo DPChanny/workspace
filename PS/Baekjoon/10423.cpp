@@ -8,15 +8,13 @@ struct E {
 };
 
 int n, m, k, bk, us[1'000 + 1], s;
-E *es;
+E* es;
 bool ks[1'000 + 1];
 
-bool operator<(const E &_a, const E &_b) {
-  return _a.w < _b.w; }
+bool operator<(const E& _a, const E& _b) { return _a.w < _b.w; }
 
 int gu(int _n) {
-  if (!us[_n])
-    return _n;
+  if (!us[_n]) return _n;
   return us[_n] = gu(us[_n]);
 }
 
@@ -30,8 +28,7 @@ int main(void) {
     ks[bk] = true;
   }
   es = new E[m];
-  for (int _m(0); _m < m; _m++)
-    cin >> es[_m].na >> es[_m].nb >> es[_m].w;
+  for (int _m(0); _m < m; _m++) cin >> es[_m].na >> es[_m].nb >> es[_m].w;
   sort(es, es + m);
   for (int _m(0); _m < m; _m++)
     if (gu(es[_m].na) != gu(es[_m].nb))

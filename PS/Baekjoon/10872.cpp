@@ -3,8 +3,7 @@
 using namespace std;
 
 int f(int _n) {
-  if (!_n)
-    return 1;
+  if (!_n) return 1;
   return f(_n - 1) * _n;
 }
 

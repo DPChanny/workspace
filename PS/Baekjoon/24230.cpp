@@ -10,17 +10,14 @@ bool vs[200'000];
 
 void gc(uint32_t _f, uint32_t _c) {
   vs[_f] = true;
-  if (cs[_f] != _c)
-    c++;
+  if (cs[_f] != _c) c++;
   for (uint32_t _t(0); _t < ns[_f].size(); _t++)
-    if (!vs[ns[_f][_t]])
-      gc(ns[_f][_t], cs[_f]);
+    if (!vs[ns[_f][_t]]) gc(ns[_f][_t], cs[_f]);
 }
 
 int32_t main(void) {
   cin >> n;
-  for (uint32_t _n(0); _n < n; _n++)
-    cin >> cs[_n];
+  for (uint32_t _n(0); _n < n; _n++) cin >> cs[_n];
   for (uint32_t _n(0); _n < n - 1; _n++) {
     cin >> bf >> bt;
     ns[bf - 1].push_back(bt - 1);

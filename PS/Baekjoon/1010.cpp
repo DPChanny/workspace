@@ -10,8 +10,7 @@ int main(void) {
   for (int _t(0); _t < t; _t++) {
     memset(dp, 0, sizeof(dp));
     cin >> n >> m;
-    for (int _m(0); _m < m; _m++)
-      dp[0][_m] = 1;
+    for (int _m(0); _m < m; _m++) dp[0][_m] = 1;
     for (int _n(1); _n < n; _n++) {
       s = 0;
       for (int _m(_n); _m < m; _m++) {
@@ -20,8 +19,7 @@ int main(void) {
       }
     }
     s = 0;
-    for (int _m(n - 1); _m < m; _m++)
-      s += dp[n - 1][_m];
+    for (int _m(n - 1); _m < m; _m++) s += dp[n - 1][_m];
     cout << s << '\n';
   }
 }

@@ -11,8 +11,7 @@ int main(void) {
   cin.tie(nullptr);
   cout.tie(nullptr);
   cin >> n;
-  for (lld _n(0); _n < n - 1; _n++)
-    cin >> nds[_n];
+  for (lld _n(0); _n < n - 1; _n++) cin >> nds[_n];
   for (lld _n(0); _n < n - 1; _n++) {
     cin >> t;
     cn = min(cn, t);

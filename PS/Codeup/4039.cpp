@@ -61,8 +61,8 @@ int main(void) {
     }
 
     for (int v = 0; v < DIR_VECTORS_COUNT; v++) {
-      NM new_nm = {nm.n + dir_vectors[v].n, nm.m + dir_vectors[v].m,
-                   nm.depth + 1};
+      NM new_nm = {
+          nm.n + dir_vectors[v].n, nm.m + dir_vectors[v].m, nm.depth + 1};
       if (new_nm.n < 0 || new_nm.n > n - 1 || new_nm.m < 0 ||
           new_nm.m > m - 1) {
         continue;

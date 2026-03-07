@@ -20,8 +20,7 @@ int main(void) {
       stickers[_r] = (int*)malloc(sizeof(int) * c);
       dp[_r] = (int*)calloc(c + 1, sizeof(int));
 
-      for (int _c = 0; _c < c; _c++)
-        scanf("%d", &stickers[_r][_c]);
+      for (int _c = 0; _c < c; _c++) scanf("%d", &stickers[_r][_c]);
 
       dp[_r][1] = stickers[_r][0];
     }

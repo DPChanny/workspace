@@ -12,8 +12,7 @@ int main(void) {
   for (int _y(0); _y < y; _y++)
     for (int _x(0); _x < x; _x++) {
       cin >> ts[_y][_x];
-      if (ts[_y][_x] == 1)
-        q.push({_y, _x});
+      if (ts[_y][_x] == 1) q.push({_y, _x});
     }
   pair<int, int> c;
   while (!q.empty()) {

@@ -12,8 +12,7 @@ lli n, m, bn;
 stack<pll> ns;
 
 void gm(lli _n) {
-  if (ns.empty())
-    return;
+  if (ns.empty()) return;
   lli s = ns.top().ps, l = ns.top().ps;
   bool r(false);
   while (!ns.empty() && ns.top().pf > _n) {
@@ -22,8 +21,7 @@ void gm(lli _n) {
     l = ns.top().ps;
     ns.pop();
   }
-  if (r)
-    ns.emplace(_n, l);
+  if (r) ns.emplace(_n, l);
 }
 
 int main(void) {

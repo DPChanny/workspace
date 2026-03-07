@@ -20,8 +20,7 @@ int main(void) {
         return 0;
       }
       s.pop();
-      if (n[_n - 1] == '(')
-        r += t;
+      if (n[_n - 1] == '(') r += t;
       t /= 2;
     } else if (n[_n] == '[') {
       t *= 3;
@@ -32,8 +31,7 @@ int main(void) {
         return 0;
       }
       s.pop();
-      if (n[_n - 1] == '[')
-        r += t;
+      if (n[_n - 1] == '[') r += t;
       t /= 3;
     }
   }

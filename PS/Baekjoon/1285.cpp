@@ -10,8 +10,7 @@ int main(void) {
   for (int _y(0); _y < n; _y++) {
     getchar();
     for (int _x(0); _x < n; _x++)
-      if (ns[_y][_x] = getchar() - 'H')
-        x[_x]++;
+      if (ns[_y][_x] = getchar() - 'H') x[_x]++;
   }
   for (int _b(0); _b < (1 << n); _b++) {
     int s(0);

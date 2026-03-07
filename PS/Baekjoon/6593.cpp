@@ -20,15 +20,13 @@ int main(void) {
   while (true) {
     cin >> h >> y >> x;
     getchar();
-    if (!x && !y && !h)
-      exit(EXIT_SUCCESS);
+    if (!x && !y && !h) exit(EXIT_SUCCESS);
     queue<S> q;
     for (int _h(0); _h < h; _h++) {
       for (int _y(0); _y < y; _y++) {
         for (int _x(0); _x < x; _x++) {
           m[_h][_y][_x] = getchar();
-          if (m[_h][_y][_x] == 'S')
-            q.push({_y, _x, _h});
+          if (m[_h][_y][_x] == 'S') q.push({_y, _x, _h});
         }
         getchar();
       }
@@ -72,12 +70,10 @@ int main(void) {
           q.push({c.y, c.x, c.h - 1});
         }
       }
-      if (flag)
-        break;
+      if (flag) break;
       t++;
     }
-    if (!flag)
-      cout << "Trapped!\n";
+    if (!flag) cout << "Trapped!\n";
     memset(vs, false, sizeof(vs));
   }
 }

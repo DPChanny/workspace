@@ -53,8 +53,7 @@ int main(void) {
   cin >> y >> x;
   for (int _y(0); _y < y; _y++) {
     getchar();
-    for (int _x(0); _x < x; _x++)
-      yxs[_y][_x] = getchar() == 'L';
+    for (int _x(0); _x < x; _x++) yxs[_y][_x] = getchar() == 'L';
   }
   for (int _y(0); _y < y; _y++)
     for (int _x(0); _x < x; _x++)

@@ -10,17 +10,11 @@ struct N {
   lli n, x, y, z;
 };
 
-bool cx(N& _a, N& _b) {
-  return _a.x > _b.x;
-}
+bool cx(N& _a, N& _b) { return _a.x > _b.x; }
 
-bool cy(N& _a, N& _b) {
-  return _a.y > _b.y;
-}
+bool cy(N& _a, N& _b) { return _a.y > _b.y; }
 
-bool cz(N& _a, N& _b) {
-  return _a.z > _b.z;
-}
+bool cz(N& _a, N& _b) { return _a.z > _b.z; }
 
 struct E {
   lli f, t, w;
@@ -35,8 +29,7 @@ N ns[100'000];
 priority_queue<E, vector<E>, ce> es;
 
 lli gu(lli _n) {
-  if (!nus[_n])
-    return _n;
+  if (!nus[_n]) return _n;
   return nus[_n] = gu(nus[_n]);
 }
 

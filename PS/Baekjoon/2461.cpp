@@ -31,8 +31,7 @@ int main(void) {
       else if (!--nus[nms[nml++].pn])
         c--;
     } else if (nmr + 1 < n * m) {
-      if (!nus[nms[++nmr].pn]++)
-        c++;
+      if (!nus[nms[++nmr].pn]++) c++;
     } else
       break;
   }

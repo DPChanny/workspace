@@ -13,8 +13,7 @@ int main(void) {
 
   vector<int> ns(n);
   vector<int> nns;
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
 
   int i(0);
   int pi(1);

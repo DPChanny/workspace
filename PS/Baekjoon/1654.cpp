@@ -17,8 +17,7 @@ int main(void) {
   cin.tie(NULL);
 
   cin >> k >> n;
-  for (long long int _k(0); _k < k; _k++)
-    cin >> ks[_k];
+  for (long long int _k(0); _k < k; _k++) cin >> ks[_k];
   sort(ks, ks + k);
 
   long long int sl(1), el(2147483648), ml, c;

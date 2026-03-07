@@ -24,9 +24,7 @@ int n, m;
 N t, c, ns[15];
 bool nus[15], mnus[15];
 
-bool ck(const N& _a) {
-  return _a.a || _a.b || _a.c || _a.d || _a.e;
-}
+bool ck(const N& _a) { return _a.a || _a.b || _a.c || _a.d || _a.e; }
 
 void gm(int _n, bool _s) {
   if (_n == n) {
@@ -37,15 +35,13 @@ void gm(int _n, bool _s) {
     return;
   }
   if (ck(ns[_n])) {
-    if (_s)
-      c = c + ns[_n];
+    if (_s) c = c + ns[_n];
     nus[_n] = _s;
     gm(_n + 1, true);
   }
   gm(_n + 1, false);
   if (ck(ns[_n])) {
-    if (_s)
-      c = c - ns[_n];
+    if (_s) c = c - ns[_n];
     nus[_n] = false;
   }
 }
@@ -62,7 +58,6 @@ int main(void) {
   else {
     cout << m << '\n';
     for (int _n(0); _n < n; _n++)
-      if (mnus[_n])
-        cout << _n + 1 << ' ';
+      if (mnus[_n]) cout << _n + 1 << ' ';
   }
 }

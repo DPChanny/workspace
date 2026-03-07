@@ -29,8 +29,7 @@ int main(void) {
   cin >> n;
   for (int _y(0); _y < n; _y++) {
     getchar();
-    for (int _x(0); _x < n; _x++)
-      m[_y][_x] = getchar() - '0';
+    for (int _x(0); _x < n; _x++) m[_y][_x] = getchar() - '0';
   }
   for (int _y(0); _y < n; _y++) {
     for (int _x(0); _x < n; _x++) {
@@ -43,6 +42,5 @@ int main(void) {
   }
   cout << fs.size() << '\n';
   sort(fs.begin(), fs.end());
-  for (int _fs(0); _fs < fs.size(); _fs++)
-    cout << fs[_fs] << '\n';
+  for (int _fs(0); _fs < fs.size(); _fs++) cout << fs[_fs] << '\n';
 }

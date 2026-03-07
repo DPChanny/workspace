@@ -18,9 +18,7 @@ int main(void) {
     yc[by]++;
   }
   for (int _y(0); _y < y.size(); _y++)
-    if (yc[y[_y]] == 1)
-      cout << y[_y] << ' ';
+    if (yc[y[_y]] == 1) cout << y[_y] << ' ';
   for (int _x(0); _x < x.size(); _x++)
-    if (xc[x[_x]] == 1)
-      cout << x[_x];
+    if (xc[x[_x]] == 1) cout << x[_x];
 }

@@ -22,12 +22,9 @@ bool check(long long int _md) {
     s = q.size();
     for (int _s(0); _s < s; _s++) {
       for (int _n(1); _n < ns.size(); _n++) {
-        if (v[_n])
-          continue;
-        if (ds[q.front()][_n] > _md)
-          continue;
-        if (_n == ns.size() - 1)
-          return true;
+        if (v[_n]) continue;
+        if (ds[q.front()][_n] > _md) continue;
+        if (_n == ns.size() - 1) return true;
         q.push(_n);
         v[_n] = true;
       }

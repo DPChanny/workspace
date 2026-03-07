@@ -5,14 +5,11 @@ using namespace std;
 uint64_t n, m, k, t, d, ilc, olc, sb, eb, mb;
 
 uint64_t gilc() {
-  if (m == 2)
-    return 1 * n;
+  if (m == 2) return 1 * n;
   return (m + (m * (m - 3) / 2)) * n;
 }
 
-uint64_t golc() {
-  return (n * m * m * (n - 1)) / 2;
-}
+uint64_t golc() { return (n * m * m * (n - 1)) / 2; }
 
 int32_t main(void) {
   ios::sync_with_stdio(false);
@@ -32,8 +29,7 @@ int32_t main(void) {
       else
         eb = mb - 1;
     }
-    while (ilc * sb * k + olc * sb <= d)
-      sb++;
+    while (ilc * sb * k + olc * sb <= d) sb++;
     sb--;
     if (!sb)
       cout << -1 << '\n';

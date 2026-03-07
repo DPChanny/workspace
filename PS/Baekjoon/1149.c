@@ -32,8 +32,10 @@ int main(void) {
     scanf(" %d %d %d", &rgb[i][RED], &rgb[i][GREEN], &rgb[i][BLUE]);
   }
 
-  printf("%d", min(min(R(n - 1, rgb, rgb_cal), G(n - 1, rgb, rgb_cal)),
-                   B(n - 1, rgb, rgb_cal)));
+  printf(
+      "%d",
+      min(min(R(n - 1, rgb, rgb_cal), G(n - 1, rgb, rgb_cal)),
+          B(n - 1, rgb, rgb_cal)));
 
   for (int i = 0; i < n; i++) {
     free(rgb[i]);

@@ -8,8 +8,7 @@ int main(void) {
   int n;
   cin >> n;
   vector<int> ns(n);
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
   stack<int> s;
   for (int _n(0); _n < n; _n++) {
     bool f(false);

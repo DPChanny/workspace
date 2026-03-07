@@ -29,19 +29,18 @@ int main(void) {
   while (!ns.empty()) {
     cn = ns.top();
     ns.pop();
-    if (nws[cn.pf] < cn.ps)
-      continue;
+    if (nws[cn.pf] < cn.ps) continue;
     for (lli _b(0); _b < bs[cn.pf].size(); _b++)
       if (nws[cn.pf] + bs[cn.pf][_b].ps < nws[bs[cn.pf][_b].pf]) {
-        ns.push({bs[cn.pf][_b].pf,
-                 nws[bs[cn.pf][_b].pf] = nws[cn.pf] + bs[cn.pf][_b].ps});
+        ns.push(
+            {bs[cn.pf][_b].pf,
+             nws[bs[cn.pf][_b].pf] = nws[cn.pf] + bs[cn.pf][_b].ps});
         nhs[bs[cn.pf][_b].pf] = cn.pf;
       }
   }
   stack<lli> rhs;
   rhs.push(bt - 1);
-  while (nhs[rhs.top()] != -1)
-    rhs.push(nhs[rhs.top()]);
+  while (nhs[rhs.top()] != -1) rhs.push(nhs[rhs.top()]);
   cout << nws[bt - 1] << '\n' << rhs.size() << '\n';
   while (!rhs.empty()) {
     cout << rhs.top() + 1 << ' ';

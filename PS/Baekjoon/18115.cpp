@@ -8,8 +8,7 @@ int n, ns[1000000];
 int main(void) {
   cin >> n;
 
-  for (int _n(0); _n < n; _n++)
-    cin >> ns[_n];
+  for (int _n(0); _n < n; _n++) cin >> ns[_n];
 
   deque<int> s;
 

@@ -15,8 +15,7 @@ void find_cycle(int node) {
   }
   visit[node] = start;
   for (int i = 1; i <= v; i++)
-    if (graph[node][i])
-      find_cycle(i);
+    if (graph[node][i]) find_cycle(i);
 }
 
 int main() {
@@ -29,8 +28,7 @@ int main() {
     graph[i] = (int*)malloc(sizeof(int) * (v + 1));
     visit[i] = 0;
     count[i] = 0;
-    for (int j = 1; j <= v; j++)
-      graph[i][j] = 0;
+    for (int j = 1; j <= v; j++) graph[i][j] = 0;
   }
 
   for (int z = 0; z < n; z++) {
@@ -46,13 +44,11 @@ int main() {
   int index;
   for (int z = 0; z < v; z++) {
     index = 0;
-    while (count[++index])
-      ;
+    while (count[++index]);
     printf("%d\n", index);
     count[index] = 999;
     for (int j = 1; j <= v; j++)
-      if (graph[index][j])
-        count[j]--;
+      if (graph[index][j]) count[j]--;
   }
 
   return 0;

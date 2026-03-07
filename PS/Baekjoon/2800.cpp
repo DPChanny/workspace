@@ -20,13 +20,10 @@ void r(int _n) {
     string result;
     bool flag(false);
     for (int i(0); i < input.length(); i++) {
-      if (!use[i])
-        result += input[i];
-      if (!flag)
-        flag = use[i];
+      if (!use[i]) result += input[i];
+      if (!flag) flag = use[i];
     }
-    if (flag)
-      results.push_back(result);
+    if (flag) results.push_back(result);
     return;
   }
   use[ps[_n].start] = 0;
@@ -51,6 +48,5 @@ int main(void) {
   r(0);
   sort(results.begin(), results.end());
   results.erase(unique(results.begin(), results.end()), results.end());
-  for (int i(0); i < results.size(); i++)
-    cout << results[i] << '\n';
+  for (int i(0); i < results.size(); i++) cout << results[i] << '\n';
 }

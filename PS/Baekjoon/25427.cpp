@@ -25,8 +25,7 @@ int main(void) {
   cin >> n;
   for (lli _n(0); _n < n; _n++) {
     cin >> bn;
-    if (string("DKSH").find(bn) != string::npos)
-      cs[gi(bn)] += cs[gi(bn) - 1];
+    if (string("DKSH").find(bn) != string::npos) cs[gi(bn)] += cs[gi(bn) - 1];
   }
   cout << cs[4];
 }

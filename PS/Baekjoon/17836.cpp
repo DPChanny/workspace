@@ -9,9 +9,7 @@ typedef pair<lli, lli> P;
 #define pf first
 #define ps second
 
-P operator+(P _a, P _b) {
-  return {_a.pf + _b.pf, _a.ps + _b.ps};
-}
+P operator+(P _a, P _b) { return {_a.pf + _b.pf, _a.ps + _b.ps}; }
 
 constexpr lli E = 0;
 constexpr lli W = 1;
@@ -38,8 +36,7 @@ int main(void) {
   cout.tie(nullptr);
   cin >> y >> x >> t;
   for (lli _y(0); _y < y; _y++)
-    for (lli _x(0); _x < x; _x++)
-      cin >> yxs[_y][_x];
+    for (lli _x(0); _x < x; _x++) cin >> yxs[_y][_x];
   ns.push({{0, 0}, false});
   while (!ns.empty() && _t < t + 1) {
     nss = ns.size();

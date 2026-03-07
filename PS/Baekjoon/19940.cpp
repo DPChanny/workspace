@@ -16,8 +16,7 @@ N bfs(int _n) {
   while (!qs.empty()) {
     cn = qs.front();
     qs.pop();
-    if (cn.n == _n)
-      return cn;
+    if (cn.n == _n) return cn;
     if (cn.n + 1 > 1)
       qs.push({cn.n - 1, cn.p60, cn.p10, cn.m10, cn.p1, cn.m1 + 1});
     qs.push({cn.n + 1, cn.p60, cn.p10, cn.m10, cn.p1 + 1, cn.m1});

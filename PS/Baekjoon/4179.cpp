@@ -42,12 +42,9 @@ int main(void) {
     for (int x(0); x < x_size; x++) {
       map_buffer = getchar();
       map[y][x] = VOID;
-      if (map_buffer == FIRE)
-        next_fire_positions.push({y, x});
-      if (map_buffer == BODY)
-        next_body_positions.push({y, x});
-      if (map_buffer == WALL)
-        map[y][x] = WALL;
+      if (map_buffer == FIRE) next_fire_positions.push({y, x});
+      if (map_buffer == BODY) next_body_positions.push({y, x});
+      if (map_buffer == WALL) map[y][x] = WALL;
     }
   }
 
@@ -58,8 +55,7 @@ int main(void) {
     for (int i(0); i < queue_size; i++) {
       position_buffer = next_fire_positions.front();
       next_fire_positions.pop();
-      if (map[position_buffer.y][position_buffer.x] == FIRE)
-        continue;
+      if (map[position_buffer.y][position_buffer.x] == FIRE) continue;
       map[position_buffer.y][position_buffer.x] = FIRE;
 
       if (check_fire_position({position_buffer.y + 1, position_buffer.x}))
@@ -76,10 +72,8 @@ int main(void) {
     for (int i(0); i < queue_size; i++) {
       position_buffer = next_body_positions.front();
       next_body_positions.pop();
-      if (map[position_buffer.y][position_buffer.x] == FIRE)
-        continue;
-      if (map[position_buffer.y][position_buffer.x] == BODY)
-        continue;
+      if (map[position_buffer.y][position_buffer.x] == FIRE) continue;
+      if (map[position_buffer.y][position_buffer.x] == BODY) continue;
       map[position_buffer.y][position_buffer.x] = BODY;
 
       if (position_buffer.y + 1 == y_size || position_buffer.x + 1 == x_size ||

@@ -5,8 +5,7 @@ using namespace std;
 
 struct compare {
   bool operator()(const int& _a, const int& _b) {
-    if (abs(_a) == abs(_b))
-      return _a > _b;
+    if (abs(_a) == abs(_b)) return _a > _b;
     return abs(_a) > abs(_b);
   }
 };

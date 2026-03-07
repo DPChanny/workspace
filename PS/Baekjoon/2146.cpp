@@ -13,8 +13,7 @@ bool check_pos(int _y, int _x) {
 }
 
 void find_edge(int _y, int _x) {
-  if (!check_pos(_y, _x))
-    return;
+  if (!check_pos(_y, _x)) return;
   vs[_y][_x] = true;
   if (!ns[_y][_x]) {
     q.push(make_pair(_y, _x));
@@ -35,8 +34,7 @@ int find_bridge() {
     for (int _s(0); _s < s; _s++) {
       cq = q.front();
       q.pop();
-      if (ns[cq.first][cq.second])
-        return t;
+      if (ns[cq.first][cq.second]) return t;
       if (check_pos(cq.first + 1, cq.second)) {
         vs[cq.first + 1][cq.second] = true;
         q.push(make_pair(cq.first + 1, cq.second));
@@ -61,8 +59,7 @@ int find_bridge() {
 int main(void) {
   cin >> n;
   for (int _y(0); _y < n; _y++)
-    for (int _x(0); _x < n; _x++)
-      cin >> ns[_y][_x];
+    for (int _x(0); _x < n; _x++) cin >> ns[_y][_x];
   memcpy(nsc, ns, sizeof(ns));
   for (int _y(0); _y < n; _y++)
     for (int _x(0); _x < n; _x++)

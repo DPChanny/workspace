@@ -11,10 +11,8 @@ int gc(int _f) {
   int md(0);
   vs[_f] = true;
   for (int _t(0); _t < ns[_f].size(); _t++)
-    if (!vs[ns[_f][_t]])
-      md = max(md, gc(ns[_f][_t]));
-  if (md + 1 > d)
-    c++;
+    if (!vs[ns[_f][_t]]) md = max(md, gc(ns[_f][_t]));
+  if (md + 1 > d) c++;
   return md + 1;
 }
 

@@ -17,6 +17,5 @@ int main(void) {
     }
     ns[ln++] = ns[_n];
   }
-  for (int _n(0); _n < n - k; _n++)
-    cout << ns[_n];
+  for (int _n(0); _n < n - k; _n++) cout << ns[_n];
 }

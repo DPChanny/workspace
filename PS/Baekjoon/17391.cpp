@@ -15,8 +15,7 @@ bool check(int _y, int _x) {
 int main(void) {
   cin >> y >> x;
   for (int _y(0); _y < y; _y++)
-    for (int _x(0); _x < x; _x++)
-      cin >> ns[_y][_x];
+    for (int _x(0); _x < x; _x++) cin >> ns[_y][_x];
   queue<pair<int, int>> q;
   pair<int, int> cq;
   q.push(make_pair(0, 0));

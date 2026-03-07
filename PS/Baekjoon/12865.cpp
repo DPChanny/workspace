@@ -19,8 +19,7 @@ int main(void) {
   cin >> k >> w;
 
   K* ks = new K[k];  // k array
-  for (int _k(0); _k < k; _k++)
-    cin >> ks[_k].weight >> ks[_k].price;
+  for (int _k(0); _k < k; _k++) cin >> ks[_k].weight >> ks[_k].price;
 
   llu** dp = new llu*[k + 1];
   dp[0] = new llu[w + 1]{
@@ -43,8 +42,7 @@ int main(void) {
 
   llu max(0);
   for (int _w(1); _w < w + 1; _w++)
-    if (dp[k][_w] > max)
-      max = dp[k][_w];
+    if (dp[k][_w] > max) max = dp[k][_w];
 
   cout << max << endl;
 

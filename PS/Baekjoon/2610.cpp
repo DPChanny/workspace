@@ -8,8 +8,7 @@ typedef long long int lli;
 typedef pair<lli, lli> R;
 
 bool operator<(R _a, R _b) {
-  if (_a.first == _b.first)
-    return _a.second < _b.second;
+  if (_a.first == _b.first) return _a.second < _b.second;
   return _a.first < _b.first;
 }
 
@@ -19,8 +18,7 @@ priority_queue<lli, vector<lli>, greater<lli>> rns;
 vector<lli> es[100 + 1];
 
 lli gu(lli _n) {
-  if (!us[_n])
-    return _n;
+  if (!us[_n]) return _n;
   return us[_n] = gu(us[_n]);
 }
 
@@ -53,16 +51,13 @@ int main(void) {
   cin >> n >> m;
   for (lli _m(0); _m < m; _m++) {
     cin >> bf >> bt;
-    if (gu(bf) != gu(bt))
-      us[gu(bf)] = gu(bt);
+    if (gu(bf) != gu(bt)) us[gu(bf)] = gu(bt);
     es[bf].push_back(bt);
     es[bt].push_back(bf);
   }
-  for (lli _n(1); _n < n + 1; _n++)
-    rs[gu(_n)] = min(rs[gu(_n)], {gr(_n), _n});
+  for (lli _n(1); _n < n + 1; _n++) rs[gu(_n)] = min(rs[gu(_n)], {gr(_n), _n});
   for (lli _u(1); _u < 100 + 1; _u++)
-    if (rs[_u].first != INT64_MAX)
-      rns.push(rs[_u].second);
+    if (rs[_u].first != INT64_MAX) rns.push(rs[_u].second);
   cout << rns.size() << '\n';
   while (!rns.empty()) {
     cout << rns.top() << '\n';

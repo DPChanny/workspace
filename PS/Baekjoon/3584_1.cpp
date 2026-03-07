@@ -19,10 +19,8 @@ int main(void) {
     }
     cin >> b1 >> b2;
     nvs[b1] = true;
-    while (nps[b1])
-      nvs[b1 = nps[b1]] = true;
-    while (!nvs[b2])
-      b2 = nps[b2];
+    while (nps[b1]) nvs[b1 = nps[b1]] = true;
+    while (!nvs[b2]) b2 = nps[b2];
     cout << b2 << '\n';
     memset(nvs, false, sizeof(bool) * n + 1);
     memset(nps, 0, sizeof(int) * n + 1);

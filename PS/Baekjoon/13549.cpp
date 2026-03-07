@@ -13,11 +13,12 @@ int n, k,
 bool flag;
 
 int main(void) {
-  for (int _vs(0); _vs < MAX; _vs++)
-    vs[_vs] = 2147483647;
+  for (int _vs(0); _vs < MAX; _vs++) vs[_vs] = 2147483647;
   ft = 2147483647;
-  priority_queue<pair<int, int>, vector<pair<int, int>>,
-                 greater<pair<int, int>>>
+  priority_queue<
+      pair<int, int>,
+      vector<pair<int, int>>,
+      greater<pair<int, int>>>
       q;
   cin >> n >> k;
   q.emplace(0, n);  // 매개변수 순서 변경

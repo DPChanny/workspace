@@ -1,4 +1,3 @@
-import sys
 import importlib.util
 import time
 
@@ -26,6 +25,7 @@ test_cases = [
     # {"n": 38, "expected": 39088169, "desc": "fib(38)"},
     # {"n": 40, "expected": 102334155, "desc": "fib(40)"},
 ]
+
 
 def run_test_cases(file_path=file_path):
     spec = importlib.util.spec_from_file_location(module_name, file_path)
@@ -57,11 +57,12 @@ def run_test_cases(file_path=file_path):
         else:
             print(f"출력: {result} ❌ Failed (Expected: {expected}, Got: {result})")
 
-        print(f"{'-'*20}\n")
+        print(f"{'-' * 20}\n")
 
     # 최종 테스트 결과 요약
     print(f"✅ {passed}/{total} 테스트 케이스 통과")
     return passed, total
+
 
 if __name__ == "__main__":
     run_test_cases()

@@ -1,4 +1,3 @@
-import sys
 import importlib.util
 
 # 동적으로 binsearch 모듈 import
@@ -14,16 +13,47 @@ test_cases = [
     {"S": [], "x": 10, "expected": -1, "desc": "빈 배열"},
     {"S": [42], "x": 42, "expected": 0, "desc": "크기 1인 배열 (존재)"},
     {"S": [42], "x": 10, "expected": -1, "desc": "크기 1인 배열 (없음)"},
-    {"S": list(range(1, 1000001, 2)), "x": 777777, "expected": 388888, "desc": "100만 개 중 중간 값 찾기"},
-    {"S": list(range(1, 1000001, 2)), "x": 1000001, "expected": -1, "desc": "100만 개 중 없는 값"},
-    {"S": list(range(1, 1000001, 2)), "x": 1, "expected": 0, "desc": "100만 개 중 첫 번째 값 찾기"}, 
-    {"S": list(range(1, 100000001, 2)), "x": 77777777, "expected": 38888888, "desc": "1억 개 중 중간 값 찾기"},
-    {"S": list(range(1, 100000001, 2)), "x": 1000000001, "expected": -1, "desc": "1억 개 중 없는 값"},
-    {"S": list(range(1, 100000001, 2)), "x": 1, "expected": 0, "desc": "1억 개 중 첫 번째 값 찾기"}
+    {
+        "S": list(range(1, 1000001, 2)),
+        "x": 777777,
+        "expected": 388888,
+        "desc": "100만 개 중 중간 값 찾기",
+    },
+    {
+        "S": list(range(1, 1000001, 2)),
+        "x": 1000001,
+        "expected": -1,
+        "desc": "100만 개 중 없는 값",
+    },
+    {
+        "S": list(range(1, 1000001, 2)),
+        "x": 1,
+        "expected": 0,
+        "desc": "100만 개 중 첫 번째 값 찾기",
+    },
+    {
+        "S": list(range(1, 100000001, 2)),
+        "x": 77777777,
+        "expected": 38888888,
+        "desc": "1억 개 중 중간 값 찾기",
+    },
+    {
+        "S": list(range(1, 100000001, 2)),
+        "x": 1000000001,
+        "expected": -1,
+        "desc": "1억 개 중 없는 값",
+    },
+    {
+        "S": list(range(1, 100000001, 2)),
+        "x": 1,
+        "expected": 0,
+        "desc": "1억 개 중 첫 번째 값 찾기",
+    },
     # , {"S": list(range(1, 1000000001, 2)), "x": 777777777, "expected": 388888888, "desc": "10억 개 중 중간 값 찾기"},
     # {"S": list(range(1, 1000000001, 2)), "x": 1000000001, "expected": -1, "desc": "10억 개 중 없는 값"},
     # {"S": list(range(1, 1000000001, 2)), "x": 1, "expected": 0, "desc": "10억 개 중 첫 번째 값 찾기"}
 ]
+
 
 def run_test_cases(file_path=file_path):
     spec = importlib.util.spec_from_file_location(module_name, file_path)
@@ -51,11 +81,12 @@ def run_test_cases(file_path=file_path):
         else:
             print(f"출력: {result} ❌ Failed (Expected: {expected}, Got: {result})")
 
-        print(f"{'-'*20}\n")
+        print(f"{'-' * 20}\n")
 
     # 최종 테스트 결과 요약
     print(f"✅ {passed}/{total} 테스트 케이스 통과")
     return passed, total
+
 
 if __name__ == "__main__":
     run_test_cases()

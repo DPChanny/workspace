@@ -1,4 +1,3 @@
-import sys
 import importlib.util
 import time
 
@@ -21,8 +20,9 @@ test_cases = [
     {"n": 100, "expected": 354224848179261915075, "desc": "fib(100)"},
     {"n": 1000, "expected": None, "desc": "fib(1,000) (대형 테스트)"},
     {"n": 10000, "expected": None, "desc": "fib(10,000) (초대형 테스트)"},
-    {"n": 100000, "expected": None, "desc": "fib(100,000) (초대형 테스트)"}
+    {"n": 100000, "expected": None, "desc": "fib(100,000) (초대형 테스트)"},
 ]
+
 
 def run_test_cases(file_path=file_path):
     spec = importlib.util.spec_from_file_location(module_name, file_path)
@@ -44,7 +44,7 @@ def run_test_cases(file_path=file_path):
         # 대형 테스트는 실행만 확인
         if expected is None:
             fib2(n)  # 실행 속도만 확인
-            print(f"출력: (Computed)")
+            print("출력: (Computed)")
             passed += 1
             result = "실행 속도만 확인"
         else:
@@ -55,7 +55,6 @@ def run_test_cases(file_path=file_path):
         time_warning = " ⚠️" if elapsed_time > 100 else ""
         print(f"걸린 시간: {elapsed_time:.3f} ms{time_warning}")
 
-
         # 결과 검증
         if expected is None:
             print(f"출력: {result} Tested")
@@ -65,11 +64,12 @@ def run_test_cases(file_path=file_path):
         else:
             print(f"출력: {result} ❌ Failed (Expected: {expected}, Got: {result})")
 
-        print(f"{'-'*20}\n")
+        print(f"{'-' * 20}\n")
 
     # 최종 테스트 결과 요약
     print(f"✅ {passed}/{total} 테스트 케이스 통과")
     return passed, total
+
 
 if __name__ == "__main__":
     run_test_cases()

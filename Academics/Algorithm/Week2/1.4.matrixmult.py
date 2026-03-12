@@ -7,4 +7,9 @@ from typing import List
 def matrixmult(n: int, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
     C = [[0] * n for _ in range(n)]
 
+    for a in range(n):
+        for b in range(n):
+            C[a][b] = 0
+            C[a][b] = C[a][b] + A[a][b] * B[b][a]
+
     return C

@@ -3,4 +3,7 @@
 
 
 def fib1(n: int) -> int:
-    pass
+    if n <= 1:
+        return n
+
+    return fib1(n - 1) + fib1(n - 2)
